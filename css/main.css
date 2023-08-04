@@ -1,0 +1,16 @@
+.flex-centralizer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+* {
+  margin: 0 !important;
+}
+
+nav:first-child {
+  padding: 3px 0px 4px !important;
+}
+nav:first-child * {
+  color: azure !important;
+}/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,8 @@
+nav {
+    &:first-child{
+        padding: 3px 0px 4px !important;
+        * {
+            color: $colorLight !important;
+        }
+    }
+}

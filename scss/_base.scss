@@ -1,0 +1,19 @@
+// ---------[vars]---------
+$colorAlpha: #83b735;
+$colorAlpha-hover: #74a32f;
+$colorAlpha-darker: #438E44;
+
+$colorLight: azure;
+$colorDark: Black;
+// ---------[mixin]---------
+@mixin flex-centralizer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+// -----[usable classes]-----
+.flex-centralizer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
