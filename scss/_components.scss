@@ -1,8 +1,41 @@
+// -------------------------[navbar]-----------------------------
 nav {
-    &:first-child{
-        padding: 3px 0px 4px !important;
-        * {
-            color: $colorLight !important;
-        }
+  &:first-child {
+    * {
+      font-size: 12px;
     }
+    p {
+      color: $colorLight !important;
+    }
+    a {
+      @include light-link;
+    }
+  }
+  img {
+    width: 60%;
+  }
+}
+// -------------------------[navbar]-----------------------------
+// -------------------------[header]-----------------------------
+.header {
+  &-categories {
+    h5 {
+      background-color: $colorAlpha;
+      width: 100%;
+    }
+    ul {
+      width: 100%;
+      li {
+        border: 0.1px solid $colorDark-hover-x;
+        border-top: 0;
+        &:hover {
+          background-color: $colorLight-hover;
+        }
+        a {
+          width: 100%;
+          display: block;
+        }
+      }
+    }
+  }
 }

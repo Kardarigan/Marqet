@@ -1,19 +1,50 @@
 // ---------[vars]---------
 $colorAlpha: #83b735;
 $colorAlpha-hover: #74a32f;
-$colorAlpha-darker: #438E44;
+$colorAlpha-darker: #438e44;
 
 $colorLight: azure;
+$colorLight-hover: rgba(240, 255, 255, 0.6);
 $colorDark: Black;
+$colorDark-hover-s: rgba(0, 0, 0, 0.8);
+$colorDark-hover: rgba(0, 0, 0, 0.5);
+$colorDark-hover-x: rgba(0, 0, 0, 0.2);
 // ---------[mixin]---------
 @mixin flex-centralizer {
   display: flex;
   justify-content: center;
   align-items: center;
 }
+@mixin light-link {
+  color: $colorLight;
+  &:hover {
+    color: $colorLight-hover;
+  }
+}
+@mixin dark-link {
+  color: $colorDark;
+  &:hover {
+    color: $colorDark-hover;
+  }
+}
 // -----[usable classes]-----
 .flex-centralizer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include flex-centralizer;
+}
+
+.lhu-link /*list-hover-underline*/{
+    display: inline-block;
+
+    &::after {
+        content: "" !important;
+        display: block;
+        width: 0;
+        height: 2px;
+        background: $colorAlpha;
+    }
+    &:hover {
+      &::after {
+          width: 100%;
+      }
+    }
 }

@@ -1,3 +1,23 @@
 * {
     margin: 0 !important;
+    padding: 0 !important;
+}
+a {
+    text-decoration: none;
+    transition: all 0.3s;
+    @include dark-link;
+    &:hover{
+        text-decoration: none;
+    }
+    &::after {
+        transition: all 0.3s;
+    }
+}
+ul {
+    list-style: none !important;
+}
+.bg{
+    &-primary {
+        background-color: $colorAlpha !important;
+    }
 }
