@@ -1,16 +1,13 @@
 * {
     margin: 0 !important;
     padding: 0 !important;
+    transition: all 0.3s;
 }
 a {
     text-decoration: none;
-    transition: all 0.3s;
     @include dark-link;
     &:hover{
         text-decoration: none;
-    }
-    &::after {
-        transition: all 0.3s;
     }
 }
 ul {

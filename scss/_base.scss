@@ -4,7 +4,8 @@ $colorAlpha-hover: #74a32f;
 $colorAlpha-darker: #438e44;
 
 $colorLight: azure;
-$colorLight-hover: rgba(240, 255, 255, 0.6);
+$colorLight-hover: rgba(240, 255, 255, 0.7);
+
 $colorDark: Black;
 $colorDark-hover-s: rgba(0, 0, 0, 0.8);
 $colorDark-hover: rgba(0, 0, 0, 0.5);
@@ -24,7 +25,7 @@ $colorDark-hover-x: rgba(0, 0, 0, 0.2);
 @mixin dark-link {
   color: $colorDark;
   &:hover {
-    color: $colorDark-hover;
+    color: $colorDark-hover-s;
   }
 }
 // -----[usable classes]-----
@@ -32,7 +33,7 @@ $colorDark-hover-x: rgba(0, 0, 0, 0.2);
   @include flex-centralizer;
 }
 
-.lhu-link /*list-hover-underline*/{
+.lhu-link /*list hover underline*/{
     display: inline-block;
 
     &::after {
@@ -45,6 +46,7 @@ $colorDark-hover-x: rgba(0, 0, 0, 0.2);
     &:hover {
       &::after {
           width: 100%;
+          transition: width 0.3s;
       }
     }
 }
