@@ -15,7 +15,6 @@
   display: flex;
   justify-content: end;
   align-items: center;
-  flex-direction: column;
 }
 
 .lhu-link {
@@ -41,6 +40,7 @@
   margin: 0 !important;
   padding: 0 !important;
   transition: all 0.3s;
+  font-family: sans-serif;
 }
 
 a {
@@ -56,6 +56,7 @@ a:hover {
 
 ul {
   list-style: none !important;
+  display: block;
 }
 
 button {
@@ -128,15 +129,12 @@ nav img {
 }
 .header-slider-item-1 {
   background-image: url(../img/slider/slider-1.jpg);
-  opacity: 0;
 }
 .header-slider-item-2 {
   background-image: url(../img/slider/slider-2.jpg);
-  opacity: 0;
 }
 .header-slider-item-3 {
   background-image: url(../img/slider/slider-3.jpg);
-  opacity: 0;
 }
 .header-slider-radio {
   position: absolute;
@@ -149,6 +147,23 @@ nav img {
   border-radius: 100px;
 }
 
-.active {
-  opacity: 1;
+.threebox-box:hover .threebox-image-content {
+  transform: scale(1.2);
+}
+.threebox-image {
+  overflow: hidden;
+  width: 100%;
+}
+.threebox-image-content {
+  -o-object-fit: contain;
+     object-fit: contain;
+  width: 100%;
+  height: inherit;
+}
+.threebox-content-event {
+  font-size: 0.8rem;
+}
+.threebox-content-links {
+  border-width: 2px !important;
+  border-color: #83b735 !important;
 }/*# sourceMappingURL=main.css.map */

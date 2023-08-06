@@ -11,40 +11,35 @@ $colorDark-hover-s: rgba(0, 0, 0, 0.8);
 $colorDark-hover: rgba(0, 0, 0, 0.5);
 $colorDark-hover-x: rgba(0, 0, 0, 0.2);
 // ---------[mixin]---------
-@mixin flex-centralizer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 @mixin light-link {
-  color: $colorLight;
-  &:hover {
-    color: $colorLight-hover;
-  }
+    color: $colorLight;
+    &:hover {
+        color: $colorLight-hover;
+    }
 }
 @mixin dark-link {
-  color: $colorDark;
-  &:hover {
-    color: $colorDark-hover-s;
-  }
+    color: $colorDark;
+    &:hover {
+        color: $colorDark-hover-s;
+    }
 }
 // -----[usable classes]-----
 .flex-centralizer {
-  @include flex-centralizer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .flex-starter {
     display: flex;
-  justify-content: start;
-  align-items: center;
+    justify-content: start;
+    align-items: center;
 }
 .flex-ender {
     display: flex;
-  justify-content: end;
-  align-items: center;
-  flex-direction: column;
+    justify-content: end;
+    align-items: center;
 }
-
-.lhu-link /*list hover underline*/{
+.lhu-link /*list hover underline*/ {
     display: inline-block;
 
     &::after {
@@ -55,14 +50,14 @@ $colorDark-hover-x: rgba(0, 0, 0, 0.2);
         background: $colorAlpha;
     }
     &:hover {
-      &::after {
-          width: 100%;
-          transition: width 0.3s;
-      }
+        &::after {
+            width: 100%;
+            transition: width 0.3s;
+        }
     }
 }
 // ----------[font]----------
-@import url('https://fonts.cdnfonts.com/css/happy-memories');
+@import url("https://fonts.cdnfonts.com/css/happy-memories");
 .font-happy {
-  font-family: 'Happy Memories', sans-serif !important;
+    font-family: "Happy Memories", sans-serif !important;
 }

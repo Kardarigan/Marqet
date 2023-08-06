@@ -53,15 +53,15 @@ nav {
             right: 0;
             &-1 {
                 background-image: url(../img/slider/slider-1.jpg);
-                opacity: 0;
+                
             }
             &-2 {
                 background-image: url(../img/slider/slider-2.jpg);
-                opacity: 0;
+                
             }
             &-3 {
                 background-image: url(../img/slider/slider-3.jpg);
-                opacity: 0;
+                
             }
         }
         &-radio {
@@ -76,10 +76,39 @@ nav {
         }
         button {
             border-radius: 100px;
-
         }
     }
 }
-.active {
-    opacity: 1;
+// -----------------------[threeboxes]---------------------------
+.threebox {
+    &-box {
+        &:hover .threebox-image-content {
+            transform: scale(1.2);
+        }
+    }
+    &-image {
+        overflow: hidden;
+        width: 100%;
+
+        &-content {
+            object-fit: contain;
+            width: 100%;
+            height: inherit;
+        }
+        
+    }
+    &-content {
+        
+        &-event {
+            font-size: 0.8rem;
+        }
+        &-title {
+    
+        }
+        &-links {
+            border-width: 2px !important;
+            border-color: $colorAlpha !important;
+        }
+    }
 }
+// -----------------------[threeboxes]---------------------------

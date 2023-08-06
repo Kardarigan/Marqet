@@ -8,11 +8,10 @@ let startX = 0;
 
 function showSlide(index) {
     sliderItems.forEach(item => {
-        item.style.transition = "opacity 1s";
-        item.style.opacity = 0;
+        item.style.display = "none";
     });
 
-    sliderItems[index].style.opacity = 1;
+    sliderItems[index].style.display = "flex";
     radioInputs[index].checked = true;
 }
 
@@ -23,7 +22,7 @@ function rotateSlider() {
 
 function startSlider() {
     showSlide(currentIndex);
-    intervalId = setInterval(rotateSlider, 4000);
+    intervalId = setInterval(rotateSlider, 4000000);
     radioInputs[currentIndex].checked = true;
 }
 
