@@ -6,15 +6,26 @@
 a {
     text-decoration: none;
     @include dark-link;
-    &:hover{
+    &:hover {
         text-decoration: none;
     }
 }
 ul {
     list-style: none !important;
 }
-.bg{
+button {
+    background-color: $colorAlpha !important;
+    padding: 10px 25px !important;
+    border: 0 !important;
+    color: $colorLight !important;
+}
+.bg {
     &-primary {
         background-color: $colorAlpha !important;
+    }
+}
+.text {
+    &-primary {
+        color: $colorAlpha !important;
     }
 }

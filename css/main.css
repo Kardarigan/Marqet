@@ -1,7 +1,21 @@
+@import url("https://fonts.cdnfonts.com/css/happy-memories");
 .flex-centralizer {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.flex-starter {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
+.flex-ender {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  flex-direction: column;
 }
 
 .lhu-link {
@@ -17,6 +31,10 @@
 .lhu-link:hover::after {
   width: 100%;
   transition: width 0.3s;
+}
+
+.font-happy {
+  font-family: "Happy Memories", sans-serif !important;
 }
 
 * {
@@ -40,8 +58,19 @@ ul {
   list-style: none !important;
 }
 
+button {
+  background-color: #83b735 !important;
+  padding: 10px 25px !important;
+  border: 0 !important;
+  color: azure !important;
+}
+
 .bg-primary {
   background-color: #83b735 !important;
+}
+
+.text-primary {
+  color: #83b735 !important;
 }
 
 nav:first-child * {
@@ -55,6 +84,9 @@ nav:first-child a {
 }
 nav:first-child a:hover {
   color: rgba(240, 255, 255, 0.7);
+}
+nav:first-child a::after {
+  transition: width 0.3s;
 }
 nav img {
   width: 60%;
@@ -79,7 +111,13 @@ nav img {
   display: block;
 }
 .header-slider {
+  color: azure;
   height: inherit;
+}
+.header-slider * {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
 }
 .header-slider-item {
   background-size: cover;
@@ -105,7 +143,12 @@ nav img {
   z-index: 1000;
   left: 50%;
   bottom: 5%;
+  accent-color: rgb(255, 255, 255);
 }
+.header-slider button {
+  border-radius: 100px;
+}
+
 .active {
   opacity: 1;
 }/*# sourceMappingURL=main.css.map */

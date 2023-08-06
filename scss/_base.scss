@@ -32,6 +32,17 @@ $colorDark-hover-x: rgba(0, 0, 0, 0.2);
 .flex-centralizer {
   @include flex-centralizer;
 }
+.flex-starter {
+    display: flex;
+  justify-content: start;
+  align-items: center;
+}
+.flex-ender {
+    display: flex;
+  justify-content: end;
+  align-items: center;
+  flex-direction: column;
+}
 
 .lhu-link /*list hover underline*/{
     display: inline-block;
@@ -49,4 +60,9 @@ $colorDark-hover-x: rgba(0, 0, 0, 0.2);
           transition: width 0.3s;
       }
     }
+}
+// ----------[font]----------
+@import url('https://fonts.cdnfonts.com/css/happy-memories');
+.font-happy {
+  font-family: 'Happy Memories', sans-serif !important;
 }
