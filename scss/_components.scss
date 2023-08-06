@@ -81,7 +81,9 @@ nav {
 }
 // -----------------------[threeboxes]---------------------------
 .threebox {
+    user-select: none;
     &-box {
+        width: 87%;
         &:hover .threebox-image-content {
             transform: scale(1.2);
         }
@@ -89,25 +91,28 @@ nav {
     &-image {
         overflow: hidden;
         width: 100%;
-
+        height: 80%;
         &-content {
-            object-fit: contain;
-            width: 100%;
-            height: inherit;
+            object-fit: cover;
         }
         
     }
     &-content {
-        
+        * {
+            user-select: none;
+        }
         &-event {
+            color: $colorAlpha;
             font-size: 0.8rem;
         }
         &-title {
-    
+            font-weight: 700;    
         }
         &-links {
             border-width: 2px !important;
             border-color: $colorAlpha !important;
+            font-weight: 600;
+            font-size: 0.8rem;
         }
     }
 }

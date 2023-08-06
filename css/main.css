@@ -147,23 +147,41 @@ nav img {
   border-radius: 100px;
 }
 
+.threebox {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+.threebox-box {
+  width: 87%;
+}
 .threebox-box:hover .threebox-image-content {
   transform: scale(1.2);
 }
 .threebox-image {
   overflow: hidden;
   width: 100%;
+  height: 80%;
 }
 .threebox-image-content {
-  -o-object-fit: contain;
-     object-fit: contain;
-  width: 100%;
-  height: inherit;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.threebox-content * {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
 }
 .threebox-content-event {
+  color: #83b735;
   font-size: 0.8rem;
+}
+.threebox-content-title {
+  font-weight: 700;
 }
 .threebox-content-links {
   border-width: 2px !important;
   border-color: #83b735 !important;
+  font-weight: 600;
+  font-size: 0.8rem;
 }/*# sourceMappingURL=main.css.map */
