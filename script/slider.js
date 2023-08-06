@@ -3,13 +3,16 @@ const radioInputs = document.querySelectorAll(".header-slider-radio-item");
 
 let currentIndex = 0;
 let intervalId;
+let isDragging = false;
+let startX = 0;
 
 function showSlide(index) {
     sliderItems.forEach(item => {
-        $(item).css("opacity", 0);
+        item.style.transition = "opacity 1s";
+        item.style.opacity = 0;
     });
 
-    $(sliderItems[index]).css("opacity", 1);
+    sliderItems[index].style.opacity = 1;
     radioInputs[index].checked = true;
 }
 
@@ -20,7 +23,8 @@ function rotateSlider() {
 
 function startSlider() {
     showSlide(currentIndex);
-    intervalId = setInterval(rotateSlider, 5000);
+    intervalId = setInterval(rotateSlider, 4000);
+    radioInputs[currentIndex].checked = true;
 }
 
 function stopSlider() {
@@ -33,6 +37,33 @@ function activateSlider(index) {
     showSlide(index);
     startSlider();
 }
+
+function handleMouseDown(event) {
+    isDragging = true;
+    startX = event.clientX;
+}
+
+function handleMouseMove(event) {
+    if (!isDragging) return;
+    const deltaX = event.clientX - startX;
+    if (deltaX > 50) {
+        activateSlider((currentIndex - 1 + sliderItems.length) % sliderItems.length);
+        isDragging = false;
+    } else if (deltaX < -50) {
+        activateSlider((currentIndex + 1) % sliderItems.length);
+        isDragging = false;
+    }
+}
+
+function handleMouseUp() {
+    isDragging = false;
+}
+
+sliderItems.forEach((item, index) => {
+    item.addEventListener("mousedown", handleMouseDown);
+    item.addEventListener("mousemove", handleMouseMove);
+    item.addEventListener("mouseup", handleMouseUp);
+});
 
 radioInputs.forEach((input, index) => {
     input.addEventListener("change", function () {

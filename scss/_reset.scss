@@ -18,6 +18,9 @@ button {
     padding: 10px 25px !important;
     border: 0 !important;
     color: $colorLight !important;
+    &:hover{
+        background-color: $colorAlpha-hover !important;
+    }
 }
 .bg {
     &-primary {

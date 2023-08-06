@@ -9,9 +9,6 @@ nav {
         }
         a {
             @include light-link;
-            &::after{
-                transition: width 0.3s;
-            }
         }
     }
     img {
@@ -69,7 +66,7 @@ nav {
         }
         &-radio {
             position: absolute;
-            z-index: 1000;
+            z-index: 99;
             left: 50%;
             bottom: 5%;
             accent-color: rgb(255, 255, 255);
@@ -79,10 +76,10 @@ nav {
         }
         button {
             border-radius: 100px;
+
         }
     }
 }
-
 .active {
     opacity: 1;
 }

@@ -64,6 +64,9 @@ button {
   border: 0 !important;
   color: azure !important;
 }
+button:hover {
+  background-color: rgba(131, 183, 53, 0) !important;
+}
 
 .bg-primary {
   background-color: #83b735 !important;
@@ -84,9 +87,6 @@ nav:first-child a {
 }
 nav:first-child a:hover {
   color: rgba(240, 255, 255, 0.7);
-}
-nav:first-child a::after {
-  transition: width 0.3s;
 }
 nav img {
   width: 60%;
@@ -140,7 +140,7 @@ nav img {
 }
 .header-slider-radio {
   position: absolute;
-  z-index: 1000;
+  z-index: 99;
   left: 50%;
   bottom: 5%;
   accent-color: rgb(255, 255, 255);
