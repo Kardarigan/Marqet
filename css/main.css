@@ -17,6 +17,11 @@
   align-items: center;
 }
 
+.flex-space {
+  display: flex;
+  justify-content: space-between;
+}
+
 .lhu-link {
   display: inline-block;
 }
@@ -67,6 +72,10 @@ button {
 }
 button:hover {
   background-color: rgba(131, 183, 53, 0) !important;
+}
+
+strong {
+  color: #83b735;
 }
 
 .bg-primary {
@@ -152,11 +161,11 @@ nav img {
      -moz-user-select: none;
           user-select: none;
 }
-.threebox-box {
-  width: 87%;
-}
-.threebox-box:hover .threebox-image-content {
+.threebox:hover .threebox-image-content {
   transform: scale(1.2);
+}
+.threebox-box {
+  width: 86%;
 }
 .threebox-image {
   overflow: hidden;
@@ -184,4 +193,45 @@ nav img {
   border-color: #83b735 !important;
   font-weight: 600;
   font-size: 0.8rem;
+}
+
+.featured {
+  height: 440px;
+}
+.featured * {
+  transition: top 0.5s ease-in-out !important;
+}
+.featured-banner {
+  overflow: hidden;
+  width: 100%;
+}
+.featured-banner-image {
+  background-image: url("../img/fashion-main/fashion-default-product-5-290x330.jpg");
+  width: 100%;
+  height: 78%;
+  transition: all 0.5s ease-in !important;
+}
+.featured-banner-image:hover {
+  background-image: url("../img/fashion-main/fashion-default-product-5-2-290x330.jpg");
+  transform: scale(1.1);
+}
+.featured-title * {
+  display: block;
+  font-size: small;
+}
+.featured-title-size-item {
+  display: inline;
+}
+.featured-title-price {
+  height: 5%;
+  width: 55%;
+  position: relative;
+  overflow: hidden;
+}
+.featured-title-price-wrapper {
+  position: absolute;
+}
+
+.featured:hover .featured-title-price-wrapper {
+  top: -100%;
 }/*# sourceMappingURL=main.css.map */

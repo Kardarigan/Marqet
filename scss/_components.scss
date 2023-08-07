@@ -44,7 +44,7 @@ nav {
         * {
             user-select: none;
         }
-    
+
         &-item {
             background-size: cover;
             position: absolute;
@@ -53,15 +53,12 @@ nav {
             right: 0;
             &-1 {
                 background-image: url(../img/slider/slider-1.jpg);
-                
             }
             &-2 {
                 background-image: url(../img/slider/slider-2.jpg);
-                
             }
             &-3 {
                 background-image: url(../img/slider/slider-3.jpg);
-                
             }
         }
         &-radio {
@@ -82,11 +79,12 @@ nav {
 // -----------------------[threeboxes]---------------------------
 .threebox {
     user-select: none;
+
+    &:hover .threebox-image-content {
+        transform: scale(1.2);
+    }
     &-box {
-        width: 87%;
-        &:hover .threebox-image-content {
-            transform: scale(1.2);
-        }
+        width: 86%;
     }
     &-image {
         overflow: hidden;
@@ -95,7 +93,6 @@ nav {
         &-content {
             object-fit: cover;
         }
-        
     }
     &-content {
         * {
@@ -106,7 +103,7 @@ nav {
             font-size: 0.8rem;
         }
         &-title {
-            font-weight: 700;    
+            font-weight: 700;
         }
         &-links {
             border-width: 2px !important;
@@ -117,3 +114,57 @@ nav {
     }
 }
 // -----------------------[threeboxes]---------------------------
+// ------------------------[featured]----------------------------
+.featured {
+    height: 440px;
+    * {
+        transition: top 0.5s ease-in-out !important;
+    }
+    &-banner {
+        overflow: hidden;
+         width: 100%;
+        &-image {
+            background-image: url("../img/fashion-main/fashion-default-product-5-290x330.jpg");
+            width: 100%;
+            height: 78%;
+            transition: all 0.5s ease-in !important;
+
+            &:hover {
+                background-image: url("../img/fashion-main/fashion-default-product-5-2-290x330.jpg");
+                transform: scale(1.1);
+            }
+        }
+    }
+    &-title {
+        * {
+            display: block;
+            font-size: small;
+        }
+        &-title {
+        }
+        &-categorie {
+        }
+        &-size {
+            &-item {
+                display: inline;
+            }
+        }
+        &-price {
+            height: 5%;
+            width: 55%;
+            position: relative;
+            overflow: hidden;
+            &-price {
+            }
+            &-link {
+            }
+            &-wrapper {
+                position: absolute;
+            }
+        }
+    }
+}
+.featured:hover .featured-title-price-wrapper{
+    top: -100%;
+}
+// ------------------------[featured]----------------------------

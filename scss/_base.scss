@@ -10,6 +10,8 @@ $colorDark: Black;
 $colorDark-hover-s: rgba(0, 0, 0, 0.8);
 $colorDark-hover: rgba(0, 0, 0, 0.5);
 $colorDark-hover-x: rgba(0, 0, 0, 0.2);
+
+
 // ---------[mixin]---------
 @mixin light-link {
     color: $colorLight;
@@ -38,6 +40,10 @@ $colorDark-hover-x: rgba(0, 0, 0, 0.2);
     display: flex;
     justify-content: end;
     align-items: center;
+}
+.flex-space {
+    display: flex;
+    justify-content: space-between;
 }
 .lhu-link /*list hover underline*/ {
     display: inline-block;

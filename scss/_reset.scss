@@ -25,6 +25,9 @@ button {
         background-color: $colorAlpha-hover !important;
     }
 }
+strong {
+    color: $colorAlpha;
+}
 .bg {
     &-primary {
         background-color: $colorAlpha !important;
