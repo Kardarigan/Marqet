@@ -5,12 +5,13 @@ $colorAlpha-darker: #438e44;
 
 $colorLight: azure;
 $colorLight-hover: rgba(240, 255, 255, 0.7);
+$colorLight-hover-x: rgba(240, 255, 255, 0.2);
+
 
 $colorDark: Black;
 $colorDark-hover-s: rgba(0, 0, 0, 0.8);
 $colorDark-hover: rgba(0, 0, 0, 0.5);
 $colorDark-hover-x: rgba(0, 0, 0, 0.2);
-
 
 // ---------[mixin]---------
 @mixin light-link {
@@ -73,4 +74,32 @@ $colorDark-hover-x: rgba(0, 0, 0, 0.2);
 .font-happy {
     font-family: "Happy Memories", sans-serif !important;
 }
-@import url('https://fonts.cdnfonts.com/css/iqos');
+@import url("https://fonts.cdnfonts.com/css/iqos");
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+/* ......................................browser........................................... */
+::-webkit-scrollbar {
+    width: 7px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: $colorLight-hover-x;
+}
+
+::-webkit-scrollbar-thumb {
+    background: $colorDark-hover;
+    border-radius: 10px;
+}
+
+// ::-webkit-scrollbar-thumb:hover {
+//     background: ;
+// }
+/* ......................................classes........................................... */
+.non-st /*select text*/ {
+    & * {
+        user-select: none !important;
+    }
+
+    &-single /*none select*/ {
+        user-select: none !important;
+    }
+}

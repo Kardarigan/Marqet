@@ -231,3 +231,19 @@ nav {
     }
 }
 // -----------------------[categories]---------------------------
+.reviews {
+    background-image: url(../img/backgrounds/bg-reviews.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 90vh;
+    color: $colorLight;
+    text-align: center;
+
+    h4 {
+        font-weight: 700;
+        font-size: 2.5rem;
+    }
+    &-slider {
+
+    }
+}
