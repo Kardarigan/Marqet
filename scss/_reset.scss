@@ -3,7 +3,13 @@
     margin: 0 !important;
     padding: 0 !important;
     transition: all 0.3s;
-    font-family: sans-serif;
+    transition: display 1s linear;
+    transition: margin 1s linear;
+    font-family: 'IQOS', sans-serif;
+}
+
+body {
+    background-color: $colorLight;
 }
 a {
     text-decoration: none;

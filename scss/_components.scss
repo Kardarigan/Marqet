@@ -122,16 +122,39 @@ nav {
     }
     &-banner {
         overflow: hidden;
-         width: 100%;
+        width: 100%;
+        position: relative;
+
         &-image {
             background-image: url("../img/fashion-main/fashion-default-product-5-290x330.jpg");
-            width: 100%;
-            height: 78%;
+            background-repeat: no-repeat;
+            background-position: center;
+            height: 70%;
             transition: all 0.5s ease-in !important;
+
+            &:hover ~ .featured-banner-panel {
+                right: 5%;
+                opacity: 1;
+                transition: all 0.5s ease-in-out !important;
+            }
 
             &:hover {
                 background-image: url("../img/fashion-main/fashion-default-product-5-2-290x330.jpg");
+                background-repeat: no-repeat;
                 transform: scale(1.1);
+            }
+        }
+        &-panel {
+            position: absolute;
+            top: 3%;
+            right: -12%;
+            padding: 10px !important;
+            transition: all 1s ease-in-out;
+            background-color: $colorLight;
+            box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+            opacity: 0;
+            &:hover {
+                right: 5%;
             }
         }
     }
@@ -163,8 +186,48 @@ nav {
             }
         }
     }
-}
-.featured:hover .featured-title-price-wrapper{
-    top: -100%;
+    &:hover .featured-title-price-wrapper {
+        top: -100%;
+    }
 }
 // ------------------------[featured]----------------------------
+// -----------------------[categories]---------------------------
+.categories {
+    position: relative;
+    height: 400px;
+
+    &-banner {
+        background-image: url("../img/categories/cat-fashing-dress-4.jpg");
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 100%;
+        height: inherit;
+    }
+    &-title {
+        position: absolute;
+        @include abelith-link($colorLight);
+        height: inherit;
+        width: 96%;
+        background-color: transparent;
+        
+        &-title {
+
+        }
+        &-stock {
+            margin-top: 50px !important;
+            display: none;
+            transition: all 0.3s !important;
+
+        }
+        &:hover {
+            background-color: $colorDark-hover;
+
+            .categories-title-stock{
+                display: block !important;
+                margin-top: 10px !important;
+
+            }
+        }
+    }
+}
+// -----------------------[categories]---------------------------

@@ -25,6 +25,12 @@ $colorDark-hover-x: rgba(0, 0, 0, 0.2);
         color: $colorDark-hover-s;
     }
 }
+@mixin abelith-link($color: $colorDark) {
+    color: $color;
+    &:hover {
+        color: $color;
+    }
+}
 // -----[usable classes]-----
 .flex-centralizer {
     display: flex;
@@ -58,7 +64,7 @@ $colorDark-hover-x: rgba(0, 0, 0, 0.2);
     &:hover {
         &::after {
             width: 100%;
-            transition: width 0.3s;
+            transition: width 0.3s ease-in-out;
         }
     }
 }
@@ -67,3 +73,4 @@ $colorDark-hover-x: rgba(0, 0, 0, 0.2);
 .font-happy {
     font-family: "Happy Memories", sans-serif !important;
 }
+@import url('https://fonts.cdnfonts.com/css/iqos');
