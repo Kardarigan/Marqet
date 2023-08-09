@@ -1,6 +1,6 @@
 // ---------[vars]---------
 $colorAlpha: #83b735;
-$colorAlpha-hover: #83b73500;
+$colorAlpha-hover: #83b735d2;
 $colorAlpha-darker: #438e44;
 
 $colorLight: azure;
@@ -12,6 +12,16 @@ $colorDark: Black;
 $colorDark-hover-s: rgba(0, 0, 0, 0.8);
 $colorDark-hover: rgba(0, 0, 0, 0.5);
 $colorDark-hover-x: rgba(0, 0, 0, 0.2);
+$colorDark-hover-xx: rgba(0, 0, 0, 0.1);
+
+
+$social-btn-colors: (
+  "facebook": #3b5999,
+  "twitter": #55acee,
+  "pintrest": #E60023,
+  "linkedin": #0077b5,
+  "telegram": #0088cc,
+);
 
 // ---------[mixin]---------
 @mixin light-link {

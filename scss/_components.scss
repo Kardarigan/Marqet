@@ -245,7 +245,7 @@ nav {
     }
 }
 // -------------------------[reviews]----------------------------
-// -----------------------[newscard]---------------------------
+// ------------------------[newscard]----------------------------
 .news-card {
     height: 320px;
     &-banner {
@@ -308,7 +308,7 @@ nav {
                 span {
                     opacity: 0;
                 }
-                &:hover span{
+                &:hover span {
                     opacity: 1;
                 }
             }
@@ -316,11 +316,26 @@ nav {
     }
     &-author {
         a {
-            color: $colorDark-hover-s;
-            &:hover{
+            color: $colorDark-hover-s !important;
+            &:hover {
                 color: $colorDark;
             }
         }
     }
 }
-// -----------------------[newscard]---------------------------
+// ------------------------[newscard]----------------------------
+// ----------------------[social button]-------------------------
+.social-btn {
+    border-radius: 50%;
+    border: 1px solid $colorDark-hover-x;
+    @each $name, $color in $social-btn-colors {
+        &-#{$name}:hover {
+            background-color: $color;
+            border-color: $color;
+            * {
+                color: $colorLight;
+            }
+        }
+    }
+}
+// ----------------------[social button]-------------------------
