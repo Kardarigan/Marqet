@@ -209,28 +209,26 @@ nav {
         height: inherit;
         width: 96%;
         background-color: transparent;
-        
-        &-title {
 
+        &-title {
         }
         &-stock {
             margin-top: 50px !important;
             display: none;
             transition: all 0.3s !important;
-
         }
         &:hover {
             background-color: $colorDark-hover;
 
-            .categories-title-stock{
+            .categories-title-stock {
                 display: block !important;
                 margin-top: 10px !important;
-
             }
         }
     }
 }
 // -----------------------[categories]---------------------------
+// -------------------------[reviews]----------------------------
 .reviews {
     background-image: url(../img/backgrounds/bg-reviews.jpg);
     background-size: cover;
@@ -244,6 +242,85 @@ nav {
         font-size: 2.5rem;
     }
     &-slider {
-
     }
 }
+// -------------------------[reviews]----------------------------
+// -----------------------[newscard]---------------------------
+.news-card {
+    height: 320px;
+    &-banner {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        &-img {
+            background-image: url(../img/news/blog-fashing-15.jpg);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+        }
+        &-mask {
+            background-color: $colorDark-hover;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            opacity: 0;
+            span {
+                position: relative;
+                font-size: 5rem;
+                color: $colorLight-hover;
+                left: 40%;
+                top: 20%;
+            }
+        }
+        &-date {
+            position: absolute;
+            background-color: $colorLight;
+            text-align: center;
+            font-size: 24px;
+            span {
+                font-weight: 600;
+                font-size: 12px;
+            }
+        }
+        &:hover {
+            .news-card-banner-mask {
+                opacity: 1;
+            }
+            .news-card-banner-img {
+                transform: scale(1.05);
+            }
+        }
+    }
+    &-content {
+        text-align: center;
+        a {
+            &:first-child {
+                background-color: $colorAlpha;
+                padding: 4px 8px !important;
+                color: $colorLight;
+            }
+            &:last-child {
+                color: $colorAlpha;
+                span {
+                    opacity: 0;
+                }
+                &:hover span{
+                    opacity: 1;
+                }
+            }
+        }
+    }
+    &-author {
+        a {
+            color: $colorDark-hover-s;
+            &:hover{
+                color: $colorDark;
+            }
+        }
+    }
+}
+// -----------------------[newscard]---------------------------
