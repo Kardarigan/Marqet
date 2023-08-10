@@ -327,6 +327,7 @@ nav {
 // ----------------------[social button]-------------------------
 .social-btn {
     border-radius: 50%;
+    color: $colorDark-hover-xx;
     border: 1px solid $colorDark-hover-x;
     @each $name, $color in $social-btn-colors {
         &-#{$name}:hover {
@@ -339,3 +340,17 @@ nav {
     }
 }
 // ----------------------[social button]-------------------------
+// -----------------------[newsletter]---------------------------
+.newsletter-form {
+    height: 44px;
+    &-input {
+        border: 1px solid $colorDark-hover-x;
+        border-radius: 0;
+        height: 100%;
+        &:focus {
+            border: 1px solid $colorDark-hover-x !important;
+            border-radius: 0 !important;
+        }
+    }
+}
+// -----------------------[newsletter]---------------------------

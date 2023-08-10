@@ -39,6 +39,16 @@
   transition: width 0.3s ease-in-out;
 }
 
+.sides-lines {
+  text-align: center;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  line-height: 0.1em;
+}
+.sides-lines span {
+  background: azure;
+  padding: 0 10px !important;
+}
+
 .font-happy {
   font-family: "Happy Memories", sans-serif !important;
 }
@@ -438,6 +448,7 @@ nav img {
 
 .social-btn {
   border-radius: 50%;
+  color: rgba(0, 0, 0, 0.1);
   border: 1px solid rgba(0, 0, 0, 0.2);
 }
 .social-btn-facebook:hover {
@@ -455,8 +466,8 @@ nav img {
   color: azure;
 }
 .social-btn-pintrest:hover {
-  background-color: #E60023;
-  border-color: #E60023;
+  background-color: #e60023;
+  border-color: #e60023;
 }
 .social-btn-pintrest:hover * {
   color: azure;
@@ -474,4 +485,17 @@ nav img {
 }
 .social-btn-telegram:hover * {
   color: azure;
+}
+
+.newsletter-form {
+  height: 44px;
+}
+.newsletter-form-input {
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 0;
+  height: 100%;
+}
+.newsletter-form-input:focus {
+  border: 1px solid rgba(0, 0, 0, 0.2) !important;
+  border-radius: 0 !important;
 }/*# sourceMappingURL=main.css.map */
