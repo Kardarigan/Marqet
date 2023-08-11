@@ -79,6 +79,31 @@
           user-select: none !important;
 }
 
+.text-size-sssz * {
+  font-size: 0.1rem !important;
+}
+.text-size-sss * {
+  font-size: 0.25rem !important;
+}
+.text-size-ss * {
+  font-size: 0.5rem !important;
+}
+.text-size-s *, footer p *,
+footer i *,
+footer li a *,
+footer span * {
+  font-size: 0.75rem !important;
+}
+.text-size-x * {
+  font-size: 1.25rem !important;
+}
+.text-size-xx * {
+  font-size: 1.5rem !important;
+}
+.text-size-xxx * {
+  font-size: 1.75rem !important;
+}
+
 * {
   margin: 0 !important;
   padding: 0 !important;
@@ -94,7 +119,7 @@ a {
   text-decoration: none;
   color: Black;
   font-size: 0.75rem;
-  font-weight: 700;
+  font-weight: 600;
 }
 a:hover {
   color: rgba(0, 0, 0, 0.8);
@@ -125,6 +150,9 @@ strong {
 .bg-primary {
   background-color: #83b735 !important;
 }
+.bg-dark {
+  background-color: Black !important;
+}
 
 .text-primary {
   color: #83b735 !important;
@@ -133,29 +161,32 @@ strong {
 .border-black {
   border-color: rgba(0, 0, 0, 0.1) !important;
 }
+.border-light {
+  border-color: rgba(240, 255, 255, 0.2) !important;
+}
 
 h1 {
-  font-weight: 700 !important;
+  font-weight: 600 !important;
 }
 
 h2 {
-  font-weight: 700 !important;
+  font-weight: 600 !important;
 }
 
 h3 {
-  font-weight: 700 !important;
+  font-weight: 600 !important;
 }
 
 h4 {
-  font-weight: 700 !important;
+  font-weight: 600 !important;
 }
 
 h5 {
-  font-weight: 700 !important;
+  font-weight: 600 !important;
 }
 
 h6 {
-  font-weight: 700 !important;
+  font-weight: 600 !important;
 }
 
 nav:first-child * {
@@ -450,6 +481,8 @@ nav img {
   border-radius: 50%;
   color: rgba(0, 0, 0, 0.1);
   border: 1px solid rgba(0, 0, 0, 0.2);
+  width: 30px;
+  height: 30px;
 }
 .social-btn-facebook:hover {
   background-color: #3b5999;
@@ -494,8 +527,32 @@ nav img {
   border: 1px solid rgba(0, 0, 0, 0.2);
   border-radius: 0;
   height: 100%;
+  background-color: transparent;
 }
 .newsletter-form-input:focus {
   border: 1px solid rgba(0, 0, 0, 0.2) !important;
   border-radius: 0 !important;
+}
+
+footer * {
+  color: azure;
+}
+footer p,
+footer i,
+footer li a,
+footer span {
+  color: rgba(240, 255, 255, 0.7) !important;
+}
+footer li a:hover {
+  color: azure !important;
+}
+footer a {
+  font-weight: 500;
+  color: azure;
+}
+footer a:hover {
+  color: rgba(240, 255, 255, 0.7);
+}
+footer .footer-logo * {
+  fill: azure;
 }/*# sourceMappingURL=main.css.map */

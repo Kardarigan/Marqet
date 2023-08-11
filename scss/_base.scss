@@ -21,6 +21,16 @@ $social-btn-colors: (
     "telegram": #0088cc
 );
 
+$text-sizes: (
+    "sssz": 0.1rem,
+
+    "sss": 0.25rem,
+    "ss": 0.5rem,
+    "s": 0.75rem,
+    "x": 1.25rem,
+    "xx": 1.5rem,
+    "xxx": 1.75rem
+);
 // ---------[mixin]---------
 @mixin light-link {
     color: $colorLight;
@@ -32,6 +42,12 @@ $social-btn-colors: (
     color: $colorDark;
     &:hover {
         color: $colorDark-hover-s;
+    }
+}
+@mixin dark-link-reverb {
+    color: $colorDark-hover-s;
+    &:hover {
+        color: $colorDark;
     }
 }
 @mixin abelith-link($color: $colorDark) {
@@ -78,12 +94,12 @@ $social-btn-colors: (
     }
 }
 .sides-lines {
-   text-align: center; 
-   border-bottom: 1px solid $colorDark-hover-xx;
-   line-height: 0.1em;
-    span { 
+    text-align: center;
+    border-bottom: 1px solid $colorDark-hover-xx;
+    line-height: 0.1em;
+    span {
         background: $colorLight;
-        padding: 0 10px !important
+        padding: 0 10px !important;
     }
 }
 // ----------[font]----------
@@ -119,4 +135,12 @@ $social-btn-colors: (
     &-single /*none select*/ {
         user-select: none !important;
     }
+}
+.text-size {
+    @each $name, $size in $text-sizes {
+        &-#{$name} *{
+            font-size: $size !important;
+        }
+    }
+    
 }

@@ -13,7 +13,7 @@ a {
     text-decoration: none;
     @include dark-link;
     font-size: 0.75rem;
-    font-weight: 700;
+    font-weight: 600;
     &:hover {
         text-decoration: none;
     }
@@ -38,18 +38,26 @@ strong {
     &-primary {
         background-color: $colorAlpha !important;
     }
+    &-dark{
+        background-color: $colorDark !important;
+    }
 }
 .text {
     &-primary {
         color: $colorAlpha !important;
     }
 }
-.border-black {
-    border-color: $colorDark-hover-xx !important;
+.border {
+    &-black {
+        border-color: $colorDark-hover-xx !important;
+    }
+    &-light{
+        border-color: $colorLight-hover-x !important;
+    }
 }
 @for $i from 1 through 6 {
     h#{$i} {
-        font-weight: 700 !important;
+        font-weight: 600 !important;
     }
   }
   

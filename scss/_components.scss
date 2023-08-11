@@ -329,6 +329,8 @@ nav {
     border-radius: 50%;
     color: $colorDark-hover-xx;
     border: 1px solid $colorDark-hover-x;
+    width: 30px;
+    height: 30px;
     @each $name, $color in $social-btn-colors {
         &-#{$name}:hover {
             background-color: $color;
@@ -347,6 +349,7 @@ nav {
         border: 1px solid $colorDark-hover-x;
         border-radius: 0;
         height: 100%;
+        background-color: transparent;
         &:focus {
             border: 1px solid $colorDark-hover-x !important;
             border-radius: 0 !important;
@@ -354,3 +357,31 @@ nav {
     }
 }
 // -----------------------[newsletter]---------------------------
+// -------------------------[footer]-----------------------------
+footer {
+    * {
+        color: $colorLight;
+    }
+    p,
+    i,
+    li a,
+    span {
+        @extend .text-size-s;
+        color: $colorLight-hover !important;
+    }
+    li a {
+        &:hover {
+            color: $colorLight !important;
+        }
+    }
+    a {
+        font-weight: 500;
+        @include light-link;
+    }
+    .footer-logo {
+        * {
+            fill: $colorLight;
+        }
+    }
+}
+// -------------------------[footer]-----------------------------
