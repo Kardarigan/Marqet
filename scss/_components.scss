@@ -38,43 +38,89 @@ nav {
             }
         }
     }
-    &-slider {
-        color: $colorLight;
-        height: inherit;
-        * {
-            user-select: none;
+}
+.header-slider {
+    color: $colorLight;
+    height: inherit;
+    * {
+        user-select: none;
+    }
+
+    &-item {
+        background-size: cover;
+        position: absolute;
+        height: 100%;
+        width: 95%;
+        right: 0;
+        &-1 {
+            background-image: url(../img/slider/slider-1.jpg);
+        }
+        &-2 {
+            background-image: url(../img/slider/slider-2.jpg);
+        }
+        &-3 {
+            background-image: url(../img/slider/slider-3.jpg);
+        }
+    }
+    &-radio {
+        position: absolute;
+        z-index: 99;
+        left: 50%;
+        bottom: 5%;
+        accent-color: rgb(255, 255, 255);
+
+        input[type="radio"] {
+            height: 20px;
+            aspect-ratio: 1;
+            padding: 2px !important;
+            background: $colorDark-hover no-repeat content-box;
+            border-radius: 50%;
+            outline-offset: 1px;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            transition: 0.5s;
+            &:checked, &:hover {
+                border-color: $colorDark;
+                background-color: $colorLight;
+                border: 1px solid $colorLight;
+
+                padding: 5px !important;
+                background-size: 5% 5%;
+            }
+        }
+
+        @media print {
+                -webkit-appearance: auto;
+                -moz-appearance: auto;
+                appearance: auto;
+                background: none;
         }
 
         &-item {
-            background-size: cover;
-            position: absolute;
-            height: 100%;
-            width: 95%;
-            right: 0;
-            &-1 {
-                background-image: url(../img/slider/slider-1.jpg);
-            }
-            &-2 {
-                background-image: url(../img/slider/slider-2.jpg);
-            }
-            &-3 {
-                background-image: url(../img/slider/slider-3.jpg);
-            }
-        }
-        &-radio {
-            position: absolute;
-            z-index: 99;
-            left: 50%;
-            bottom: 5%;
-            accent-color: rgb(255, 255, 255);
-
-            &-item {
-            }
-        }
-        button {
-            border-radius: 100px;
         }
     }
+    button {
+        border-radius: 100px;
+    }
+}
+@keyframes fadeIn {
+    0%,
+    100% {
+        opacity: 0.5;
+    }
+    20%,
+    80% {
+        opacity: 1;
+    }
+}
+.header-slider-item {
+    display: none;
+    animation: fadeIn 2s ease-in-out infinite;
+}
+.header-slider-item.active {
+    display: flex;
+    // animation: none;
 }
 // -----------------------[threeboxes]---------------------------
 .threebox {
@@ -331,6 +377,7 @@ nav {
     border: 1px solid $colorDark-hover-x;
     width: 30px;
     height: 30px;
+
     @each $name, $color in $social-btn-colors {
         &-#{$name}:hover {
             background-color: $color;

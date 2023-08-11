@@ -223,6 +223,7 @@ nav img {
   width: 100%;
   display: block;
 }
+
 .header-slider {
   color: azure;
   height: inherit;
@@ -255,8 +256,52 @@ nav img {
   bottom: 5%;
   accent-color: rgb(255, 255, 255);
 }
+.header-slider-radio input[type=radio] {
+  height: 20px;
+  aspect-ratio: 1;
+  padding: 2px !important;
+  background: rgba(0, 0, 0, 0.5) no-repeat content-box;
+  border-radius: 50%;
+  outline-offset: 1px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  transition: 0.5s;
+}
+.header-slider-radio input[type=radio]:checked, .header-slider-radio input[type=radio]:hover {
+  border-color: Black;
+  background-color: azure;
+  border: 1px solid azure;
+  padding: 5px !important;
+  background-size: 5% 5%;
+}
+@media print {
+  .header-slider-radio {
+    -webkit-appearance: auto;
+    -moz-appearance: auto;
+    appearance: auto;
+    background: none;
+  }
+}
 .header-slider button {
   border-radius: 100px;
+}
+
+@keyframes fadeIn {
+  0%, 100% {
+    opacity: 0.5;
+  }
+  20%, 80% {
+    opacity: 1;
+  }
+}
+.header-slider-item {
+  display: none;
+  animation: fadeIn 2s ease-in-out infinite;
+}
+
+.header-slider-item.active {
+  display: flex;
 }
 
 .threebox {
