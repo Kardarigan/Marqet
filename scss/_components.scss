@@ -53,9 +53,9 @@ nav {
     &-item {
         background-size: cover;
         position: absolute;
-        height: 100%;
         width: 95%;
         right: 0;
+        height: 100% !important;
         &-1 {
             background-image: url(../img/slider/slider-1.jpg);
         }
@@ -70,6 +70,7 @@ nav {
         position: absolute;
         z-index: 99;
         left: 50%;
+        height: 10px !important;
         bottom: 5%;
         accent-color: rgb(255, 255, 255);
 
@@ -119,20 +120,20 @@ nav {
         opacity: 1;
     }
 }
-// .header-slider-item {
-//     display: none;
-//     animation: fadeIn 2s ease-in-out infinite;
-// }
-// .header-slider-item.active {
-//     display: flex;
-//     // animation: none;
-// }
+.header-slider-item {
+    display: none;
+    animation: fadeIn 2s ease-in-out infinite;
+}
+.header-slider-item.active {
+    display: flex;
+    // animation: none;
+}
 // -----------------------[threeboxes]---------------------------
 .threebox {
     user-select: none;
 
     &:hover .threebox-image-content {
-        transform: scale(1.2);
+        transform: scale(1.1);
     }
     &-box {
         width: 86%;
@@ -167,7 +168,7 @@ nav {
 // -----------------------[threeboxes]---------------------------
 // ------------------------[featured]----------------------------
 .featured {
-    height: 440px;
+    width: 100%;
     * {
         transition: top 0.5s ease-in-out !important;
     }
@@ -180,7 +181,8 @@ nav {
             background-image: url("../img/fashion-main/fashion-default-product-5-290x330.jpg");
             background-repeat: no-repeat;
             background-position: center;
-            height: 70%;
+            background-size: contain;
+            width: 100%;
             transition: all 0.5s ease-in !important;
 
             &:hover ~ .featured-banner-panel {
@@ -214,10 +216,6 @@ nav {
             display: block;
             font-size: small;
         }
-        &-title {
-        }
-        &-categorie {
-        }
         &-size {
             &-item {
                 display: inline;
@@ -228,10 +226,6 @@ nav {
             width: 55%;
             position: relative;
             overflow: hidden;
-            &-price {
-            }
-            &-link {
-            }
             &-wrapper {
                 position: absolute;
             }
@@ -239,6 +233,7 @@ nav {
     }
     &:hover .featured-title-price-wrapper {
         top: -100%;
+        transition: all 1s ease-in-out !important;
     }
 }
 // ------------------------[featured]----------------------------
@@ -301,7 +296,6 @@ nav {
         }
     }
 }
-
 .slick-slide img {
     display: inline;
 }
@@ -473,4 +467,15 @@ footer {
             font-size: 20px;
         }
     }
+    header {
+        .header-slider {
+            height: 80vh;
+            padding: 10px 50px !important;
+            &-item {
+                width: 100%;
+                height: 80vh !important;
+            }
+        }
+    }
+
 }

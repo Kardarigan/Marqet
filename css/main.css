@@ -248,9 +248,9 @@ nav button:hover {
 .header-slider-item {
   background-size: cover;
   position: absolute;
-  height: 100%;
   width: 95%;
   right: 0;
+  height: 100% !important;
 }
 .header-slider-item-1 {
   background-image: url(../img/slider/slider-1.jpg);
@@ -265,6 +265,7 @@ nav button:hover {
   position: absolute;
   z-index: 99;
   left: 50%;
+  height: 10px !important;
   bottom: 5%;
   accent-color: rgb(255, 255, 255);
 }
@@ -307,13 +308,22 @@ nav button:hover {
     opacity: 1;
   }
 }
+.header-slider-item {
+  display: none;
+  animation: fadeIn 2s ease-in-out infinite;
+}
+
+.header-slider-item.active {
+  display: flex;
+}
+
 .threebox {
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
 }
 .threebox:hover .threebox-image-content {
-  transform: scale(1.2);
+  transform: scale(1.1);
 }
 .threebox-box {
   width: 86%;
@@ -347,7 +357,7 @@ nav button:hover {
 }
 
 .featured {
-  height: 440px;
+  width: 100%;
 }
 .featured * {
   transition: top 0.5s ease-in-out !important;
@@ -361,7 +371,8 @@ nav button:hover {
   background-image: url("../img/fashion-main/fashion-default-product-5-290x330.jpg");
   background-repeat: no-repeat;
   background-position: center;
-  height: 70%;
+  background-size: contain;
+  width: 100%;
   transition: all 0.5s ease-in !important;
 }
 .featured-banner-image:hover ~ .featured-banner-panel {
@@ -405,6 +416,7 @@ nav button:hover {
 }
 .featured:hover .featured-title-price-wrapper {
   top: -100%;
+  transition: all 1s ease-in-out !important;
 }
 
 .categories {
@@ -648,5 +660,13 @@ footer .footer-logo * {
   }
   nav .fa-cart-shopping {
     font-size: 20px;
+  }
+  header .header-slider {
+    height: 80vh;
+    padding: 10px 50px !important;
+  }
+  header .header-slider-item {
+    width: 100%;
+    height: 80vh !important;
   }
 }/*# sourceMappingURL=main.css.map */
