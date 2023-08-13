@@ -58,11 +58,11 @@ $text-sizes: (
 }
 @mixin button-reseter {
     background-color: transparent !important;
-    padding: 10px 25px !important;
+    padding: 0 0 !important;
     color: $colorDark !important;
     &:hover{
         background-color: transparent !important;
-        color: $colordark;
+        color: $colorDark;
     }
 }
 // -----[usable classes]-----

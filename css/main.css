@@ -209,6 +209,12 @@ nav img {
 }
 nav button {
   background-color: transparent !important;
+  padding: 0 0 !important;
+  color: Black !important;
+}
+nav button:hover {
+  background-color: transparent !important;
+  color: Black;
 }
 
 .header-categories h5 {
@@ -301,15 +307,6 @@ nav button {
     opacity: 1;
   }
 }
-.header-slider-item {
-  display: none;
-  animation: fadeIn 2s ease-in-out infinite;
-}
-
-.header-slider-item.active {
-  display: flex;
-}
-
 .threebox {
   -webkit-user-select: none;
      -moz-user-select: none;

@@ -16,7 +16,7 @@ nav {
         width: 90%;
     }
     button {
-        background-color: transparent !important;
+        @include button-reseter;
     }
 }
 // -------------------------[navbar]-----------------------------
@@ -119,14 +119,14 @@ nav {
         opacity: 1;
     }
 }
-.header-slider-item {
-    display: none;
-    animation: fadeIn 2s ease-in-out infinite;
-}
-.header-slider-item.active {
-    display: flex;
-    // animation: none;
-}
+// .header-slider-item {
+//     display: none;
+//     animation: fadeIn 2s ease-in-out infinite;
+// }
+// .header-slider-item.active {
+//     display: flex;
+//     // animation: none;
+// }
 // -----------------------[threeboxes]---------------------------
 .threebox {
     user-select: none;
