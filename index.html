@@ -19,7 +19,7 @@
             https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css        "
             rel="stylesheet"
         />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css" />
         <!-- FONT AWSOME CDN -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
         <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.4.2/css/all.css" />
@@ -37,15 +37,32 @@
     <body>
         <!------------------------------[navbar]------------------------------>
         <nav class="navbar navbar-expand-md navbar-light bg-primary">
-            <div class="container mx-auto d-flex justify-content-between">
-                <ul class="d-flex">
+            <div class="container-lg mx-auto justify-content-between d-flex">
+                <ul class="d-lg-flex d-none">
                     <li class="d-inline p-2 border-start border-light"><a href="#">ENGLISH</a></li>
                     <li class="d-inline p-2 border-start border-light"><a href="#">COUNTRY</a></li>
                     <li class="d-inline p-2 border-start border-light">
                         <p class="d-inline">FREE SHIPPING FOR ALL ORDERS OF $150</p>
                     </li>
                 </ul>
-                <ul class="d-flex">
+                <ul class="mx-auto d-lg-none d-flex py-2">
+                    <li class="d-inline p-1 text-size-m">
+                        <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                    </li>
+                    <li class="d-inline p-1 text-size-m">
+                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    </li>
+                    <li class="d-inline p-1 text-size-m">
+                        <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                    </li>
+                    <li class="d-inline p-1 text-size-m">
+                        <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                    </li>
+                    <li class="d-inline p-1 text-size-m">
+                        <a href="#"><i class="fa-brands fa-pinterest"></i></a>
+                    </li>
+                </ul>
+                <ul class="d-lg-flex d-none">
                     <li class="d-inline p-2 border-end border-light">
                         <ul>
                             <li class="d-inline p-1">
@@ -55,7 +72,7 @@
                                 <a href="#"><i class="fa-brands fa-twitter"></i></a>
                             </li>
                             <li class="d-inline p-1">
-                                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                                <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
                             </li>
                             <li class="d-inline p-1">
                                 <a href="#"><i class="fa-brands fa-youtube"></i></a>
@@ -73,14 +90,23 @@
                 </ul>
             </div>
         </nav>
-        <nav class="navbar navbar-expand-md navbar-light">
-            <div class="container mx-auto d-flex justify-content-between row">
-                <div class="py-4 col-4">
-                    <a href="#">
-                        <img src="img/wood-logo-dark.svg" class="img-fluid" alt="logo" />
+        <nav class="navbar navbar-expand-md navbar-light px-1">
+            <div class="container-lg mx-auto row d-flex justify-content-between">
+                <div class="col-1 d-lg-none d-flex">
+                    <button >
+                        <span class="d-inline"><i class="fa fa-bars"></i></span>
+                        <p class="d-md-inline d-none">MENU</p>
+                    </button>
+                </div>
+                <div class="py-4 col-lg-3 col-10 flex-centralizer">
+                    <a class="d-flex justify-content-lg-start justify-content-center" href="#">
+                        <img src="img/wood-logo-dark.svg" alt="logo" />
                     </a>
                 </div>
-                <ul class="d-flex col-5 list-hover-underline">
+                <div class="col-1 d-lg-none d-flex">
+                    <a href="#"><i class="fa-light fa-cart-shopping"></i></a>
+                </div>
+                <ul class="d-lg-flex d-none col-6 mx-auto flex-centralizer list-hover-underline">
                     <li class="p-2 border-end border-light"><a href="#">HOME</a></li>
                     <li class="p-2 border-end border-light"><a href="#">SHOP</a></li>
                     <li class="p-2 border-end border-light"><a href="#">BLOG</a></li>
@@ -88,7 +114,7 @@
                     <li class="p-2 border-end border-light"><a href="#">ELEMENTS</a></li>
                     <li class="p-2 border-end border-light"><a href="#">BUY</a></li>
                 </ul>
-                <ul class="d-flex col-3">
+                <ul class="d-lg-flex d-none col-3 flex-ender">
                     <li class="d-inline p-1 border-end border-light"><a href="#">LOGIN/REGISTER</a></li>
                     <li class="d-inline p-1 border-end border-light">
                         <a href="#"><i class="fa-sharp fa-light fa-magnifying-glass"></i></a>
@@ -97,7 +123,9 @@
                         <a href="#"><i class="fa-light fa-heart"></i></a>
                     </li>
                     <li class="d-inline p-1 border-end border-light">
-                        <a href="#"><i class="fa-light fa-cart-shopping"></i><span> $0.00</span></a>
+                        <a href="#"
+                            ><i class="fa-light fa-cart-shopping"><span> $0.00</span></i></a
+                        >
                     </li>
                 </ul>
             </div>
@@ -105,7 +133,7 @@
         <!------------------------------[navbar]------------------------------>
         <!------------------------------[header]------------------------------>
         <header>
-            <div class="container mx-auto row">
+            <div class="container-lg mx-auto row">
                 <div class="header-categories col-3 d-md-block d-none">
                     <h5 class="py-3 ps-3 text-light">CATEGORIES</h5>
                     <ul>
@@ -685,27 +713,27 @@
                         <div class="h-50">
                             <img src="img/profiles/wood-testimon-2-70x70.jpg" alt="profile" class="rounded-circle img-fluid" />
                             <p class="py-4 text-center">
-                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perspiciatis, officiis enim magni, fugit sunt totam
-                                reprehenderit doloribus ipsum harum architecto, sit odit? Impedit, a? Perferendis minima iste dolores expedita
-                                nisi.
+                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perspiciatis, officiis enim magni, fugit sunt
+                                totam reprehenderit doloribus ipsum harum architecto, sit odit? Impedit, a? Perferendis minima iste dolores
+                                expedita nisi.
                             </p>
                             <h6>SANNE COSIMA <span>-Main Moderator</span></h6>
                         </div>
                         <div class="h-50">
                             <img src="img/profiles/wood-testimon-2-70x70.jpg" alt="profile" class="rounded-circle img-fluid" />
                             <p class="py-4 text-center">
-                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perspiciatis, officiis enim magni, fugit sunt totam
-                                reprehenderit doloribus ipsum harum architecto, sit odit? Impedit, a? Perferendis minima iste dolores expedita
-                                nisi.
+                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perspiciatis, officiis enim magni, fugit sunt
+                                totam reprehenderit doloribus ipsum harum architecto, sit odit? Impedit, a? Perferendis minima iste dolores
+                                expedita nisi.
                             </p>
                             <h6>SANNE COSIMA <span>-Main Moderator</span></h6>
                         </div>
                         <div class="h-50">
                             <img src="img/profiles/wood-testimon-2-70x70.jpg" alt="profile" class="rounded-circle img-fluid" />
                             <p class="py-4 text-center">
-                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perspiciatis, officiis enim magni, fugit sunt totam
-                                reprehenderit doloribus ipsum harum architecto, sit odit? Impedit, a? Perferendis minima iste dolores expedita
-                                nisi.
+                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perspiciatis, officiis enim magni, fugit sunt
+                                totam reprehenderit doloribus ipsum harum architecto, sit odit? Impedit, a? Perferendis minima iste dolores
+                                expedita nisi.
                             </p>
                             <h6>SANNE COSIMA <span>-Main Moderator</span></h6>
                         </div>
@@ -739,7 +767,7 @@
                         </div>
                         <div class="col-sm-6">
                             <div class="news-card-content p-4">
-                                <a href="#" class="mb-2">DECORATION, DESIGN TRENDS</a>
+                                <p class="news-card-content-categories mb-2"><a href="#">DECORATION</a>, <a href="#">DESIGN TRENDS</a></p>
                                 <h4 class="m-2">The big design: Wall likes pictures</h4>
                                 <div class="news-card-author">
                                     <img src="img/avatar-home.jpg" alt="avatar" class="rounded-circle img-fluid" />
@@ -748,7 +776,7 @@
                                     <a href="#"><i class="fa-regular fa-share-nodes"></i></a>
                                 </div>
                                 <p class="my-3">Amet aliquam id diam maecenas ultricies mi eget mauris. Ac auctor augue mauris augue</p>
-                                <a href="#">&nbsp;&nbsp;&nbsp; CONTINUE READING<span>...</span></a>
+                                <a class="news-card-content-readmore" href="#">&nbsp;&nbsp;&nbsp; CONTINUE READING<span>...</span></a>
                             </div>
                         </div>
                     </article>
@@ -765,7 +793,7 @@
                         </div>
                         <div class="col-sm-6">
                             <div class="news-card-content p-4">
-                                <a href="#" class="mb-2">DECORATION, DESIGN TRENDS</a>
+                                <p class="news-card-content-categories mb-2"><a href="#">DECORATION</a>, <a href="#">DESIGN TRENDS</a></p>
                                 <h4 class="m-2">The big design: Wall likes pictures</h4>
                                 <div class="news-card-author">
                                     <img src="img/avatar-home.jpg" alt="avatar" class="rounded-circle img-fluid" />
@@ -774,7 +802,7 @@
                                     <a href="#"><i class="fa-regular fa-share-nodes"></i></a>
                                 </div>
                                 <p class="my-3">Amet aliquam id diam maecenas ultricies mi eget mauris. Ac auctor augue mauris augue</p>
-                                <a href="#">&nbsp;&nbsp;&nbsp; CONTINUE READING<span> . . .</span></a>
+                                <a class="news-card-content-readmore" href="#">&nbsp;&nbsp;&nbsp; CONTINUE READING<span>...</span></a>
                             </div>
                         </div>
                     </article>
@@ -784,14 +812,14 @@
         <!-----------------------------[newscard]------------------------------>
         <!----------------------------[newsletter]----------------------------->
         <section class="border-top border-black">
-            <div class="row container m-auto px-3 py-5">
+            <div class="row container-lg m-auto px-3 py-5">
                 <div class="col-lg-6 row d-flex align-items-center">
                     <div class="col-sm-5 me-sm-5">
                         <h6 class="p-3">FEATURED PRODUCTS</h6>
                         <ul>
                             <li class="row border-bottom border-black p-2">
                                 <div class="col-5">
-                                    <img src="/img/fashion-main/fashion-default-product-4-290x330.jpg" alt="fashion" class="img-fluid" />
+                                    <img src="img/fashion-main/fashion-default-product-4-290x330.jpg" alt="fashion" class="img-fluid" />
                                 </div>
                                 <div class="col-7">
                                     <a href="#">Wuller Bust Shirt</a>
@@ -800,7 +828,7 @@
                             </li>
                             <li class="row border-bottom border-black p-2">
                                 <div class="col-5">
-                                    <img src="/img/fashion-main/fashion-default-product-4-290x330.jpg" alt="fashion" class="img-fluid" />
+                                    <img src="img/fashion-main/fashion-default-product-4-290x330.jpg" alt="fashion" class="img-fluid" />
                                 </div>
                                 <div class="col-7">
                                     <a href="#">Wuller Bust Shirt</a>
@@ -809,7 +837,7 @@
                             </li>
                             <li class="row border-bottom border-black p-2">
                                 <div class="col-5">
-                                    <img src="/img/fashion-main/fashion-default-product-4-290x330.jpg" alt="fashion" class="img-fluid" />
+                                    <img src="img/fashion-main/fashion-default-product-4-290x330.jpg" alt="fashion" class="img-fluid" />
                                 </div>
                                 <div class="col-7">
                                     <a href="#">Wuller Bust Shirt</a>
@@ -823,7 +851,7 @@
                         <ul>
                             <li class="row border-bottom border-black p-2">
                                 <div class="col-5">
-                                    <img src="/img/fashion-main/fashion-default-product-4-290x330.jpg" alt="fashion" class="img-fluid" />
+                                    <img src="img/fashion-main/fashion-default-product-4-290x330.jpg" alt="fashion" class="img-fluid" />
                                 </div>
                                 <div class="col-7">
                                     <a href="#">Wuller Bust Shirt</a>
@@ -832,7 +860,7 @@
                             </li>
                             <li class="row border-bottom border-black p-2">
                                 <div class="col-5">
-                                    <img src="/img/fashion-main/fashion-default-product-4-290x330.jpg" alt="fashion" class="img-fluid" />
+                                    <img src="img/fashion-main/fashion-default-product-4-290x330.jpg" alt="fashion" class="img-fluid" />
                                 </div>
                                 <div class="col-7">
                                     <a href="#">Wuller Bust Shirt</a>
@@ -841,7 +869,7 @@
                             </li>
                             <li class="row border-bottom border-black p-2">
                                 <div class="col-5">
-                                    <img src="/img/fashion-main/fashion-default-product-4-290x330.jpg" alt="fashion" class="img-fluid" />
+                                    <img src="img/fashion-main/fashion-default-product-4-290x330.jpg" alt="fashion" class="img-fluid" />
                                 </div>
                                 <div class="col-7">
                                     <a href="#">Wuller Bust Shirt</a>
@@ -944,7 +972,7 @@
                         <div class="pe-lg-5 pt-3">
                             <article class="row py-3">
                                 <div class="col-4">
-                                    <img src="/img/resent-post/blog-11-75x65.jpg" alt="resent post" class="img-fluid" />
+                                    <img src="img/resent-post/blog-11-75x65.jpg" alt="resent post" class="img-fluid" />
                                 </div>
                                 <div class="col-7 px-1">
                                     <a href="#">A companion for extra sleeping</a><br />
@@ -956,7 +984,7 @@
                             <hr />
                             <article class="row py-3">
                                 <div class="col-4">
-                                    <img src="/img/resent-post//blog-12-75x65.jpg" alt="resent post" class="img-fluid" />
+                                    <img src="img/resent-post//blog-12-75x65.jpg" alt="resent post" class="img-fluid" />
                                 </div>
                                 <div class="col-7 px-1">
                                     <a href="#">A companion for extra sleeping</a><br />

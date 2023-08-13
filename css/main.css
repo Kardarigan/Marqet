@@ -94,6 +94,9 @@ footer li a *,
 footer span * {
   font-size: 0.75rem !important;
 }
+.text-size-m * {
+  font-size: 1rem !important;
+}
 .text-size-x * {
   font-size: 1.25rem !important;
 }
@@ -196,13 +199,16 @@ nav:first-child p {
   color: azure !important;
 }
 nav:first-child a {
-  color: azure;
+  color: azure !important;
 }
 nav:first-child a:hover {
-  color: rgba(240, 255, 255, 0.7);
+  color: rgba(240, 255, 255, 0.7) !important;
 }
 nav img {
-  width: 60%;
+  width: 90%;
+}
+nav button {
+  background-color: transparent !important;
 }
 
 .header-categories h5 {
@@ -450,11 +456,11 @@ nav img {
   font-weight: 700;
   font-size: 2.5rem;
 }
-button {
+.reviews button {
   background-color: transparent !important;
   position: absolute !important;
 }
-button:hover, button:focus {
+.reviews button:hover, .reviews button:focus {
   background-color: transparent !important;
 }
 
@@ -467,6 +473,15 @@ button:hover, button:focus {
   justify-content: center !important;
   align-items: center !important;
   flex-direction: column !important;
+}
+
+.slick-dots li button:before {
+  color: rgba(240, 255, 255, 0.7) !important;
+  font-size: 12px !important;
+}
+
+.slick-dots li.slick-active button:before {
+  color: azure !important;
 }
 
 .news-card {
@@ -520,18 +535,27 @@ button:hover, button:focus {
 .news-card-content {
   text-align: center;
 }
-.news-card-content a:first-child {
+.news-card-content-categories {
   background-color: #83b735;
   padding: 4px 8px !important;
   color: azure;
 }
-.news-card-content a:last-child {
+.news-card-content-categories a {
+  color: azure !important;
+}
+.news-card-content-categories a:hover {
+  color: rgba(240, 255, 255, 0.7) !important;
+}
+.news-card-content-readmore {
   color: #83b735;
 }
-.news-card-content a:last-child span {
+.news-card-content-readmore span {
   opacity: 0;
 }
-.news-card-content a:last-child:hover span {
+.news-card-content-readmore:hover {
+  color: rgba(131, 183, 53, 0.8235294118);
+}
+.news-card-content-readmore:hover span {
   opacity: 1;
 }
 .news-card-author a {
@@ -612,11 +636,20 @@ footer li a:hover {
 }
 footer a {
   font-weight: 500;
-  color: azure;
+  color: azure !important;
 }
 footer a:hover {
-  color: rgba(240, 255, 255, 0.7);
+  color: rgba(240, 255, 255, 0.7) !important;
 }
 footer .footer-logo * {
   fill: azure;
+}
+
+@media (max-width: 991px) {
+  nav img {
+    width: 50% !important;
+  }
+  nav .fa-cart-shopping {
+    font-size: 20px;
+  }
 }/*# sourceMappingURL=main.css.map */

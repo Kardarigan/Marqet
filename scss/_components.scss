@@ -11,8 +11,12 @@ nav {
             @include light-link;
         }
     }
+
     img {
-        width: 60%;
+        width: 90%;
+    }
+    button {
+        background-color: transparent !important;
     }
 }
 // -------------------------[navbar]-----------------------------
@@ -80,7 +84,8 @@ nav {
             -moz-appearance: none;
             appearance: none;
             transition: 0.5s;
-            &:checked, &:hover {
+            &:checked,
+            &:hover {
                 border-color: $colorDark;
                 background-color: $colorLight;
                 border: 1px solid $colorLight;
@@ -91,10 +96,10 @@ nav {
         }
 
         @media print {
-                -webkit-appearance: auto;
-                -moz-appearance: auto;
-                appearance: auto;
-                background: none;
+            -webkit-appearance: auto;
+            -moz-appearance: auto;
+            appearance: auto;
+            background: none;
         }
 
         &-item {
@@ -287,17 +292,16 @@ nav {
         font-weight: 700;
         font-size: 2.5rem;
     }
-    &-slider {
+    button {
+        background-color: transparent !important;
+        position: absolute !important;
+        &:hover,
+        &:focus {
+            background-color: transparent !important;
+        }
     }
 }
 
-button {
-    background-color: transparent  !important;
-    position: absolute !important;
-    &:hover, &:focus{
-        background-color: transparent  !important;
-    }
-}
 .slick-slide img {
     display: inline;
 }
@@ -306,6 +310,13 @@ button {
     justify-content: center !important;
     align-items: center !important;
     flex-direction: column !important;
+}
+.slick-dots li button:before {
+    color: $colorLight-hover !important;
+    font-size: 12px !important;
+}
+.slick-dots li.slick-active button:before {
+    color: $colorLight !important;
 }
 // -------------------------[reviews]----------------------------
 // ------------------------[newscard]----------------------------
@@ -360,18 +371,22 @@ button {
     }
     &-content {
         text-align: center;
-        a {
-            &:first-child {
-                background-color: $colorAlpha;
-                padding: 4px 8px !important;
-                color: $colorLight;
+        &-categories {
+            background-color: $colorAlpha;
+            padding: 4px 8px !important;
+            color: $colorLight;
+            a {
+                @include light-link;
             }
-            &:last-child {
-                color: $colorAlpha;
+        }
+        &-readmore {
+            color: $colorAlpha;
+            span {
+                opacity: 0;
+            }
+            &:hover {
+                color: $colorAlpha-hover;
                 span {
-                    opacity: 0;
-                }
-                &:hover span {
                     opacity: 1;
                 }
             }
@@ -449,3 +464,13 @@ footer {
     }
 }
 // -------------------------[footer]-----------------------------
+@media (max-width: 991px) {
+    nav {
+        img {
+            width: 50% !important;
+        }
+        .fa-cart-shopping {
+            font-size: 20px;
+        }
+    }
+}

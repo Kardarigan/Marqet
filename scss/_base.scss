@@ -23,19 +23,19 @@ $social-btn-colors: (
 
 $text-sizes: (
     "sssz": 0.1rem,
-
     "sss": 0.25rem,
     "ss": 0.5rem,
     "s": 0.75rem,
+    "m": 1rem,
     "x": 1.25rem,
     "xx": 1.5rem,
     "xxx": 1.75rem
 );
 // ---------[mixin]---------
 @mixin light-link {
-    color: $colorLight;
+    color: $colorLight !important;
     &:hover {
-        color: $colorLight-hover;
+        color: $colorLight-hover !important;
     }
 }
 @mixin dark-link {
@@ -55,6 +55,9 @@ $text-sizes: (
     &:hover {
         color: $color;
     }
+}
+@mixin reset-button {
+    
 }
 // -----[usable classes]-----
 .flex-centralizer {
