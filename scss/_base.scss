@@ -12,6 +12,7 @@ $colorDark-hover-s: rgba(0, 0, 0, 0.8);
 $colorDark-hover: rgba(0, 0, 0, 0.5);
 $colorDark-hover-x: rgba(0, 0, 0, 0.2);
 $colorDark-hover-xx: rgba(0, 0, 0, 0.1);
+$colorDark-light: #454545;
 
 $social-btn-colors: (
     "facebook": #3b5999,
@@ -29,7 +30,9 @@ $text-sizes: (
     "m": 1rem,
     "x": 1.25rem,
     "xx": 1.5rem,
-    "xxx": 1.75rem
+    "xxx": 1.75rem,
+    "xxxx": 2rem,
+    "xxxxx": 2.25rem,
 );
 // ---------[mixin]---------
 @mixin light-link {
@@ -132,9 +135,6 @@ $text-sizes: (
     border-radius: 10px;
 }
 
-// ::-webkit-scrollbar-thumb:hover {
-//     background: ;
-// }
 /* ......................................classes........................................... */
 .non-st /*select text*/ {
     & * {

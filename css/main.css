@@ -106,6 +106,12 @@ footer span * {
 .text-size-xxx * {
   font-size: 1.75rem !important;
 }
+.text-size-xxxx * {
+  font-size: 2rem !important;
+}
+.text-size-xxxxx * {
+  font-size: 2.25rem !important;
+}
 
 * {
   margin: 0 !important;
@@ -166,6 +172,12 @@ strong {
 }
 .border-light {
   border-color: rgba(240, 255, 255, 0.2) !important;
+}
+
+.card {
+  background-color: transparent !important;
+  border: 0 !important;
+  border-radius: 0 !important;
 }
 
 h1 {
@@ -354,69 +366,6 @@ nav button:hover {
   border-color: #83b735 !important;
   font-weight: 600;
   font-size: 0.8rem;
-}
-
-.featured {
-  width: 100%;
-}
-.featured * {
-  transition: top 0.5s ease-in-out !important;
-}
-.featured-banner {
-  overflow: hidden;
-  width: 100%;
-  position: relative;
-}
-.featured-banner-image {
-  background-image: url("../img/fashion-main/fashion-default-product-5-290x330.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
-  width: 100%;
-  transition: all 0.5s ease-in !important;
-}
-.featured-banner-image:hover ~ .featured-banner-panel {
-  right: 5%;
-  opacity: 1;
-  transition: all 0.5s ease-in-out !important;
-}
-.featured-banner-image:hover {
-  background-image: url("../img/fashion-main/fashion-default-product-5-2-290x330.jpg");
-  background-repeat: no-repeat;
-  transform: scale(1.1);
-}
-.featured-banner-panel {
-  position: absolute;
-  top: 3%;
-  right: -12%;
-  padding: 10px !important;
-  transition: all 1s ease-in-out;
-  background-color: azure;
-  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
-  opacity: 0;
-}
-.featured-banner-panel:hover {
-  right: 5%;
-}
-.featured-title * {
-  display: block;
-  font-size: small;
-}
-.featured-title-size-item {
-  display: inline;
-}
-.featured-title-price {
-  height: 5%;
-  width: 55%;
-  position: relative;
-  overflow: hidden;
-}
-.featured-title-price-wrapper {
-  position: absolute;
-}
-.featured:hover .featured-title-price-wrapper {
-  top: -100%;
-  transition: all 1s ease-in-out !important;
 }
 
 .categories {

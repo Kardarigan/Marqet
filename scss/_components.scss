@@ -166,77 +166,11 @@ nav {
     }
 }
 // -----------------------[threeboxes]---------------------------
-// ------------------------[featured]----------------------------
-.featured {
-    width: 100%;
-    * {
-        transition: top 0.5s ease-in-out !important;
-    }
-    &-banner {
-        overflow: hidden;
-        width: 100%;
-        position: relative;
-
-        &-image {
-            background-image: url("../img/fashion-main/fashion-default-product-5-290x330.jpg");
-            background-repeat: no-repeat;
-            background-position: center;
-            background-size: contain;
-            width: 100%;
-            transition: all 0.5s ease-in !important;
-
-            &:hover ~ .featured-banner-panel {
-                right: 5%;
-                opacity: 1;
-                transition: all 0.5s ease-in-out !important;
-            }
-
-            &:hover {
-                background-image: url("../img/fashion-main/fashion-default-product-5-2-290x330.jpg");
-                background-repeat: no-repeat;
-                transform: scale(1.1);
-            }
-        }
-        &-panel {
-            position: absolute;
-            top: 3%;
-            right: -12%;
-            padding: 10px !important;
-            transition: all 1s ease-in-out;
-            background-color: $colorLight;
-            box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
-            opacity: 0;
-            &:hover {
-                right: 5%;
-            }
-        }
-    }
-    &-title {
-        * {
-            display: block;
-            font-size: small;
-        }
-        &-size {
-            &-item {
-                display: inline;
-            }
-        }
-        &-price {
-            height: 5%;
-            width: 55%;
-            position: relative;
-            overflow: hidden;
-            &-wrapper {
-                position: absolute;
-            }
-        }
-    }
-    &:hover .featured-title-price-wrapper {
-        top: -100%;
-        transition: all 1s ease-in-out !important;
-    }
+// ------------------------[warecard]----------------------------
+.warecard {
+    
 }
-// ------------------------[featured]----------------------------
+// ------------------------[warecard]----------------------------
 // -----------------------[categories]---------------------------
 .categories {
     position: relative;
@@ -477,5 +411,4 @@ footer {
             }
         }
     }
-
 }
