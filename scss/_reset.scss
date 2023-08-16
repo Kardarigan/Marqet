@@ -11,7 +11,6 @@ body {
 a {
     text-decoration: none;
     @include dark-link;
-    font-size: 0.75rem;
     font-weight: 600;
     &:hover {
         text-decoration: none;

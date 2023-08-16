@@ -127,7 +127,6 @@ body {
 a {
   text-decoration: none;
   color: Black;
-  font-size: 0.75rem;
   font-weight: 600;
 }
 a:hover {
@@ -370,7 +369,13 @@ nav button:hover {
 
 .categories {
   position: relative;
-  height: 400px;
+  height: 380px;
+}
+.categories-container {
+  position: absolute;
+  width: 90%;
+  height: inherit;
+  overflow: hidden;
 }
 .categories-banner {
   background-image: url("../img/categories/cat-fashing-dress-4.jpg");
@@ -378,21 +383,23 @@ nav button:hover {
   background-position: center;
   width: 100%;
   height: inherit;
+  position: absolute;
 }
 .categories-title {
   position: absolute;
-  color: azure;
+  width: 100%;
   height: inherit;
-  width: 96%;
   background-color: transparent;
 }
-.categories-title:hover {
+.categories-title * {
+  color: azure;
+}
+.categories-title *:hover {
   color: azure;
 }
 .categories-title-stock {
   margin-top: 50px !important;
   display: none;
-  transition: all 0.3s !important;
 }
 .categories-title:hover {
   background-color: rgba(0, 0, 0, 0.5);
@@ -400,6 +407,9 @@ nav button:hover {
 .categories-title:hover .categories-title-stock {
   display: block !important;
   margin-top: 10px !important;
+}
+.categories:hover .categories-banner {
+  transform: scale(1.1);
 }
 
 .reviews {
@@ -422,15 +432,11 @@ nav button:hover {
   background-color: transparent !important;
 }
 
-.slick-slide img {
-  display: inline;
-}
-
 .slick-initialized .slick-slide {
   display: flex !important;
   justify-content: center !important;
   align-items: center !important;
-  flex-direction: column !important;
+  flex-direction: row !important;
 }
 
 .slick-dots li button:before {
@@ -442,85 +448,85 @@ nav button:hover {
   color: azure !important;
 }
 
-.news-card {
-  height: 320px;
+.newsCard {
+  height: 340px;
+  flex-direction: row;
 }
-.news-card-banner {
+.newsCard-banner {
   position: relative;
-  width: 100%;
-  height: 100%;
   overflow: hidden;
 }
-.news-card-banner-img {
+.newsCard-banner-img {
+  height: 100%;
+  width: 100%;
   background-image: url(../img/news/blog-fashing-15.jpg);
-  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  width: 100%;
-  height: 100%;
-  position: absolute;
 }
-.news-card-banner-mask {
+.newsCard-banner-mask {
   background-color: rgba(0, 0, 0, 0.5);
   width: 100%;
   height: 100%;
   position: absolute;
   opacity: 0;
 }
-.news-card-banner-mask span {
+.newsCard-banner-mask span {
   position: relative;
-  font-size: 5rem;
+  font-size: 5vw;
   color: rgba(240, 255, 255, 0.7);
   left: 40%;
   top: 20%;
 }
-.news-card-banner-date {
+.newsCard-banner-date {
   position: absolute;
   background-color: azure;
   text-align: center;
-  font-size: 24px;
 }
-.news-card-banner-date span {
+.newsCard-banner-date span {
   font-weight: 600;
-  font-size: 12px;
+  font-size: 0.75rem;
 }
-.news-card-banner:hover .news-card-banner-mask {
+.newsCard-banner:hover .newsCard-banner-mask {
   opacity: 1;
 }
-.news-card-banner:hover .news-card-banner-img {
+.newsCard-banner:hover .newsCard-banner-img {
   transform: scale(1.05);
 }
-.news-card-content {
-  text-align: center;
-}
-.news-card-content-categories {
+.newsCard-categories {
   background-color: #83b735;
-  padding: 4px 8px !important;
+  padding: 0 10px 2px !important;
   color: azure;
+  white-space: nowrap;
 }
-.news-card-content-categories a {
+.newsCard-categories a {
   color: azure !important;
+  white-space: nowrap;
 }
-.news-card-content-categories a:hover {
+.newsCard-categories a:hover {
   color: rgba(240, 255, 255, 0.7) !important;
 }
-.news-card-content-readmore {
+.newsCard-readmore {
   color: #83b735;
 }
-.news-card-content-readmore span {
+.newsCard-readmore span {
   opacity: 0;
 }
-.news-card-content-readmore:hover {
+.newsCard-readmore:hover {
   color: rgba(131, 183, 53, 0.8235294118);
 }
-.news-card-content-readmore:hover span {
+.newsCard-readmore:hover span {
   opacity: 1;
 }
-.news-card-author a {
+.newsCard-author a {
   color: rgba(0, 0, 0, 0.8) !important;
 }
-.news-card-author a:hover {
-  color: Black;
+.newsCard-author a:hover {
+  color: Black !important;
+}
+@media (max-width: 768px) {
+  .newsCard {
+    height: auto;
+  }
 }
 
 .social-btn {

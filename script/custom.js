@@ -3,6 +3,28 @@ $(".myqmars").slick({
     centerMode: true
 });
 
+$(".multiple-items").slick({
+    infinite: true,
+    slidesToShow: 2,
+    slidesToScroll: 1,
+    responsive: [
+        {
+          breakpoint: 1024,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 1,
+            infinite: true
+          }
+        },
+        {
+          breakpoint: 600,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1
+          }
+        }
+    ]
+});
 // ----------------[warecard builder]------------------
 $.getJSON("../data/waresInfo.json", function (data) {
     $.each(data, function (index, item) {
@@ -33,7 +55,6 @@ $.getJSON("../data/waresInfo.json", function (data) {
                     $("<a>", { class: "text-muted d-block pt-1", href: "#" }).text(item.categories),
 
                     $("<ul>", { class: "card-text py-1" }).append(
-                        // Loop through sizes and create list items
                         (function () {
                             const sizeItems = [];
                             $.each(item.sizes, function (index, size) {
@@ -54,14 +75,5 @@ $.getJSON("../data/waresInfo.json", function (data) {
         );
         $(".warecards").append(article);
     });
-
-   
-    $(".warecards").on("mouseenter", ".warecard-banner", function () {
-      const hoverPath = $(this).find('.warecard-banner-img').attr('data-hover');
-      $(this).find('.warecard-banner-img').attr('src', hoverPath);
-    }).on("mouseleave", ".warecard-banner", function () {
-      const imgPath = $(this).find('.warecard-banner-img').attr('data-img');
-      $(this).find('.warecard-banner-img').attr('src', imgPath);
-    });
 });
-// ------------[warecard builder changer]--------------
+// ----------------[warecard changer]------------------

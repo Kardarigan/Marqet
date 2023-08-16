@@ -168,43 +168,53 @@ nav {
 // -----------------------[threeboxes]---------------------------
 // ------------------------[warecard]----------------------------
 .warecard {
-    
 }
 // ------------------------[warecard]----------------------------
 // -----------------------[categories]---------------------------
 .categories {
     position: relative;
-    height: 400px;
+    height: 380px;
 
+    &-container {
+        position: absolute;
+        width: 90%;
+        height: inherit;
+        overflow: hidden;
+    }
     &-banner {
         background-image: url("../img/categories/cat-fashing-dress-4.jpg");
         background-repeat: no-repeat;
         background-position: center;
         width: 100%;
         height: inherit;
+        position: absolute;
     }
     &-title {
         position: absolute;
-        @include abelith-link($colorLight);
+        width: 100%;
         height: inherit;
-        width: 96%;
         background-color: transparent;
 
+        * {
+            @include abelith-link($colorLight);
+        }
         &-title {
         }
         &-stock {
             margin-top: 50px !important;
             display: none;
-            transition: all 0.3s !important;
         }
         &:hover {
             background-color: $colorDark-hover;
-
             .categories-title-stock {
                 display: block !important;
                 margin-top: 10px !important;
             }
         }
+    }
+
+    &:hover .categories-banner {
+        transform: scale(1.1);
     }
 }
 // -----------------------[categories]---------------------------
@@ -230,14 +240,11 @@ nav {
         }
     }
 }
-.slick-slide img {
-    display: inline;
-}
 .slick-initialized .slick-slide {
     display: flex !important;
     justify-content: center !important;
     align-items: center !important;
-    flex-direction: column !important;
+    flex-direction: row !important;
 }
 .slick-dots li button:before {
     color: $colorLight-hover !important;
@@ -247,88 +254,105 @@ nav {
     color: $colorLight !important;
 }
 // -------------------------[reviews]----------------------------
-// ------------------------[newscard]----------------------------
-.news-card {
-    height: 320px;
+// ------------------------[newscard]----------------------------$font-size-base: 16px;
+.newsCard {
+    height: 340px;
+    flex-direction: row;
+
     &-banner {
         position: relative;
-        width: 100%;
-        height: 100%;
         overflow: hidden;
+
         &-img {
+            height: 100%;
+            width: 100%;
             background-image: url(../img/news/blog-fashing-15.jpg);
-            background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
-            width: 100%;
-            height: 100%;
-            position: absolute;
         }
+
         &-mask {
             background-color: $colorDark-hover;
             width: 100%;
             height: 100%;
             position: absolute;
             opacity: 0;
+
             span {
                 position: relative;
-                font-size: 5rem;
+                font-size: 5vw;
                 color: $colorLight-hover;
                 left: 40%;
                 top: 20%;
             }
         }
+
         &-date {
             position: absolute;
             background-color: $colorLight;
             text-align: center;
-            font-size: 24px;
+
             span {
                 font-weight: 600;
-                font-size: 12px;
+                font-size: 0.75rem;
             }
         }
+
         &:hover {
-            .news-card-banner-mask {
+            .newsCard-banner-mask {
                 opacity: 1;
             }
-            .news-card-banner-img {
+            .newsCard-banner-img {
                 transform: scale(1.05);
             }
         }
     }
-    &-content {
-        text-align: center;
-        &-categories {
-            background-color: $colorAlpha;
-            padding: 4px 8px !important;
-            color: $colorLight;
-            a {
-                @include light-link;
-            }
+
+    &-categories {
+        background-color: $colorAlpha;
+        padding: 0 10px 2px !important;
+        color: $colorLight;
+        white-space: nowrap;
+
+        a {
+            @include light-link;
+            white-space: nowrap;
+            font
+            
         }
-        &-readmore {
-            color: $colorAlpha;
+    }
+
+    &-readmore {
+        color: $colorAlpha;
+
+        span {
+            opacity: 0;
+        }
+
+        &:hover {
+            color: $colorAlpha-hover;
+
             span {
-                opacity: 0;
-            }
-            &:hover {
-                color: $colorAlpha-hover;
-                span {
-                    opacity: 1;
-                }
+                opacity: 1;
             }
         }
     }
+
     &-author {
         a {
             color: $colorDark-hover-s !important;
+
             &:hover {
-                color: $colorDark;
+                color: $colorDark !important;
             }
         }
     }
+
+    @media (max-width: 768px) {
+        height: auto;
+    }
 }
+
 // ------------------------[newscard]----------------------------
 // ----------------------[social button]-------------------------
 .social-btn {
