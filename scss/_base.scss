@@ -47,6 +47,12 @@ $text-sizes: (
         color: $colorDark-hover-s;
     }
 }
+@mixin alpha-link {
+    color: $colorAlpha;
+    &:hover {
+        color: $colorAlpha-darker;
+    }
+}
 @mixin dark-link-reverb {
     color: $colorDark-hover-s;
     &:hover {

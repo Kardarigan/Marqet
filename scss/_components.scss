@@ -254,7 +254,7 @@ nav {
     color: $colorLight !important;
 }
 // -------------------------[reviews]----------------------------
-// ------------------------[newscard]----------------------------$font-size-base: 16px;
+// ------------------------[newscard]----------------------------
 .newsCard {
     height: 340px;
     flex-direction: row;
@@ -310,29 +310,38 @@ nav {
 
     &-categories {
         background-color: $colorAlpha;
-        padding: 0 10px 2px !important;
+        padding: 0 8px 3px !important;
         color: $colorLight;
         white-space: nowrap;
 
         a {
             @include light-link;
             white-space: nowrap;
-            font
-            
+            font-size: 11px !important;            
         }
     }
 
     &-readmore {
-        color: $colorAlpha;
+        @include alpha-link;
 
-        span {
-            opacity: 0;
+        &::after{
+            position: absolute;
+            bottom: 0;
+            left: 100%;
+            display: inline-block;
+            margin-left: 5px;
+            height: 5px;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 5px;
+            opacity: 1;
+            transition: opacity .35s ease;
+            content: "\2026";
+            color: red;
         }
 
         &:hover {
-            color: $colorAlpha-hover;
-
-            span {
+            .newsCard-readmore::after {
                 opacity: 1;
             }
         }
@@ -352,7 +361,6 @@ nav {
         height: auto;
     }
 }
-
 // ------------------------[newscard]----------------------------
 // ----------------------[social button]-------------------------
 .social-btn {
