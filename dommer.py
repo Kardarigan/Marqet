@@ -1,43 +1,47 @@
 import os
 from bs4 import BeautifulSoup
 
-allFiles = ['index.html','pages\homeblog.html']
-
-def addAllDOM(htmlPath):
+def addAllDOM(destinationPath):
     mainDirectory = os.path.dirname(__file__)
 
-    headSource = 'components\headtag.html'
-    navSource = 'components\\navbar.html'
-    scriptSource = 'components\script.html'
+    headSource = 'components/headtag.html'
+    navSource = 'components/navbar.html'
+    scriptSource = 'components/script.html'
 
-    headPath = os.path.join(mainDirectory, headSource)
-    navPath = os.path.join(mainDirectory, navSource)
-    scriptPath = os.path.join(mainDirectory, scriptSource)
-    destinationPath = os.path.join(mainDirectory, htmlPath)
+    destinationPath = os.path.join(mainDirectory, destinationPath)
 
+    with open(destinationPath, 'r', encoding='utf-8') as destination_file:
+        destination_content = BeautifulSoup(destination_file, 'html.parser')
 
-    allPathes = [headSource,navSource,scriptSource,destinationPath]
+    allPathes = [headSource, navSource, scriptSource]
+    allTargets = ['head', 'nav', 'body']
 
-    for path in allPathes:
+    for path, targetStr in zip(allPathes, allTargets):
+        path = os.path.join(mainDirectory, path)
         if not os.path.exists(path):
-            print(f'\033[31mError{path} not Found!')
+            print(f'\033[31mError {path} not Found!')
             return
-        else:
-            print('Passed!')
 
+        with open(path, 'r', encoding='utf-8') as file:
+            pathContent = file.read()
 
-    with open(htmlPath, 'r', encoding='utf-8') as fileContent:
-        soup = BeautifulSoup(fileContent, 'html.parser')
+        sourceSoup = BeautifulSoup(pathContent, 'html.parser')
 
-    with open(htmlPath, 'r', encoding='utf-8') as fileContent:
-        soup = BeautifulSoup(fileContent, 'html.parser')
+        if targetStr == 'nav':
+            nav_target = destination_content.find('nav')
+            if nav_target:
+                if not nav_target.has_attr('id'):
+                    nav_target['id'] = 'targetNav'
 
-    with open(htmlPath, 'r', encoding='utf-8') as fileContent:
-        soup = BeautifulSoup(fileContent, 'html.parser')
+        target_tag = destination_content.find(targetStr)
 
-    with open(htmlPath, 'r', encoding='utf-8') as fileContent:
-        soup = BeautifulSoup(fileContent, 'html.parser')
+        if target_tag:
+            target_tag.append(sourceSoup)
 
+    with open(destinationPath, 'w', encoding='utf-8') as destination_file:
+        destination_file.write(str(destination_content))
 
-for pathes in allFiles:
-    addAllDOM(pathes)
+allFiles = ['pages/homeblog.html']
+# 'index.html',
+for aFile in allFiles:
+    addAllDOM(aFile)
