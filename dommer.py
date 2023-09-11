@@ -40,8 +40,9 @@ def addAllDOM(destinationPath):
 
     with open(destinationPath, 'w', encoding='utf-8') as destination_file:
         destination_file.write(str(destination_content))
+    print('Mission Complete Sire')
 
-allFiles = ['pages/homeblog.html']
+allFiles = ['pages\homeblog.html','pages\stuff.html']
 # 'index.html',
 for aFile in allFiles:
     addAllDOM(aFile)
