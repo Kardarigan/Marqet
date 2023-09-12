@@ -46,6 +46,8 @@ nav {
 .header-slider {
     color: $colorLight;
     height: inherit;
+    display: flex;
+    justify-content: center;
     * {
         user-select: none;
     }
@@ -69,7 +71,6 @@ nav {
     &-radio {
         position: absolute;
         z-index: 99;
-        left: 50%;
         height: 10px !important;
         bottom: 5%;
         accent-color: rgb(255, 255, 255);
@@ -108,16 +109,6 @@ nav {
     }
     button {
         border-radius: 100px;
-    }
-}
-@keyframes fadeIn {
-    0%,
-    100% {
-        opacity: 0.5;
-    }
-    20%,
-    80% {
-        opacity: 1;
     }
 }
 .header-slider-item {
@@ -240,19 +231,6 @@ nav {
         }
     }
 }
-.slick-initialized .slick-slide {
-    display: flex !important;
-    justify-content: center !important;
-    align-items: center !important;
-    flex-direction: row !important;
-}
-.slick-dots li button:before {
-    color: $colorLight-hover !important;
-    font-size: 12px !important;
-}
-.slick-dots li.slick-active button:before {
-    color: $colorLight !important;
-}
 // -------------------------[reviews]----------------------------
 // ------------------------[newscard]----------------------------
 .newsCard {
@@ -367,8 +345,8 @@ nav {
     border-radius: 50%;
     color: $colorDark-hover-xx;
     border: 1px solid $colorDark-hover-x;
-    width: 30px;
-    height: 30px;
+    width: 35px;
+    height: 35px;
 
     @each $name, $color in $social-btn-colors {
         &-#{$name}:hover {

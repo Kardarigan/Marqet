@@ -22,7 +22,7 @@ function rotateSlider() {
 
 function startSlider() {
     showSlide(currentIndex);
-    intervalId = setInterval(rotateSlider, 5000000000000);
+    intervalId = setInterval(rotateSlider, 5000000);
     radioInputs[currentIndex].checked = true;
 }
 

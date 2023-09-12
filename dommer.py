@@ -1,5 +1,8 @@
 import os
 from bs4 import BeautifulSoup
+import pyautogui
+import time
+
 
 def addAllDOM(destinationPath):
     mainDirectory = os.path.dirname(__file__)
@@ -9,9 +12,13 @@ def addAllDOM(destinationPath):
     scriptSource = 'components/script.html'
 
     destinationPath = os.path.join(mainDirectory, destinationPath)
-
+    needDeletes = ['link', 'script']
     with open(destinationPath, 'r', encoding='utf-8') as destination_file:
-        destination_content = BeautifulSoup(destination_file, 'html.parser')
+        destinationContent = BeautifulSoup(destination_file, 'html.parser')
+        for dels in needDeletes:
+            hasDelete = destinationContent.find_all(dels)
+            for tag in hasDelete:
+                tag.decompose()
 
     allPathes = [headSource, navSource, scriptSource]
     allTargets = ['head', 'nav', 'body']
@@ -28,21 +35,24 @@ def addAllDOM(destinationPath):
         sourceSoup = BeautifulSoup(pathContent, 'html.parser')
 
         if targetStr == 'nav':
-            nav_target = destination_content.find('nav')
-            if nav_target:
-                if not nav_target.has_attr('id'):
-                    nav_target['id'] = 'targetNav'
+            navTarget = destinationContent.find('nav', {'id': 'targetNav'})
+            if navTarget:
+                navTarget.clear()
 
-        target_tag = destination_content.find(targetStr)
+        targetTag = destinationContent.find(targetStr)
 
-        if target_tag:
-            target_tag.append(sourceSoup)
+        if targetTag:
+            targetTag.append(sourceSoup)
 
     with open(destinationPath, 'w', encoding='utf-8') as destination_file:
-        destination_file.write(str(destination_content))
-    print('Mission Complete Sire')
+        destination_file.writelines(line for line in str(
+            destinationContent).splitlines(True) if line.strip())
 
-allFiles = ['pages\homeblog.html','pages\stuff.html']
-# 'index.html',
+
+
+allFiles = ['index.html','pages\homeblog.html', 'pages\stuff.html']
+
 for aFile in allFiles:
     addAllDOM(aFile)
+    aFileName = aFile.replace('pages\\', '') 
+    print(f'Mission Complete Sire ----> in {aFileName}')
