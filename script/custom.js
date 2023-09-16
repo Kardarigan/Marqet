@@ -57,4 +57,8 @@ $.getJSON("../data/waresInfo.json", function (data) {
         $(".warecards").append(article);
     });
 });
-// ----------------[warecard changer]------------------
+// ----------------[splid]------------------
+
+
+var splide = new Splide( '.splide' );
+splide.mount();
