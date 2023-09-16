@@ -1,41 +1,21 @@
-$(".myqmars").slick({
-    dots: true,
-    centerMode: true
-});
-
-$(".multiple-items").slick({
-    infinite: true,
-    slidesToShow: 2,
-    slidesToScroll: 1,
-    responsive: [
-        {
-          breakpoint: 1024,
-          settings: {
-            slidesToShow: 2,
-            slidesToScroll: 1,
-            infinite: true
-          }
-        },
-        {
-          breakpoint: 600,
-          settings: {
-            slidesToShow: 1,
-            slidesToScroll: 1
-          }
-        }
-    ]
-});
 // ----------------[warecard builder]------------------
 $.getJSON("../data/waresInfo.json", function (data) {
     $.each(data, function (index, item) {
         const article = $("<article>", { class: "col-md-3 p-2 col-6" }).append(
             $("<div>", { class: "card warecard" }).append(
-                $("<div>", { class: "warecard-banner" }).append(
-                    $("<img>", {
-                        class: "card-img-top warecard-banner-img",
-                        src: item.imgPath,
-                        alt: item.imgAlt
-                    })
+                $("<div>", { class: "card warecard-container" }).append(
+                    $("<a>", { class: "warecard-banner overflow-hidden", href: item.href }).append(
+                        $("<img>", {
+                            class: "card-img-top warecard-banner-img-hover position-absolute d-none",
+                            src: item.hoverPath,
+                            alt: item.imgAlt
+                        }),
+                        $("<img>", {
+                            class: "card-img-top warecard-banner-img",
+                            src: item.imgPath,
+                            alt: item.imgAlt
+                        })
+                    )
                 ),
                 $("<div>", { class: "position-absolute warecard-img-panel p-2 m-2 bg-white shadow-sm" }).append(
                     $("<ul>").append(
@@ -73,6 +53,7 @@ $.getJSON("../data/waresInfo.json", function (data) {
                 )
             )
         );
+
         $(".warecards").append(article);
     });
 });

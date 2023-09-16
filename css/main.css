@@ -46,7 +46,7 @@
   line-height: 0.1em;
 }
 .sides-lines span {
-  background: azure;
+  background: rgb(249, 255, 255);
   padding: 0 10px !important;
 }
 
@@ -122,7 +122,7 @@ footer span * {
 }
 
 body {
-  background-color: azure;
+  background-color: rgb(249, 255, 255);
 }
 
 a {
@@ -146,7 +146,7 @@ button {
   background-color: #83b735 !important;
   padding: 10px 25px !important;
   border: 0 !important;
-  color: azure !important;
+  color: rgb(249, 255, 255) !important;
 }
 button:hover {
   background-color: rgba(131, 183, 53, 0.8235294118) !important;
@@ -208,10 +208,10 @@ nav:first-child * {
   font-size: 12px;
 }
 nav:first-child p {
-  color: azure !important;
+  color: rgb(249, 255, 255) !important;
 }
 nav:first-child a {
-  color: azure !important;
+  color: rgb(249, 255, 255) !important;
 }
 nav:first-child a:hover {
   color: rgba(240, 255, 255, 0.7) !important;
@@ -247,9 +247,8 @@ nav button:hover {
   width: 100%;
   display: block;
 }
-
 .header-slider {
-  color: azure;
+  color: rgb(249, 255, 255);
   height: inherit;
   display: flex;
   justify-content: center;
@@ -265,6 +264,8 @@ nav button:hover {
   width: 95%;
   right: 0;
   height: 100% !important;
+  display: none;
+  animation: fadeIn 2s ease-in-out infinite;
 }
 .header-slider-item-1 {
   background-image: url(../img/slider/slider-1.jpg);
@@ -274,6 +275,9 @@ nav button:hover {
 }
 .header-slider-item-3 {
   background-image: url(../img/slider/slider-3.jpg);
+}
+.header-slider-item.active {
+  display: flex;
 }
 .header-slider-radio {
   position: absolute;
@@ -296,8 +300,8 @@ nav button:hover {
 }
 .header-slider-radio input[type=radio]:checked, .header-slider-radio input[type=radio]:hover {
   border-color: Black;
-  background-color: azure;
-  border: 1px solid azure;
+  background-color: rgb(249, 255, 255);
+  border: 1px solid rgb(249, 255, 255);
   padding: 5px !important;
   background-size: 5% 5%;
 }
@@ -311,15 +315,6 @@ nav button:hover {
 }
 .header-slider button {
   border-radius: 100px;
-}
-
-.header-slider-item {
-  display: none;
-  animation: fadeIn 2s ease-in-out infinite;
-}
-
-.header-slider-item.active {
-  display: flex;
 }
 
 .threebox {
@@ -361,6 +356,20 @@ nav button:hover {
   font-size: 0.8rem;
 }
 
+.warecard-container {
+  overflow: hidden;
+}
+.warecard-banner-img {
+  z-index: 100;
+}
+.warecard-banner:hover .warecard-banner-img {
+  opacity: 0;
+}
+.warecard-banner:hover .warecard-banner-img-hover {
+  transform: scale(1.2);
+  display: block;
+}
+
 .categories {
   position: relative;
   height: 380px;
@@ -386,10 +395,10 @@ nav button:hover {
   background-color: transparent;
 }
 .categories-title * {
-  color: azure;
+  color: rgb(249, 255, 255);
 }
 .categories-title *:hover {
-  color: azure;
+  color: rgb(249, 255, 255);
 }
 .categories-title-stock {
   margin-top: 50px !important;
@@ -411,7 +420,7 @@ nav button:hover {
   background-size: cover;
   background-position: center;
   height: 90vh;
-  color: azure;
+  color: rgb(249, 255, 255);
   text-align: center;
 }
 .reviews h4 {
@@ -457,7 +466,7 @@ nav button:hover {
 }
 .newsCard-banner-date {
   position: absolute;
-  background-color: azure;
+  background-color: rgb(249, 255, 255);
   text-align: center;
 }
 .newsCard-banner-date span {
@@ -473,11 +482,11 @@ nav button:hover {
 .newsCard-categories {
   background-color: #83b735;
   padding: 0 8px 3px !important;
-  color: azure;
+  color: rgb(249, 255, 255);
   white-space: nowrap;
 }
 .newsCard-categories a {
-  color: azure !important;
+  color: rgb(249, 255, 255) !important;
   white-space: nowrap;
   font-size: 11px !important;
 }
@@ -532,35 +541,35 @@ nav button:hover {
   border-color: #3b5999;
 }
 .social-btn-facebook:hover * {
-  color: azure;
+  color: rgb(249, 255, 255);
 }
 .social-btn-twitter:hover {
   background-color: #55acee;
   border-color: #55acee;
 }
 .social-btn-twitter:hover * {
-  color: azure;
+  color: rgb(249, 255, 255);
 }
 .social-btn-pintrest:hover {
   background-color: #e60023;
   border-color: #e60023;
 }
 .social-btn-pintrest:hover * {
-  color: azure;
+  color: rgb(249, 255, 255);
 }
 .social-btn-linkedin:hover {
   background-color: #0077b5;
   border-color: #0077b5;
 }
 .social-btn-linkedin:hover * {
-  color: azure;
+  color: rgb(249, 255, 255);
 }
 .social-btn-telegram:hover {
   background-color: #0088cc;
   border-color: #0088cc;
 }
 .social-btn-telegram:hover * {
-  color: azure;
+  color: rgb(249, 255, 255);
 }
 
 .newsletter-form {
@@ -578,7 +587,7 @@ nav button:hover {
 }
 
 footer * {
-  color: azure;
+  color: rgb(249, 255, 255);
 }
 footer p,
 footer i,
@@ -587,17 +596,17 @@ footer span {
   color: rgba(240, 255, 255, 0.7) !important;
 }
 footer li a:hover {
-  color: azure !important;
+  color: rgb(249, 255, 255) !important;
 }
 footer a {
   font-weight: 500;
-  color: azure !important;
+  color: rgb(249, 255, 255) !important;
 }
 footer a:hover {
   color: rgba(240, 255, 255, 0.7) !important;
 }
 footer .footer-logo * {
-  fill: azure;
+  fill: rgb(249, 255, 255);
 }
 
 @media (max-width: 991px) {

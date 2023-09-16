@@ -42,82 +42,79 @@ nav {
             }
         }
     }
-}
-.header-slider {
-    color: $colorLight;
-    height: inherit;
-    display: flex;
-    justify-content: center;
-    * {
-        user-select: none;
-    }
-
-    &-item {
-        background-size: cover;
-        position: absolute;
-        width: 95%;
-        right: 0;
-        height: 100% !important;
-        &-1 {
-            background-image: url(../img/slider/slider-1.jpg);
+    &-slider {
+        color: $colorLight;
+        height: inherit;
+        display: flex;
+        justify-content: center;
+        * {
+            user-select: none;
         }
-        &-2 {
-            background-image: url(../img/slider/slider-2.jpg);
-        }
-        &-3 {
-            background-image: url(../img/slider/slider-3.jpg);
-        }
-    }
-    &-radio {
-        position: absolute;
-        z-index: 99;
-        height: 10px !important;
-        bottom: 5%;
-        accent-color: rgb(255, 255, 255);
-
-        input[type="radio"] {
-            height: 20px;
-            aspect-ratio: 1;
-            padding: 2px !important;
-            background: $colorDark-hover no-repeat content-box;
-            border-radius: 50%;
-            outline-offset: 1px;
-            -webkit-appearance: none;
-            -moz-appearance: none;
-            appearance: none;
-            transition: 0.5s;
-            &:checked,
-            &:hover {
-                border-color: $colorDark;
-                background-color: $colorLight;
-                border: 1px solid $colorLight;
-
-                padding: 5px !important;
-                background-size: 5% 5%;
+        &-item {
+            background-size: cover;
+            position: absolute;
+            width: 95%;
+            right: 0;
+            height: 100% !important;
+            display: none;
+            animation: fadeIn 2s ease-in-out infinite;
+            &-1 {
+                background-image: url(../img/slider/slider-1.jpg);
+            }
+            &-2 {
+                background-image: url(../img/slider/slider-2.jpg);
+            }
+            &-3 {
+                background-image: url(../img/slider/slider-3.jpg);
+            }
+            &.active {
+                display: flex;
+                // animation: none;
             }
         }
+        &-radio {
+            position: absolute;
+            z-index: 99;
+            height: 10px !important;
+            bottom: 5%;
+            accent-color: rgb(255, 255, 255);
 
-        @media print {
-            -webkit-appearance: auto;
-            -moz-appearance: auto;
-            appearance: auto;
-            background: none;
+            input[type="radio"] {
+                height: 20px;
+                aspect-ratio: 1;
+                padding: 2px !important;
+                background: $colorDark-hover no-repeat content-box;
+                border-radius: 50%;
+                outline-offset: 1px;
+                -webkit-appearance: none;
+                -moz-appearance: none;
+                appearance: none;
+                transition: 0.5s;
+                &:checked,
+                &:hover {
+                    border-color: $colorDark;
+                    background-color: $colorLight;
+                    border: 1px solid $colorLight;
+
+                    padding: 5px !important;
+                    background-size: 5% 5%;
+                }
+            }
+
+            @media print {
+                -webkit-appearance: auto;
+                -moz-appearance: auto;
+                appearance: auto;
+                background: none;
+            }
+
+            &-item {
+            }
         }
-
-        &-item {
+        button {
+            border-radius: 100px;
         }
     }
-    button {
-        border-radius: 100px;
-    }
-}
-.header-slider-item {
-    display: none;
-    animation: fadeIn 2s ease-in-out infinite;
-}
-.header-slider-item.active {
-    display: flex;
-    // animation: none;
 }
 // -----------------------[threeboxes]---------------------------
 .threebox {
@@ -159,6 +156,25 @@ nav {
 // -----------------------[threeboxes]---------------------------
 // ------------------------[warecard]----------------------------
 .warecard {
+    &-container {
+        overflow: hidden;
+    }
+    &-banner {
+        &-img {
+            z-index: 100;
+            &-hover {
+            }
+        }
+        &:hover {
+            .warecard-banner-img {
+                opacity: 0;
+            }
+            .warecard-banner-img-hover {
+                transform: scale(1.2);
+                display: block;
+            }
+        }
+    }
 }
 // ------------------------[warecard]----------------------------
 // -----------------------[categories]---------------------------
@@ -295,14 +311,14 @@ nav {
         a {
             @include light-link;
             white-space: nowrap;
-            font-size: 11px !important;            
+            font-size: 11px !important;
         }
     }
 
     &-readmore {
         @include alpha-link;
 
-        &::after{
+        &::after {
             position: absolute;
             bottom: 0;
             left: 100%;
@@ -313,7 +329,7 @@ nav {
             font-size: 14px;
             line-height: 5px;
             opacity: 1;
-            transition: opacity .35s ease;
+            transition: opacity 0.35s ease;
             content: "\2026";
             color: red;
         }
