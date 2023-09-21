@@ -1,17 +1,10 @@
 // -------------------------[navbar]-----------------------------
-nav {
+#targetNav {
     &:first-child {
         * {
             font-size: 12px;
         }
-        p {
-            color: $colorLight !important;
-        }
-        a {
-            @include light-link;
-        }
     }
-
     img {
         width: 90%;
     }
@@ -391,7 +384,7 @@ nav {
 }
 // -----------------------[newsletter]---------------------------
 // -------------------------[footer]-----------------------------
-footer {
+.mainFooter {
     * {
         color: $colorLight;
     }

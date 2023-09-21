@@ -9,6 +9,7 @@ def addAllDOM(destinationPath):
 
     headSource = 'components/headtag.html'
     navSource = 'components/navbar.html'
+    footSource = 'components/footer.html'
     scriptSource = 'components/script.html'
 
     destinationPath = os.path.join(mainDirectory, destinationPath)
@@ -20,8 +21,8 @@ def addAllDOM(destinationPath):
             for tag in hasDelete:
                 tag.decompose()
 
-    allPathes = [headSource, navSource, scriptSource]
-    allTargets = ['head', 'nav', 'body']
+    allPathes = [headSource, navSource, scriptSource, footSource]
+    allTargets = ['head', 'nav', 'body', 'footer']
 
     for path, targetStr in zip(allPathes, allTargets):
         path = os.path.join(mainDirectory, path)
@@ -38,6 +39,10 @@ def addAllDOM(destinationPath):
             navTarget = destinationContent.find('nav', {'id': 'targetNav'})
             if navTarget:
                 navTarget.clear()
+        if targetStr == 'footer':
+            footTarget = destinationContent.find('footer')
+            if footTarget:
+                footTarget.clear()
 
         targetTag = destinationContent.find(targetStr)
 
