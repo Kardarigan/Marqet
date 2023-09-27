@@ -57,36 +57,65 @@ $.getJSON("../data/waresInfo.json", function (data) {
         $(".warecards").append(article);
     });
 });
-// ----------------[splid]------------------
-var main = new Splide( '#main-slider', {
-    type       : 'loop',
-    heightRatio: 0.5,
-    pagination : true,
-    arrows     : true,
-    cover      : true,
-  } );
-  
-  var thumbnails = new Splide( '#thumbnail-slider', {
-    rewind          : true,
-    fixedWidth      : 104,
-    fixedHeight     : 58,
-    isNavigation    : true,
-    gap             : 10,
-    focus           : 'center',
-    pagination      : false,
-    cover           : true,
-    dragMinThreshold: {
-      mouse: 4,
-      touch: 10,
-    },
-    breakpoints : {
-      640: {
-        fixedWidth  : 66,
-        fixedHeight : 38,
-      },
-    },
-  } );
-  
-  main.sync( thumbnails );
-  main.mount();
-  thumbnails.mount();
+// --------------------[Magnifier]---------------------
+const showWrapper = document.querySelector(".album-show-wrapper");
+const showImage = document.querySelector(".album-show-wrappe img");
+const thumbWrapper = document.querySelector(".album-thumbnail-wrapper");
+
+const ZOOM = 300;
+
+showWrapper.addEventListener("mouseenter", function () {
+    showImage.style.width = ZOOM + "%";
+});
+
+showWrapper.addEventListener("mouseleave", function () {
+    showImage.style.width = "100%";
+    showImage.style.top = "0";
+    showImage.style.left = "0";
+});
+
+showWrapper.addEventListener("mousemove", function (mouseEvent) {
+    let obj = thumbWrapper;
+    let obj_left = 0;
+    let obj_top = 0;
+    let xpos;
+    let ypos;
+    while (obj.offsetParent) {
+        obj_left += obj.offsetParent;
+        obj_top += obj.offsetParent;
+        obj = obj.offsetParent;
+    }
+    if (mouseEvent) {
+        xpos = mouseEvent.pageX;
+        ypos = mouseEvent.pageY;
+    } else {
+        xpos = window.event.x + document.body.scrollLeft - 2;
+        ypos = window.event.y + document.body.scrollTop - 2;
+    }
+
+    ypos -= obj_left;
+    ypos -= obj_top;
+
+    const imgWidth = showImage.clientWidth;
+    const imgHeight = showImage.clientHeight;
+
+    showImage.style.top = -(((imgHeight - this.clientHeight) * ypos) / this.clientHeight) + "px";
+    showImage.style.left = -(((imgHeight - this.clientWidth) * xpos) / this.clientWidth) + "px";
+});
+
+Array.from(thumbWrapper.children).forEach((thumbImage, i, list) => {
+    thumbImage.addEventListener("click", function () {
+        const newSrc = thumbImage.querySelector("img").src;
+        showImage.src = newSrc;
+
+        list.forEach(prod => prod.classList.remove("active"));
+        thumbImage.classList.add("active");
+    });
+});
+
+function changeHeight() {
+    showImage.style.height = showWrapper.clientWidth + "px";
+}
+changeHeight();
+
+window.addEventListener("resize", changeHeight)

@@ -600,6 +600,24 @@ h6 {
   fill: rgb(249, 255, 255);
 }
 
+.album-thumbnail {
+  width: 130px;
+  height: 149px;
+}
+.album-thumbnail-wrapper {
+  width: 100%;
+  height: 100%;
+}
+.album-show {
+  max-width: 100%;
+  height: 100%;
+}
+.album-show-wrapper {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
 @media (max-width: 991px) {
   nav img {
     width: 50% !important;
