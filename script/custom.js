@@ -57,65 +57,80 @@ $.getJSON("../data/waresInfo.json", function (data) {
         $(".warecards").append(article);
     });
 });
-// --------------------[Magnifier]---------------------
-const showWrapper = document.querySelector(".album-show-wrapper");
-const showImage = document.querySelector(".album-show-wrappe img");
-const thumbWrapper = document.querySelector(".album-thumbnail-wrapper");
+// --------------------[magnifier]---------------------
+const showWrp = document.querySelector(".album-show-wrapper");
+const showImg = document.querySelector(".album-show");
+const thumbWrp = document.querySelector(".album-thumbnail-wrapper");
 
-const ZOOM = 300;
-
-showWrapper.addEventListener("mouseenter", function () {
-    showImage.style.width = ZOOM + "%";
+showWrp.addEventListener("mouseleave", function () {
+    showImg.style.transform = "scale(1)";
+    showImg.style.top = "0";
+    showImg.style.left = "0";
 });
 
-showWrapper.addEventListener("mouseleave", function () {
-    showImage.style.width = "100%";
-    showImage.style.top = "0";
-    showImage.style.left = "0";
-});
-
-showWrapper.addEventListener("mousemove", function (mouseEvent) {
-    let obj = thumbWrapper;
+showWrp.addEventListener("mousemove", function (mouseEvent) {
+    let obj = showWrp;
     let obj_left = 0;
     let obj_top = 0;
     let xpos;
     let ypos;
+
     while (obj.offsetParent) {
-        obj_left += obj.offsetParent;
-        obj_top += obj.offsetParent;
+        obj_left += obj.offsetLeft;
+        obj_top += obj.offsetTop;
         obj = obj.offsetParent;
     }
     if (mouseEvent) {
         xpos = mouseEvent.pageX;
         ypos = mouseEvent.pageY;
     } else {
-        xpos = window.event.x + document.body.scrollLeft - 2;
-        ypos = window.event.y + document.body.scrollTop - 2;
+        xpos = window.Event.x + document.body.scrollLeft - 2;
+        ypos = window.Event.y + document.body.scrollTop - 2;
     }
 
-    ypos -= obj_left;
+    xpos -= obj_left;
     ypos -= obj_top;
 
-    const imgWidth = showImage.clientWidth;
-    const imgHeight = showImage.clientHeight;
+    const originX = (xpos / this.clientWidth) * 100 + "%";
+    const originY = (ypos / this.clientHeight) * 100 + "%";
 
-    showImage.style.top = -(((imgHeight - this.clientHeight) * ypos) / this.clientHeight) + "px";
-    showImage.style.left = -(((imgHeight - this.clientWidth) * xpos) / this.clientWidth) + "px";
+    showImg.style.transformOrigin = originX + " " + originY;
+    showImg.style.transform = "scale(2)";
 });
 
-Array.from(thumbWrapper.children).forEach((thumbImage, i, list) => {
-    thumbImage.addEventListener("click", function () {
-        const newSrc = thumbImage.querySelector("img").src;
-        showImage.src = newSrc;
+Array.from(thumbWrp.children).forEach((productElm, i, list) => {
+    productElm.addEventListener("click", function () {
+        const newSrc = productElm.querySelector("img").src;
+        showImg.src = newSrc;
 
         list.forEach(prod => prod.classList.remove("active"));
-        thumbImage.classList.add("active");
+        productElm.classList.add("active");
     });
 });
 
 function changeHeight() {
-    showImage.style.height = showWrapper.clientWidth + "px";
+    showWrp.style.height = showWrp.clientWidth + "px";
 }
 changeHeight();
 
-window.addEventListener("resize", changeHeight)
+window.addEventListener("resize", changeHeight);
+// --------------------[size btn]---------------------
+const sizeBtns = document.querySelectorAll(".size-btn");
+const clearButton = document.querySelector(".size-btn-clear");
+clearButton.style.display = 'none';
+
+Array.from(sizeBtns).forEach((sizeBtn) => {
+    sizeBtn.addEventListener("click", function () {
+        sizeBtns.forEach(btn => btn.classList.remove("active"));
+        
+        this.classList.add("active");
+
+        const anySizeBtns = Array.from(sizeBtns).some(btn => btn.classList.contains("active"));
+
+        if (anySizeBtns) {
+            $(clearButton).css("display", "inline-block");
+        } else {
+            $(clearButton).css("display", "none");
+        }
+    });
+});
