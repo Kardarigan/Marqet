@@ -127,6 +127,23 @@ $text-sizes: (
         }
     }
 }
+.lhu-link-top /*list hover underline*/ {
+    display: inline-block;
+
+    &::before {
+        content: "" !important;
+        display: block;
+        width: 0;
+        height: 2px;
+        background: $colorAlpha;
+    }
+    &:hover {
+        &::before {
+            width: 100%;
+            transition: width 0.3s ease-in-out;
+        }
+    }
+}
 .sides-lines {
     text-align: center;
     border-bottom: 1px solid $colorDark-hover-xx;
@@ -173,4 +190,7 @@ $text-sizes: (
             font-size: $size !important;
         }
     }
+}
+.uppercase {
+    text-transform: uppercase;
 }

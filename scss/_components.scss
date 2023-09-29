@@ -372,14 +372,7 @@
 .newsletter-form {
     height: 44px;
     &-input {
-        border: 1px solid $colorDark-hover-x;
-        border-radius: 0;
         height: 100%;
-        background-color: transparent;
-        &:focus {
-            border: 1px solid $colorDark-hover-x !important;
-            border-radius: 0 !important;
-        }
     }
 }
 // -----------------------[newsletter]---------------------------
@@ -447,7 +440,7 @@
     &-list {
         li {
             &:last-child {
-                font-size: 13px !important;
+                font-size: 11px !important;
             }
         }
     }
@@ -463,6 +456,70 @@
             color: $colorDark-hover !important;
         }
     }
+}
+// ----------------------[stuffnumber]---------------------------
+.stuffNumber {
+    width: 80px;
+    height: 42px;
+    * {
+        color: $colorDark-hover !important;
+    }
+    &-decrease {
+        border: 1px solid $colorDark-hover-xx;
+        @extend .flex-centralizer;
+        button {
+            padding: 0 !important;
+            width: 20px !important;
+            width: 18px;
+            height: 42px !important;
+        }
+
+        &:hover > button {
+            color: $colorLight !important;
+            background-color: $colorAlpha !important;
+        }
+    }
+    &-number {
+        border: 1px solid $colorDark-hover-xx;
+        border-left: 0;
+        border-right: 0;
+        @extend .flex-centralizer;
+    }
+    &-increase {
+        border: 1px solid $colorDark-hover-xx;
+        @extend .flex-centralizer;
+        button {
+            padding: 0 !important;
+            width: 20px !important;
+            width: 18px;
+            height: 42px !important;
+        }
+        &:hover > button {
+            color: $colorLight !important;
+            background-color: $colorAlpha !important;
+        }
+    }
+}
+// -----------------------[stufftabs]----------------------------
+#stuffTabs {
+    &-btn {
+        li {
+            button {
+                height: 30px;
+            }
+        }
+    }
+    ul {
+        li {
+            &::before {
+                content: ">";
+                margin-right: 10px;
+            }
+        }
+    }
+}
+#desctiption {
+    
 }
 // -----------------------[mediquery]----------------------------
 @media (max-width: 991px) {

@@ -55,7 +55,7 @@ def addAllDOM(destinationPath):
 
 
 
-allFiles = ['index.html','pages\homeblog.html', 'pages\stuff.html']
+allFiles = ['index.html','pages\homeblog.html', 'pages\stuff.html','pages\post.html']
 
 for aFile in allFiles:
     addAllDOM(aFile)

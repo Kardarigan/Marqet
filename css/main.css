@@ -20,7 +20,7 @@
   background-color: transparent !important;
 }
 
-.flex-centralizer {
+.flex-centralizer, .stuffNumber-increase, .stuffNumber-number, .stuffNumber-decrease {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -54,6 +54,21 @@
   background: #83b735;
 }
 .lhu-link:hover::after {
+  width: 100%;
+  transition: width 0.3s ease-in-out;
+}
+
+.lhu-link-top {
+  display: inline-block;
+}
+.lhu-link-top::before {
+  content: "" !important;
+  display: block;
+  width: 0;
+  height: 2px;
+  background: #83b735;
+}
+.lhu-link-top:hover::before {
   width: 100%;
   transition: width 0.3s ease-in-out;
 }
@@ -132,6 +147,10 @@
   font-size: 2.25rem !important;
 }
 
+.uppercase {
+  text-transform: uppercase;
+}
+
 * {
   margin: 0 !important;
   padding: 0 !important;
@@ -172,6 +191,20 @@ button:hover {
 
 strong {
   color: #83b735;
+}
+
+input, textarea {
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 0;
+  background-color: transparent;
+}
+input:focus, textarea:focus {
+  border: 1px solid rgba(0, 0, 0, 0.2) !important;
+  border-radius: 0 !important;
+}
+
+p, li {
+  font-size: 15px;
 }
 
 .bg-primary {
@@ -585,14 +618,7 @@ h6 {
   height: 44px;
 }
 .newsletter-form-input {
-  border: 1px solid rgba(0, 0, 0, 0.2);
-  border-radius: 0;
   height: 100%;
-  background-color: transparent;
-}
-.newsletter-form-input:focus {
-  border: 1px solid rgba(0, 0, 0, 0.2) !important;
-  border-radius: 0 !important;
 }
 
 .mainFooter * {
@@ -646,7 +672,7 @@ h6 {
 }
 
 .size-list li:last-child {
-  font-size: 13px !important;
+  font-size: 11px !important;
 }
 .size-btn {
   padding: 3px 10px !important;
@@ -659,6 +685,53 @@ h6 {
 }
 .size-btn-clear {
   color: rgba(0, 0, 0, 0.5) !important;
+}
+
+.stuffNumber {
+  width: 80px;
+  height: 42px;
+}
+.stuffNumber * {
+  color: rgba(0, 0, 0, 0.5) !important;
+}
+.stuffNumber-decrease {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+.stuffNumber-decrease button {
+  padding: 0 !important;
+  width: 20px !important;
+  width: 18px;
+  height: 42px !important;
+}
+.stuffNumber-decrease:hover > button {
+  color: rgb(249, 255, 255) !important;
+  background-color: #83b735 !important;
+}
+.stuffNumber-number {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-left: 0;
+  border-right: 0;
+}
+.stuffNumber-increase {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+.stuffNumber-increase button {
+  padding: 0 !important;
+  width: 20px !important;
+  width: 18px;
+  height: 42px !important;
+}
+.stuffNumber-increase:hover > button {
+  color: rgb(249, 255, 255) !important;
+  background-color: #83b735 !important;
+}
+
+#stuffTabs-btn li button {
+  height: 30px;
+}
+#stuffTabs ul li::before {
+  content: ">";
+  margin-right: 10px;
 }
 
 @media (max-width: 991px) {

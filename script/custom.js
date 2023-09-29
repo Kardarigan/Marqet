@@ -34,12 +34,12 @@ $.getJSON("../data/waresInfo.json", function (data) {
                     $("<a>", { class: "card-title pt-5", href: "#" }).text(item.title),
                     $("<a>", { class: "text-muted d-block pt-1", href: "#" }).text(item.categories),
 
-                    $("<ul>", { class: "card-text py-1" }).append(
+                    $("<ul>", { class: "card-text py-1 size-list" }).append(
                         (function () {
                             const sizeItems = [];
                             $.each(item.sizes, function (index, size) {
                                 sizeItems.push(
-                                    $("<li>", { class: "d-inline text-size-m" }).append($("<a>", { class: "me-3", href: "#" }).text(size))
+                                    $("<li>", { class: "d-inline text-size-m" }).append($("<button>", { class: "me-3 reset-button size-btn", href: "#" }).text(size))
                                 );
                             });
                             return sizeItems;
@@ -115,22 +115,49 @@ changeHeight();
 
 window.addEventListener("resize", changeHeight);
 // --------------------[size btn]---------------------
-const sizeBtns = document.querySelectorAll(".size-btn");
-const clearButton = document.querySelector(".size-btn-clear");
-clearButton.style.display = 'none';
+$(document).ready(function () {
+    const sizeBtns = $(".size-btn");
+    const clearButton = $(".size-btn-clear");
+    clearButton.hide();
 
-Array.from(sizeBtns).forEach((sizeBtn) => {
-    sizeBtn.addEventListener("click", function () {
-        sizeBtns.forEach(btn => btn.classList.remove("active"));
-        
-        this.classList.add("active");
+    clearButton.on("click", function () {
+        sizeBtns.removeClass("active");
+        clearButton.hide();
+    });
 
-        const anySizeBtns = Array.from(sizeBtns).some(btn => btn.classList.contains("active"));
+    sizeBtns.on("click", function () {
+        sizeBtns.removeClass("active");
+        $(this).addClass("active");
+
+        const anySizeBtns = sizeBtns.hasClass("active");
 
         if (anySizeBtns) {
-            $(clearButton).css("display", "inline-block");
+            clearButton.show();
         } else {
-            $(clearButton).css("display", "none");
+            clearButton.hide();
         }
     });
+});
+// ------------------[stuffnumber]--------------------
+let stuffQuantity = 0;
+
+$('.stuffNumber-number p').html(stuffQuantity);
+
+$('.stuffNumber-decrease-btn').click(function (e) { 
+    stuffQuantity -= 1;
+    if (stuffQuantity <= 0) {
+        $('.stuffNumber-number p').html(0);
+    } else {
+        $('.stuffNumber-number p').html(stuffQuantity);
+    }
+});
+
+$('.stuffNumber-increase-btn').click(function (e) { 
+    if (stuffQuantity <= 0) {
+        stuffQuantity = 0;
+    } else {
+        stuffQuantity = stuffQuantity;
+    }
+    stuffQuantity += 1;
+    $('.stuffNumber-number p').html(stuffQuantity);
 });

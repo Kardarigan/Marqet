@@ -32,6 +32,18 @@ button {
 strong {
     color: $colorAlpha;
 }
+input, textarea {
+    border: 1px solid $colorDark-hover-x;
+    border-radius: 0;
+    background-color: transparent;
+    &:focus {
+        border: 1px solid $colorDark-hover-x !important;
+        border-radius: 0 !important;
+    }
+}
+p,li {
+    font-size: 15px;
+}
 .bg {
     &-primary {
         background-color: $colorAlpha !important;
