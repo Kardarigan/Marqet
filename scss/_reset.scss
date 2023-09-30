@@ -43,6 +43,7 @@ input, textarea {
 }
 p,li {
     font-size: 15px;
+    color: $colorDark-hover;
 }
 .bg {
     &-primary {
@@ -63,6 +64,10 @@ p,li {
     }
     &-light {
         border-color: $colorLight-hover-x !important;
+    }
+    &-primary{
+        border-color: $colorAlpha !important;
+
     }
 }
 .card {

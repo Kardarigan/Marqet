@@ -12,6 +12,11 @@
         @include button-reseter;
     }
 }
+.navBar-window{
+    z-index: 100000;
+    background-color: $colorLight;
+    width: 100%;
+}
 // -------------------------[navbar]-----------------------------
 // -------------------------[header]-----------------------------
 .header {
@@ -500,6 +505,22 @@
         }
     }
 }
+// -----------------------[instagram]----------------------------
+.instagramPosts {
+    &:hover {
+        img {
+            opacity: 70%;
+        }
+    }
+}
+// -----------------------[stufftabs]----------------------------
+#recentComments {
+    li {
+        &::before {
+            content: "#";
+        }
+    }
+}
 // -----------------------[stufftabs]----------------------------
 #stuffTabs {
     &-btn {
@@ -518,10 +539,36 @@
         }
     }
 }
-#desctiption {
-    
+// -----------------------[blogTitle]----------------------------
+#blogTitle {
+    position: relative;
+    div {
+        position: absolute;
+        background-color: rgb(249, 255, 255);
+        text-align: center;
+        top: 0;
+        left: 0;
+        span {
+            font-weight: 600;
+            font-size: 0.75rem;
+        }
+    }
 }
-// -----------------------[mediquery]----------------------------
+// ------------------------[blogMain]----------------------------
+#viewAllBrands {
+    &:hover {
+        background-color: $colorDark-hover-x !important;
+    }
+}
+.authorCard {
+    background-color: $colorDark-hover-xxx;
+    position: relative;
+    img {
+        position: absolute;
+        top: -30px;
+    }
+}
+// ----------------------[mediaquery]----------------------------
 @media (max-width: 991px) {
     nav {
         img {

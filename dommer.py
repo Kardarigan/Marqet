@@ -39,6 +39,7 @@ def addAllDOM(destinationPath):
             navTarget = destinationContent.find('nav', {'id': 'targetNav'})
             if navTarget:
                 navTarget.clear()
+
         if targetStr == 'footer':
             footTarget = destinationContent.find('footer')
             if footTarget:

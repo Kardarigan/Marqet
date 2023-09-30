@@ -205,6 +205,7 @@ input:focus, textarea:focus {
 
 p, li {
   font-size: 15px;
+  color: rgba(0, 0, 0, 0.5);
 }
 
 .bg-primary {
@@ -223,6 +224,9 @@ p, li {
 }
 .border-light {
   border-color: rgba(240, 255, 255, 0.2) !important;
+}
+.border-primary {
+  border-color: #83b735 !important;
 }
 
 .card {
@@ -269,6 +273,12 @@ h6 {
 #targetNav button:hover {
   background-color: transparent !important;
   color: Black;
+}
+
+.navBar-window {
+  z-index: 100000;
+  background-color: rgb(249, 255, 255);
+  width: 100%;
 }
 
 .header-categories h5 {
@@ -726,12 +736,48 @@ h6 {
   background-color: #83b735 !important;
 }
 
+.instagramPosts:hover img {
+  opacity: 70%;
+}
+
+#recentComments li::before {
+  content: "#";
+}
+
 #stuffTabs-btn li button {
   height: 30px;
 }
 #stuffTabs ul li::before {
   content: ">";
   margin-right: 10px;
+}
+
+#blogTitle {
+  position: relative;
+}
+#blogTitle div {
+  position: absolute;
+  background-color: rgb(249, 255, 255);
+  text-align: center;
+  top: 0;
+  left: 0;
+}
+#blogTitle div span {
+  font-weight: 600;
+  font-size: 0.75rem;
+}
+
+#viewAllBrands:hover {
+  background-color: rgba(0, 0, 0, 0.2) !important;
+}
+
+.authorCard {
+  background-color: rgba(0, 0, 0, 0.05);
+  position: relative;
+}
+.authorCard img {
+  position: absolute;
+  top: -30px;
 }
 
 @media (max-width: 991px) {
