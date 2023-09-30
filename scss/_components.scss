@@ -8,14 +8,16 @@
     img {
         width: 90%;
     }
-    button {
-        @include button-reseter;
+    section {
+        button {
+            @include button-reseter;
+        }
     }
 }
 .navBar-window{
-    z-index: 100000;
+    z-index: 999;
     background-color: $colorLight;
-    width: 100%;
+    box-shadow: 0 0 2px 2px $colorDark-hover-xxx;
 }
 // -------------------------[navbar]-----------------------------
 // -------------------------[header]-----------------------------

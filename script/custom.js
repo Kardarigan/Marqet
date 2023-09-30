@@ -48,7 +48,7 @@ $.getJSON("../data/waresInfo.json", function (data) {
 
                     $("<div>").append(
                         $("<strong>", { class: "d-block" }).text("$199.00"),
-                        $("<a>", { class: "lhu-link my-1", href: "#" }).text("SELECT OPTION")
+                        $("<a>", { class: "list-hover-underline my-1", href: "#" }).text("SELECT OPTION")
                     )
                 )
             )
