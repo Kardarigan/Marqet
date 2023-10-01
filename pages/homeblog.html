@@ -103,34 +103,29 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
                     </div>
                     <ul class="d-lg-flex d-none col-6 mx-auto flex-centralizer list-hover-underline">
                         <li class="p-2 border-end border-light">
-                            <a href="#">HOME </a>
+                            <a href="#" class="navBar-item" data-navTab="Home">HOME </a>
                         </li>
                         <li class="p-2 border-end border-light">
-                            <a href="#"
-                                >SHOP
+                            <a href="#" class="navBar-item" data-navTab="Shop">SHOP
                             </a>
                         </li>
                         <li class="p-2 border-end border-light">
-                            <a href="#"
-                                >BLOG
+                            <a href="#" class="navBar-item" data-navTab="Blog">BLOG
                                 <div class="navBar-window d-none position-absolute p-5 shadow"></div>
                             </a>
                         </li>
                         <li class="p-2 border-end border-light">
-                            <a href="#"
-                                >PAGES
+                            <a href="#" class="navBar-item" data-navTab="Pages">PAGES
                                 <div class="navBar-window d-none position-absolute p-5 shadow"></div>
                             </a>
                         </li>
                         <li class="p-2 border-end border-light">
-                            <a href="#"
-                                >ELEMENTS
+                            <a href="#" class="navBar-item" data-navTab="Elements">ELEMENTS
                                 <div class="navBar-window d-none position-absolute p-5 shadow"></div>
                             </a>
                         </li>
                         <li class="p-2 border-end border-light">
-                            <a href="#"
-                                >BUY
+                            <a href="#" class="navBar-item" data-navTab="Buy">BUY
                                 <div class="navBar-window d-none position-absolute p-5 shadow"></div>
                             </a>
                         </li>
@@ -152,7 +147,7 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
                 </div>
             </section>
             <menu class="d-flex justify-content-center position-absolute w-100">
-                <div class="navBar-window p-5 row w-100 d-flex justify-content-between">
+                <div id="navWinHome" class="navBar-window p-5 row w-100 justify-content-between">
                     <div class="col-3"><a href="#"><img alt="project" class="img-fluid shadow-lg" src="/img/project.jpg" /><p class="text-center text-dark mt-2 fs-6">Battlefront II</p></a></div>
                     <div class="col-3"><a href="#"><img alt="project" class="img-fluid shadow-lg" src="/img/project.jpg" /><p class="text-center text-dark mt-2 fs-6">Battlefront II</p></a></div>
                     <div class="col-3"><a href="#"><img alt="project" class="img-fluid shadow-lg" src="/img/project.jpg" /><p class="text-center text-dark mt-2 fs-6">Battlefront II</p></a></div>
@@ -163,6 +158,50 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
                     <div class="col-3 mt-5"><a href="#"><img alt="project" class="img-fluid shadow-lg" src="/img/project.jpg" /><p class="text-center text-dark mt-2 fs-6">Battlefront II</p></a></div>
                     <div class="col-12 mt-3 text-center">
                         <button>View all Demos (38)</button>
+                    </div>
+                </div>
+                <div id="navWinShop" class="navBar-window row w-100 mx-5 justify-content-between d-flex">
+                    <div class="col-3 bg-primary h-100 pb-3 ">
+                        <ul class="w-100">
+                            <li class="p-3 w-100"><a href="#" class="w-100 fs-5 text-light">Shop Pages<i class="fa-regular fa-chevron-right end-0 position-absolute mt-2 me-3"></i></a></li>
+                            <li class="p-3 w-100"><a href="#" class="w-100 fs-5 text-light">Product Loop<i class="fa-regular fa-chevron-right end-0 position-absolute mt-2 me-3"></i></a></li>
+                            <li class="p-3 w-100"><a href="#" class="w-100 fs-5 text-light">Single Product<i class="fa-regular fa-chevron-right end-0 position-absolute mt-2 me-3"></i></a></li>
+                            <li class="p-3 w-100"><a href="#" class="w-100 fs-5 text-light">Features<i class="fa-regular fa-chevron-right end-0 position-absolute mt-2 me-3"></i></a></li>
+                        </ul>
+                    </div>
+                    <div class="col-9 ps-4 row">
+                        <ul class="col-4 py-3">
+                            <h6><a href="#">HOVER DESIGN</a></h6>
+                            <li class="mt-3"><a href="#" class="text-muted">item 1</a></li>
+                            <li class="mt-3"><a href="#" class="text-muted">item 2</a></li>
+                            <li class="mt-3"><a href="#" class="text-muted">item 3</a></li>
+                            <li class="mt-3"><a href="#" class="text-muted">item 4</a></li>
+                            <li class="mt-3"><a href="#" class="text-muted">item 5</a></li>
+                            <li class="mt-3"><a href="#" class="text-muted">item 6</a></li>
+                            <li class="mt-3"><a href="#" class="text-muted">item 7</a></li>
+                            <li class="mt-3"><a href="#" class="text-muted">item 8</a></li>
+                            <li class="mt-3"><a href="#" class="text-muted">item 9</a></li>
+                            <li class="mt-3"><a href="#" class="text-muted">item 10</a></li>
+                        </ul>
+                        <ul class="col-4 py-3">
+                            <h6><a href="#">HOVER DESIGN</a></h6>
+                            <li class="mt-3"><a href="#" class="text-muted">item 1</a></li>
+                            <li class="mt-3"><a href="#" class="text-muted">item 2</a></li>
+                            <li class="mt-3"><a href="#" class="text-muted">item 3</a></li>
+                            <li class="mt-3"><a href="#" class="text-muted">item 4</a></li>
+                            <li class="mt-3"><a href="#" class="text-muted">item 5</a></li>
+                            <li class="mt-3"><a href="#" class="text-muted">item 6</a></li>
+                            <li class="mt-3"><a href="#" class="text-muted">item 7</a></li>
+                            <li class="mt-3"><a href="#" class="text-muted">item 8</a></li>
+                            <li class="mt-3"><a href="#" class="text-muted">item 9</a></li>
+                            <li class="mt-3"><a href="#" class="text-muted">item 10</a></li>
+                        </ul>
+                        <div class="bg-muted col-4 h-100 flex-centralizer flex-column text-center">
+                            <img src="/img/advanced-variable.webp" alt="idonno" class="img-fluid">
+                            <h5 class="mx-1">Advanced Variable products with swatches</h5>
+                            <p class="w-75 my-3">Advanced Variable products with swatches porttitor scelerisque</p>
+                            <button class="rounded-pill">VIEW MORE</button>
+                        </div>
                     </div>
                 </div>
             </menu>

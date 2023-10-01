@@ -39,7 +39,9 @@ $.getJSON("../data/waresInfo.json", function (data) {
                             const sizeItems = [];
                             $.each(item.sizes, function (index, size) {
                                 sizeItems.push(
-                                    $("<li>", { class: "d-inline text-size-m" }).append($("<button>", { class: "me-3 reset-button size-btn", href: "#" }).text(size))
+                                    $("<li>", { class: "d-inline text-size-m" }).append(
+                                        $("<button>", { class: "me-3 reset-button size-btn", href: "#" }).text(size)
+                                    )
                                 );
                             });
                             return sizeItems;
@@ -141,23 +143,34 @@ $(document).ready(function () {
 // ------------------[stuffnumber]--------------------
 let stuffQuantity = 0;
 
-$('.stuffNumber-number p').html(stuffQuantity);
+$(".stuffNumber-number p").html(stuffQuantity);
 
-$('.stuffNumber-decrease-btn').click(function (e) { 
+$(".stuffNumber-decrease-btn").click(function (e) {
     stuffQuantity -= 1;
     if (stuffQuantity <= 0) {
-        $('.stuffNumber-number p').html(0);
+        $(".stuffNumber-number p").html(0);
     } else {
-        $('.stuffNumber-number p').html(stuffQuantity);
+        $(".stuffNumber-number p").html(stuffQuantity);
     }
 });
 
-$('.stuffNumber-increase-btn').click(function (e) { 
+$(".stuffNumber-increase-btn").click(function (e) {
     if (stuffQuantity <= 0) {
         stuffQuantity = 0;
     } else {
         stuffQuantity = stuffQuantity;
     }
     stuffQuantity += 1;
-    $('.stuffNumber-number p').html(stuffQuantity);
+    $(".stuffNumber-number p").html(stuffQuantity);
 });
+// -------------------[navbartab]---------------------
+$(".navBar-item").hover(
+    function () {
+        var navTabId = $(this).data("navTab");
+        $("#navWin" + navTabId).fadeIn();
+    },
+    function () {
+        var navTabId = $(this).data("navTab");
+        $("#navWin" + navTabId).fadeOut();
+    }
+);

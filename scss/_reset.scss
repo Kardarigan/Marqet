@@ -52,6 +52,9 @@ p,li {
     &-dark {
         background-color: $colorDark !important;
     }
+    &-muted {
+        background-color: $colorDark-hover-xxx;
+    }
 }
 .text {
     &-primary {
