@@ -30,6 +30,7 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
         <link href="/img/jedi-logo.png" rel="shortcut icon" type="image/png" />
     </head>
     <body>
+        <!------------------------ navbar ------------------------>
         <nav id="targetNav">
             <section class="navbar navbar-expand-md navbar-light bg-primary">
                 <div class="container-lg mx-auto justify-content-between d-flex">
@@ -441,6 +442,79 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
                 </div>
             </menu>
         </nav>
+        <!------------------------ navbar ------------------------>
+        <!------------------------ header ------------------------>
+        <header class="w-100 text-center bg-white py-3 overview-title">
+            <a href="#" class="me-2">←</a>
+            <h1 class="d-inline">Furniture</h1>
+        </header>
+        <!------------------------ header ------------------------>
+        <!------------------------- main ------------------------->
+        <section class="px-5 row">
+            <!----------------------- sidemenu ----------------------->
+            <div class="col-lg-3 p-5 ps-0 d-lg-block d-none">
+                <ul class="overview-categories mb-4">
+                    <h6>PRODUCT CATEGORIES</h6>
+                    <li class="mt-3">
+                        <a href="#" class="d-block w-100 position-relative"
+                            >Accessories <span class="px-1 rounded-pill position-absolute end-0">80</span></a
+                        >
+                    </li>
+                    <li class="mt-3">
+                        <a href="#" class="d-block w-100 position-relative"
+                            >Clocks <span class="px-1 rounded-pill position-absolute end-0">80</span></a
+                        >
+                    </li>
+                    <li class="mt-3">
+                        <a href="#" class="d-block w-100 position-relative"
+                            >Cooking <span class="px-1 rounded-pill position-absolute end-0">80</span></a
+                        >
+                    </li>
+                    <li class="mt-3">
+                        <a href="#" class="d-block w-100 position-relative"
+                            >Furnitures <span class="px-1 rounded-pill position-absolute end-0">80</span></a
+                        >
+                    </li>
+                    <li class="mt-3">
+                        <a href="#" class="d-block w-100 position-relative"
+                            >Lighting <span class="px-1 rounded-pill position-absolute end-0">80</span></a
+                        >
+                    </li>
+                    <li class="mt-3">
+                        <a href="#" class="d-block w-100 position-relative"
+                            >Toys <span class="px-1 rounded-pill position-absolute end-0">80</span></a
+                        >
+                    </li>
+                </ul>
+                <hr />
+                <div class="wrapper">
+                    <div class="price-input">
+                        <div class="field">
+                            <span>Min</span>
+                            <input type="number" class="input-min" value="2500" />
+                        </div>
+                        <div class="separator">-</div>
+                        <div class="field">
+                            <span>Max</span>
+                            <input type="number" class="input-max" value="7500" />
+                        </div>
+                    </div>
+                    <div class="slider">
+                        <div class="progress"></div>
+                    </div>
+                    <div class="range-input">
+                        <input type="range" class="range-min" min="0" max="10000" value="2500" step="100" />
+                        <input type="range" class="range-max" min="0" max="10000" value="7500" step="100" />
+                    </div>
+                </div>
+            </div>
+            <!----------------------- sidemenu ----------------------->
+            <!----------------------- overview ----------------------->
+            <div class="col-lg-9"></div>
+            <!----------------------- overview ----------------------->
+        </section>
+        <!------------------------- main ------------------------->
+        <!------------------------ navbar ------------------------>
         <footer>
             <!----------------------------[newsletter]----------------------------->
             <section class="border-top border-black">
@@ -697,6 +771,8 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
             </section>
             <!------------------------------[footer]------------------------------->
         </footer>
+        <!------------------------ navbar ------------------------>
+
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
         <script src="
 https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js

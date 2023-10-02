@@ -182,3 +182,47 @@ $(".navBar-shop li").hover(
         $(this).addClass("active");
     }
 );
+
+$(function () {
+    const rangeInput = $(".range-input input"),
+      priceInput = $(".price-input input"),
+      range = $(".slider .progress");
+    let priceGap = 1000;
+  
+    priceInput.each(function () {
+      $(this).on("input", function (e) {
+        let minPrice = parseFloat($(priceInput[0]).val()),
+          maxPrice = parseFloat($(priceInput[1]).val());
+  
+        if (maxPrice - minPrice >= priceGap && maxPrice <= rangeInput[1].val()) {
+          if (e.target.className === "input-min") {
+            rangeInput[0].val(minPrice);
+            range.css("left", (minPrice / rangeInput[0].val()) * 100 + "%");
+          } else {
+            rangeInput[1].val(maxPrice);
+            range.css("right", 100 - (maxPrice / rangeInput[1].val()) * 100 + "%");
+          }
+        }
+      });
+    });
+  
+    rangeInput.each(function () {
+      $(this).on("input", function (e) {
+        let minVal = parseFloat($(rangeInput[0]).val()),
+          maxVal = parseFloat($(rangeInput[1]).val());
+  
+        if (maxVal - minVal < priceGap) {
+          if (e.target.className === "range-min") {
+            rangeInput[0].val(maxVal - priceGap);
+          } else {
+            rangeInput[1].val(minVal + priceGap);
+          }
+        } else {
+          priceInput[0].val(minVal);
+          priceInput[1].val(maxVal);
+          range.css("left", (minVal / rangeInput[0].val()) * 100 + "%");
+          range.css("right", 100 - (maxVal / rangeInput[1].val()) * 100 + "%");
+        }
+      });
+    });
+  });
