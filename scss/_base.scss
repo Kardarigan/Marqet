@@ -13,6 +13,8 @@ $colorDark-hover: rgba(0, 0, 0, 0.5);
 $colorDark-hover-x: rgba(0, 0, 0, 0.2);
 $colorDark-hover-xx: rgba(0, 0, 0, 0.1);
 $colorDark-hover-xxx: rgba(0, 0, 0, 0.05);
+$colorDark-hover-xxxx: rgba(0, 0, 0, 0.025);
+
 $colorDark-light: #454545;
 
 $social-btn-colors: (
@@ -128,6 +130,12 @@ $text-sizes: (
         }
     }
 }
+.lhu-link-reset /*list hover underline*/ {
+    &::after {
+        content: "" !important;
+        display: none !important;
+    }
+}
 .lhu-link-top /*list hover underline*/ {
     display: inline-block;
 
@@ -165,16 +173,13 @@ $text-sizes: (
 ::-webkit-scrollbar {
     width: 7px;
 }
-
 ::-webkit-scrollbar-track {
     background-color: $colorLight-hover-x;
 }
-
 ::-webkit-scrollbar-thumb {
     background: $colorDark-hover;
     border-radius: 10px;
 }
-
 /* ......................................classes........................................... */
 .non-st /*select text*/ {
     & * {

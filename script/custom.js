@@ -174,3 +174,11 @@ $(".navBar-item").hover(
         $("#navWin" + navTabId).fadeOut();
     }
 );
+$(".navBar-shop li").hover(
+    function () {
+        $(this).addClass("active");
+    },
+    function () {
+        $(this).addClass("active");
+    }
+);

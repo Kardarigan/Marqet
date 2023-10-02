@@ -14,13 +14,44 @@
         }
     }
 }
-.navBar-window{
-    z-index: 999;
-    background-color: $colorLight;
-    box-shadow: 0 0 2px 2px $colorDark-hover-xxx;
-    display: none;
-    li, p {
-        font-size: 12px;
+.navBar {
+    &-window {
+        z-index: 999;
+        background-color: $colorLight;
+        box-shadow: 0 0 2px 2px $colorDark-hover-xxx;
+        display: none;
+        h6,
+        h5,
+        h4 {
+            color: $colorDark;
+        }
+        p {
+            font-size: 12px;
+        }
+    }
+    &-shop {
+        li {
+            &:hover {
+                background-color: $colorLight;
+                a {
+                    color: $colorDark !important;
+                }
+            }
+        }
+    }
+    &-submenu {
+        width: 750px;
+        margin-left: -100px !important;
+        a {
+            color: $colorDark-hover;
+            font-weight: 300;
+            &::after {
+                display: none;
+            }
+            &:hover {
+                color: $colorAlpha;
+            }
+        }
     }
 }
 // -------------------------[navbar]-----------------------------
