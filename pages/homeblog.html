@@ -26,6 +26,7 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
         <link href="https://site-assets.fontawesome.com/releases/v6.4.2/css/sharp-solid.css" rel="stylesheet" />
         <link href="https://site-assets.fontawesome.com/releases/v6.4.2/css/sharp-regular.css" rel="stylesheet" />
         <link href="https://site-assets.fontawesome.com/releases/v6.4.2/css/sharp-light.css" rel="stylesheet" />
+
         <link href="/css/main.css" rel="stylesheet" />
         <link href="/img/jedi-logo.png" rel="shortcut icon" type="image/png" />
     </head>
@@ -453,7 +454,7 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
         <section class="px-5 row">
             <!----------------------- sidemenu ----------------------->
             <div class="col-lg-3 p-5 ps-0 d-lg-block d-none">
-                <ul class="overview-categories mb-4">
+                <ul class="overview-categories">
                     <h6>PRODUCT CATEGORIES</h6>
                     <li class="mt-3">
                         <a href="#" class="d-block w-100 position-relative"
@@ -486,35 +487,245 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
                         >
                     </li>
                 </ul>
-                <hr />
-                <div class="wrapper">
-                    <div class="price-input">
-                        <div class="field">
-                            <span>Min</span>
-                            <input type="number" class="input-min" value="2500" />
-                        </div>
-                        <div class="separator">-</div>
-                        <div class="field">
-                            <span>Max</span>
-                            <input type="number" class="input-max" value="7500" />
-                        </div>
-                    </div>
-                    <div class="slider">
-                        <div class="progress"></div>
-                    </div>
-                    <div class="range-input">
-                        <input type="range" class="range-min" min="0" max="10000" value="2500" step="100" />
-                        <input type="range" class="range-max" min="0" max="10000" value="7500" step="100" />
-                    </div>
+                <hr class="my-4" />
+                <h6>FILTER BY PRICE</h6>
+                <form action="#" method="get" class="my-3">
+                    <input type="range" class="w-100" />
+                    <p class="d-flex my-4 align-items-center">
+                        Price : &nbsp;<span class="text-dark">$<span id="minPrice">40</span> - $<span id="maxPrice">800</span></span
+                        ><button type="submit" class="btn-omega ml-auto p-2">FILTER</button>
+                    </p>
+                </form>
+                <hr class="my-4" />
+                <ul class="overview-colors pe-2">
+                    <h6>PRODUCT CATEGORIES</h6>
+                    <li class="mt-4">
+                        <a href="#" class="d-block w-100 position-relative"
+                            ><span class="me-1 rounded-circle prod-color-silver"></span>silver<span
+                                class="px-1 rounded-pill position-absolute end-0"
+                                >80</span
+                            ></a
+                        >
+                    </li>
+                    <li class="mt-4">
+                        <a href="#" class="d-block w-100 position-relative"
+                            ><span class="me-1 rounded-circle prod-color-gray"></span>gray<span
+                                class="px-1 rounded-pill position-absolute end-0"
+                                >80</span
+                            ></a
+                        >
+                    </li>
+                    <li class="mt-4">
+                        <a href="#" class="d-block w-100 position-relative"
+                            ><span class="me-1 rounded-circle prod-color-black"></span>black<span
+                                class="px-1 rounded-pill position-absolute end-0"
+                                >80</span
+                            ></a
+                        >
+                    </li>
+                    <li class="mt-4">
+                        <a href="#" class="d-block w-100 position-relative"
+                            ><span class="me-1 rounded-circle prod-color-red"></span>red<span
+                                class="px-1 rounded-pill position-absolute end-0"
+                                >80</span
+                            ></a
+                        >
+                    </li>
+                    <li class="mt-4">
+                        <a href="#" class="d-block w-100 position-relative"
+                            ><span class="me-1 rounded-circle prod-color-maroon"></span>maroon<span
+                                class="px-1 rounded-pill position-absolute end-0"
+                                >80</span
+                            ></a
+                        >
+                    </li>
+                    <li class="mt-4">
+                        <a href="#" class="d-block w-100 position-relative"
+                            ><span class="me-1 rounded-circle prod-color-yellow"></span>yellow<span
+                                class="px-1 rounded-pill position-absolute end-0"
+                                >80</span
+                            ></a
+                        >
+                    </li>
+                    <li class="mt-4">
+                        <a href="#" class="d-block w-100 position-relative"
+                            ><span class="me-1 rounded-circle prod-color-olive"></span>olive<span
+                                class="px-1 rounded-pill position-absolute end-0"
+                                >80</span
+                            ></a
+                        >
+                    </li>
+                    <li class="mt-4">
+                        <a href="#" class="d-block w-100 position-relative"
+                            ><span class="me-1 rounded-circle prod-color-lime"></span>lime<span
+                                class="px-1 rounded-pill position-absolute end-0"
+                                >80</span
+                            ></a
+                        >
+                    </li>
+                    <li class="mt-4">
+                        <a href="#" class="d-block w-100 position-relative"
+                            ><span class="me-1 rounded-circle prod-color-green"></span>green<span
+                                class="px-1 rounded-pill position-absolute end-0"
+                                >80</span
+                            ></a
+                        >
+                    </li>
+                    <li class="mt-4">
+                        <a href="#" class="d-block w-100 position-relative"
+                            ><span class="me-1 rounded-circle prod-color-aqua"></span>aqua<span
+                                class="px-1 rounded-pill position-absolute end-0"
+                                >80</span
+                            ></a
+                        >
+                    </li>
+                    <li class="mt-4">
+                        <a href="#" class="d-block w-100 position-relative"
+                            ><span class="me-1 rounded-circle prod-color-teal"></span>teal<span
+                                class="px-1 rounded-pill position-absolute end-0"
+                                >80</span
+                            ></a
+                        >
+                    </li>
+                    <li class="mt-4">
+                        <a href="#" class="d-block w-100 position-relative"
+                            ><span class="me-1 rounded-circle prod-color-blue"></span>blue<span
+                                class="px-1 rounded-pill position-absolute end-0"
+                                >80</span
+                            ></a
+                        >
+                    </li>
+                    <li class="mt-4">
+                        <a href="#" class="d-block w-100 position-relative"
+                            ><span class="me-1 rounded-circle prod-color-navy"></span>navy<span
+                                class="px-1 rounded-pill position-absolute end-0"
+                                >80</span
+                            ></a
+                        >
+                    </li>
+                    <li class="mt-4">
+                        <a href="#" class="d-block w-100 position-relative"
+                            ><span class="me-1 rounded-circle prod-color-fuchsia"></span>fuchsia<span
+                                class="px-1 rounded-pill position-absolute end-0"
+                                >80</span
+                            ></a
+                        >
+                    </li>
+                    <li class="mt-4">
+                        <a href="#" class="d-block w-100 position-relative"
+                            ><span class="me-1 rounded-circle prod-color-purple"></span>purple<span
+                                class="px-1 rounded-pill position-absolute end-0"
+                                >80</span
+                            ></a
+                        >
+                    </li>
+                </ul>
+                <hr class="my-4" />
+                <ul class="overview-sizes">
+                    <h6>PRODUCT CATEGORIES</h6>
+                    <li class="mt-4">
+                        <a href="#" class="d-block w-100 position-relative"
+                            ><span>M</span><span class="px-1 rounded-pill position-absolute end-0">80</span></a
+                        >
+                    </li>
+                    <li class="mt-4">
+                        <a href="#" class="d-block w-100 position-relative"
+                            ><span>L</span><span class="px-1 rounded-pill position-absolute end-0">80</span></a
+                        >
+                    </li>
+                    <li class="mt-4">
+                        <a href="#" class="d-block w-100 position-relative"
+                            ><span>XL</span><span class="px-1 rounded-pill position-absolute end-0">80</span></a
+                        >
+                    </li>
+                </ul>
+                <hr class="my-4" />
+                <h6>FILTER BY BRAND</h6>
+                <div class="overview-search-input position-relative d-flex align-items-center mt-3 mb-2">
+                    <input type="text" placeholder="Find a Brand" class="w-100 p-5" />
+                    <i class="fal fa-search position-absolute end-0 pe-2"></i>
                 </div>
+                <div class="overview-search-arena row">
+                    <div class="col-6 mt-1"><img src="/img/brand-alessi.png" alt="brand" class="img-fluid w-50" /></div>
+                    <div class="col-6 mt-1"><img src="/img/brand-Eva-Solo.png" alt="brand" class="img-fluid w-50" /></div>
+                    <div class="col-6 mt-1"><img src="/img/brand-PackIt.png" alt="brand" class="img-fluid w-50" /></div>
+                    <div class="col-6 mt-1"><img src="/img/brand-Rosenthal-blog.png" alt="brand" class="img-fluid w-50" /></div>
+                    <div class="col-6 mt-1"><img src="/img/brand-witra.png" alt="brand" class="img-fluid w-50" /></div>
+                </div>
+                <hr class="my-4" />
+                <h6>PRODUCT STATUS</h6>
+                <label class="d-block position-relative mt-3 overview-status-wrapper"
+                    >On sale
+                    <input type="checkbox" name="sale" id="onSaleCheck" class="overview-status" />
+                    <span class="overview-status-check"></span>
+                </label>
+                <label class="d-block position-relative mt-1 overview-status-wrapper"
+                    >In stock
+                    <input type="checkbox" name="stock" id="inStockCheck" class="overview-status" />
+                    <span class="overview-status-check"></span>
+                </label>
+                <hr class="my-4" />
+                <h6>TOP RATED PRODUCTS</h6>
+                <article class="row border-bottom">
+                    <div class="col-5"><img src="/img/product/product-2-430x491.jpg" alt="product" class="img-fluid pe-2" /></div>
+                    <div class="col-7 d-flex flex-column justify-content-between py-4">
+                        <a href="#">Geometric chair</a>
+                        <p class="text-color-mustart">
+                            <i class="fa-sharp fa-solid fa-star"></i><i class="fa-sharp fa-solid fa-star"></i
+                            ><i class="fa-sharp fa-solid fa-star"></i><i class="fa-sharp fa-solid fa-star"></i
+                            ><i class="fa-sharp fa-solid fa-star"></i>
+                        </p>
+                        <strong>$700.00</strong>
+                    </div>
+                </article>
+                <article class="row border-bottom">
+                    <div class="col-5"><img src="/img/product/product-3-430x491.jpg" alt="product" class="img-fluid pe-2" /></div>
+                    <div class="col-7 d-flex flex-column justify-content-between py-4">
+                        <a href="#">Geometric chair</a>
+                        <p class="text-color-mustart">
+                            <i class="fa-sharp fa-solid fa-star"></i><i class="fa-sharp fa-solid fa-star"></i
+                            ><i class="fa-sharp fa-solid fa-star"></i><i class="fa-sharp fa-solid fa-star"></i
+                            ><i class="fa-sharp fa-solid fa-star"></i>
+                        </p>
+                        <div class="row">
+                            <div class="col-6"><del class="text-muted">$200.00</del></div>
+                            <div class="col-6"><strong>$700.00</strong></div>
+                        </div>
+                    </div>
+                </article>
+                <article class="row border-bottom">
+                    <div class="col-5">
+                        <img src="/img/product/product-furniture-9-2-430x491.jpg" alt="product" class="img-fluid pe-2" />
+                    </div>
+                    <div class="col-7 d-flex flex-column justify-content-between py-4">
+                        <a href="#">Geometric chair</a>
+                        <p class="text-color-mustart">
+                            <i class="fa-sharp fa-solid fa-star"></i><i class="fa-sharp fa-solid fa-star"></i
+                            ><i class="fa-sharp fa-solid fa-star"></i><i class="fa-sharp fa-solid fa-star"></i
+                            ><i class="fa-sharp fa-solid fa-star"></i>
+                        </p>
+                        <strong>$700.00</strong>
+                    </div>
+                </article>
             </div>
             <!----------------------- sidemenu ----------------------->
             <!----------------------- overview ----------------------->
-            <div class="col-lg-9"></div>
+            <div class="col-lg-9">
+                <div class="overview-header position-relative">
+                    <div class="position-absolute w-25">
+                        <h3>VULUTATE DUIRA PARTURENT MIRA</h3>
+                        <p>Suspedise ullamcorper dis nisl ipsu habitasse nam parturent fusce tique.</p>
+                        <button type="button" class="phy-button">SHOP NOW</button>
+                    </div>
+                    <div class="overview-header-img">
+                        <img src="/img/blog/wood-furnit-cat-banner-sofa.jpg" alt="couch" class="img-fluid" />
+                    </div>
+                </div>
+            </div>
             <!----------------------- overview ----------------------->
         </section>
         <!------------------------- main ------------------------->
-        <!------------------------ navbar ------------------------>
+        <!------------------------ footer ------------------------>
         <footer>
             <!----------------------------[newsletter]----------------------------->
             <section class="border-top border-black">
@@ -771,7 +982,7 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
             </section>
             <!------------------------------[footer]------------------------------->
         </footer>
-        <!------------------------ navbar ------------------------>
+        <!------------------------ footer ------------------------>
 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
         <script src="
