@@ -22,11 +22,11 @@
 
 .phy-button {
   box-shadow: 0px 3px 0px 0px #438e44 !important;
-  padding: 10px 18px !important;
+  padding: 8px 18px !important;
   font-size: 12px;
 }
 .phy-button:active {
-  margin-top: 4px !important;
+  margin-top: 6px !important;
   box-shadow: 0px 0px 0px 0px #438e44 !important;
 }
 
@@ -468,6 +468,12 @@ p, li {
 .text-primary {
   color: #83b735 !important;
 }
+.text-muted {
+  color: rgba(0, 0, 0, 0.5) !important;
+}
+.text-muted-all * {
+  color: rgba(0, 0, 0, 0.5) !important;
+}
 
 .border-black {
   border-color: rgba(0, 0, 0, 0.1) !important;
@@ -687,18 +693,38 @@ h6 {
   font-size: 0.8rem;
 }
 
+.warecard {
+  overflow: hidden;
+}
 .warecard-container {
   overflow: hidden;
 }
 .warecard-banner-img {
   z-index: 100;
 }
+.warecard-banner-img-hover {
+  position: absolute;
+  z-index: -10;
+}
+.warecard-banner-panel {
+  margin: 0 -55px !important;
+}
 .warecard-banner:hover .warecard-banner-img {
   opacity: 0;
 }
 .warecard-banner:hover .warecard-banner-img-hover {
-  transform: scale(1.2);
-  display: block;
+  animation: scaleUp 5s;
+}
+@keyframes scaleUp {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.2);
+  }
+}
+.warecard-banner:hover + .warecard-banner-panel {
+  margin: 0 0 !important;
 }
 
 .categories {
@@ -744,6 +770,9 @@ h6 {
 }
 .categories:hover .categories-banner {
   transform: scale(1.1);
+}
+.categories-path > .active {
+  color: Black !important;
 }
 
 .reviews {
@@ -1179,6 +1208,32 @@ h6 {
   border: solid rgb(249, 255, 255);
   border-width: 0 1px 1px 0;
   transform: rotate(45deg);
+}
+.overview-header {
+  overflow: hidden;
+}
+.overview-header:hover .overview-header-img img {
+  transform: scale(1.05);
+}
+.overview-grid li a {
+  font-size: large;
+}
+.overview-grid li a.active {
+  color: Black !important;
+}
+.overview-sort {
+  all: unset;
+  width: 100%;
+}
+.overview-sort-wrapper {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+.overview-sort-wrapper i {
+  margin: 5px -15px !important;
+  z-index: -1;
+}
+.overview-sort:focus .overview-sort-wrapper {
+  border-bottom: 3px solid #83b735;
 }
 
 @media (max-width: 991px) {

@@ -6,7 +6,7 @@ $.getJSON("../data/waresInfo.json", function (data) {
                 $("<div>", { class: "card warecard-container" }).append(
                     $("<a>", { class: "warecard-banner overflow-hidden", href: item.href }).append(
                         $("<img>", {
-                            class: "card-img-top warecard-banner-img-hover position-absolute d-none",
+                            class: "card-img-top warecard-banner-img-hover position-absolute",
                             src: item.hoverPath,
                             alt: item.imgAlt
                         }),
@@ -15,21 +15,22 @@ $.getJSON("../data/waresInfo.json", function (data) {
                             src: item.imgPath,
                             alt: item.imgAlt
                         })
-                    )
-                ),
-                $("<div>", { class: "position-absolute warecard-img-panel p-2 m-2 bg-white shadow-sm" }).append(
-                    $("<ul>").append(
-                        $("<li>", { class: "p-2 text-size-x" }).append(
-                            $("<a>", { href: "#" }).append($("<i>", { class: "fa-solid fa-shuffle" }))
-                        ),
-                        $("<li>", { class: "p-2 text-size-x" }).append(
-                            $("<a>", { href: "#" }).append($("<i>", { class: "fa-solid fa-magnifying-glass" }))
-                        ),
-                        $("<li>", { class: "p-2 text-size-x" }).append(
-                            $("<a>", { href: "#" }).append($("<i>", { class: "fa-regular fa-heart" }))
+                    ),
+                    $("<div>", { class: "position-absolute warecard-banner-panel p-2 m-2 bg-white shadow-sm" }).append(
+                        $("<ul>").append(
+                            $("<li>", { class: "p-2 text-size-x" }).append(
+                                $("<a>", { href: "#" }).append($("<i>", { class: "fa-solid fa-shuffle" }))
+                            ),
+                            $("<li>", { class: "p-2 text-size-x" }).append(
+                                $("<a>", { href: "#" }).append($("<i>", { class: "fa-solid fa-magnifying-glass" }))
+                            ),
+                            $("<li>", { class: "p-2 text-size-x" }).append(
+                                $("<a>", { href: "#" }).append($("<i>", { class: "fa-regular fa-heart" }))
+                            )
                         )
                     )
                 ),
+
                 $("<div>", { class: "card-body py-1 px-3" }).append(
                     $("<a>", { class: "card-title pt-5", href: "#" }).text(item.title),
                     $("<a>", { class: "text-muted d-block pt-1", href: "#" }).text(item.categories),
@@ -117,28 +118,26 @@ changeHeight();
 
 window.addEventListener("resize", changeHeight);
 // --------------------[size btn]---------------------
-$(document).ready(function () {
-    const sizeBtns = $(".size-btn");
-    const clearButton = $(".size-btn-clear");
+const sizeBtns = $(".size-btn");
+const clearButton = $(".size-btn-clear");
+clearButton.hide();
+
+clearButton.on("click", function () {
+    sizeBtns.removeClass("active");
     clearButton.hide();
+});
 
-    clearButton.on("click", function () {
-        sizeBtns.removeClass("active");
+sizeBtns.on("click", function () {
+    sizeBtns.removeClass("active");
+    $(this).addClass("active");
+
+    const anySizeBtns = sizeBtns.hasClass("active");
+
+    if (anySizeBtns) {
+        clearButton.show();
+    } else {
         clearButton.hide();
-    });
-
-    sizeBtns.on("click", function () {
-        sizeBtns.removeClass("active");
-        $(this).addClass("active");
-
-        const anySizeBtns = sizeBtns.hasClass("active");
-
-        if (anySizeBtns) {
-            clearButton.show();
-        } else {
-            clearButton.hide();
-        }
-    });
+    }
 });
 // ------------------[stuffnumber]--------------------
 let stuffQuantity = 0;
@@ -182,4 +181,10 @@ $(".navBar-shop li").hover(
         $(this).addClass("active");
     }
 );
-// ------------------[filterrange]--------------------
+// -----------------[overviewShow]--------------------
+debugger;
+$(".overview-show-btn").on("click", function (event) {
+    event.preventDefault();
+    $(this).addClass("active");
+    $(".overview-show-btn:not(.active)").removeClass("active");
+});

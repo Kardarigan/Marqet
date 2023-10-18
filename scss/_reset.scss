@@ -60,6 +60,12 @@ p,li {
     &-primary {
         color: $colorAlpha !important;
     }
+    &-muted {
+        color: $colorDark-hover !important;
+        &-all * {
+            color: $colorDark-hover !important;
+        }
+    }
 }
 .border {
     &-black {
