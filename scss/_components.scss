@@ -1,822 +1,832 @@
 // -------------------------[navbar]-----------------------------
 #targetNav nav {
-    &:first-child {
-        * {
-            font-size: 12px;
-        }
+  &:first-child {
+    * {
+      font-size: 12px;
     }
-    img {
-        width: 90%;
+  }
+  img {
+    width: 90%;
+  }
+  section {
+    button {
+      @include button-reseter;
     }
-    section {
-        button {
-            @include button-reseter;
-        }
-    }
+  }
 }
 .navBar {
-    &-window {
-        z-index: 999;
+  &-window {
+    z-index: 999;
+    background-color: $colorLight;
+    box-shadow: 0 0 2px 2px $colorDark-hover-xxx;
+    display: none;
+    h6,
+    h5,
+    h4 {
+      color: $colorDark;
+    }
+    p {
+      font-size: 12px;
+    }
+  }
+  &-shop {
+    li {
+      &:hover {
         background-color: $colorLight;
-        box-shadow: 0 0 2px 2px $colorDark-hover-xxx;
-        display: none;
-        h6,
-        h5,
-        h4 {
-            color: $colorDark;
-        }
-        p {
-            font-size: 12px;
-        }
-    }
-    &-shop {
-        li {
-            &:hover {
-                background-color: $colorLight;
-                a {
-                    color: $colorDark !important;
-                }
-            }
-        }
-    }
-    &-submenu {
-        width: 750px;
-        margin-left: -100px !important;
         a {
-            color: $colorDark-hover;
-            font-weight: 300;
-            &::after {
-                display: none;
-            }
-            &:hover {
-                color: $colorAlpha;
-            }
+          color: $colorDark !important;
         }
+      }
     }
+  }
+  &-submenu {
+    width: 750px;
+    margin-left: -100px !important;
+    a {
+      color: $colorDark-hover;
+      font-weight: 300;
+      &::after {
+        display: none;
+      }
+      &:hover {
+        color: $colorAlpha;
+      }
+    }
+  }
 }
 // -------------------------[header]-----------------------------
 .header {
-    &-categories {
-        h5 {
-            background-color: $colorAlpha;
-            width: 100%;
-        }
-        ul {
-            width: 100%;
-            li {
-                border: 0.1px solid $colorDark-hover-x;
-                border-top: 0;
-                &:hover {
-                    background-color: $colorLight-hover;
-                }
-                a {
-                    width: 100%;
-                    display: block;
-                }
-            }
-        }
+  &-categories {
+    h5 {
+      background-color: $colorAlpha;
+      width: 100%;
     }
-    &-slider {
-        color: $colorLight;
-        height: inherit;
+    ul {
+      width: 100%;
+      li {
+        border: 0.1px solid $colorDark-hover-x;
+        border-top: 0;
+        &:hover {
+          background-color: $colorLight-hover;
+        }
+        a {
+          width: 100%;
+          display: block;
+        }
+      }
+    }
+  }
+  &-slider {
+    color: $colorLight;
+    height: inherit;
+    display: flex;
+    justify-content: center;
+    * {
+      user-select: none;
+    }
+    &-item {
+      background-size: cover;
+      position: absolute;
+      width: 95%;
+      right: 0;
+      height: 100% !important;
+      display: none;
+      animation: fadeIn 2s ease-in-out infinite;
+      &-1 {
+        background-image: url(../img/slider/slider-1.jpg);
+      }
+      &-2 {
+        background-image: url(../img/slider/slider-2.jpg);
+      }
+      &-3 {
+        background-image: url(../img/slider/slider-3.jpg);
+      }
+      &.active {
         display: flex;
-        justify-content: center;
-        * {
-            user-select: none;
-        }
-        &-item {
-            background-size: cover;
-            position: absolute;
-            width: 95%;
-            right: 0;
-            height: 100% !important;
-            display: none;
-            animation: fadeIn 2s ease-in-out infinite;
-            &-1 {
-                background-image: url(../img/slider/slider-1.jpg);
-            }
-            &-2 {
-                background-image: url(../img/slider/slider-2.jpg);
-            }
-            &-3 {
-                background-image: url(../img/slider/slider-3.jpg);
-            }
-            &.active {
-                display: flex;
-                // animation: none;
-            }
-        }
-        &-radio {
-            position: absolute;
-            z-index: 99;
-            height: 10px !important;
-            bottom: 5%;
-            accent-color: rgb(255, 255, 255);
-
-            input[type="radio"] {
-                height: 20px;
-                aspect-ratio: 1;
-                padding: 2px !important;
-                background: $colorDark-hover no-repeat content-box;
-                border-radius: 50%;
-                outline-offset: 1px;
-                -webkit-appearance: none;
-                -moz-appearance: none;
-                appearance: none;
-                transition: 0.5s;
-                &:checked,
-                &:hover {
-                    border-color: $colorDark;
-                    background-color: $colorLight;
-                    border: 1px solid $colorLight;
-
-                    padding: 5px !important;
-                    background-size: 5% 5%;
-                }
-            }
-
-            @media print {
-                -webkit-appearance: auto;
-                -moz-appearance: auto;
-                appearance: auto;
-                background: none;
-            }
-
-            &-item {
-            }
-        }
-        button {
-            border-radius: 100px;
-        }
+        // animation: none;
+      }
     }
+    &-radio {
+      position: absolute;
+      z-index: 99;
+      height: 10px !important;
+      bottom: 5%;
+      accent-color: rgb(255, 255, 255);
+
+      input[type="radio"] {
+        height: 20px;
+        aspect-ratio: 1;
+        padding: 2px !important;
+        background: $colorDark-hover no-repeat content-box;
+        border-radius: 50%;
+        outline-offset: 1px;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        transition: 0.5s;
+        &:checked,
+        &:hover {
+          border-color: $colorDark;
+          background-color: $colorLight;
+          border: 1px solid $colorLight;
+
+          padding: 5px !important;
+          background-size: 5% 5%;
+        }
+      }
+
+      @media print {
+        -webkit-appearance: auto;
+        -moz-appearance: auto;
+        appearance: auto;
+        background: none;
+      }
+
+      &-item {
+      }
+    }
+    button {
+      border-radius: 100px;
+    }
+  }
 }
 // -----------------------[threeboxes]---------------------------
 .threebox {
-    user-select: none;
+  user-select: none;
 
-    &:hover .threebox-image-content {
-        transform: scale(1.1);
-    }
-    &-box {
-        width: 86%;
-    }
-    &-image {
-        overflow: hidden;
-        width: 100%;
-        height: 80%;
-        &-content {
-            object-fit: cover;
-        }
-    }
+  &:hover .threebox-image-content {
+    transform: scale(1.1);
+  }
+  &-box {
+    width: 86%;
+  }
+  &-image {
+    overflow: hidden;
+    width: 100%;
+    height: 80%;
     &-content {
-        * {
-            user-select: none;
-        }
-        &-event {
-            color: $colorAlpha;
-            font-size: 0.8rem;
-        }
-        &-title {
-            font-weight: 700;
-        }
-        &-links {
-            border-width: 2px !important;
-            border-color: $colorAlpha !important;
-            font-weight: 600;
-            font-size: 0.8rem;
-        }
+      object-fit: cover;
     }
+  }
+  &-content {
+    * {
+      user-select: none;
+    }
+    &-event {
+      color: $colorAlpha;
+      font-size: 0.8rem;
+    }
+    &-title {
+      font-weight: 700;
+    }
+    &-links {
+      border-width: 2px !important;
+      border-color: $colorAlpha !important;
+      font-weight: 600;
+      font-size: 0.8rem;
+    }
+  }
 }
 // ------------------------[warecard]----------------------------
 .warecard {
+  overflow: hidden;
+  &-container {
     overflow: hidden;
-
-    &-container {
-        overflow: hidden;
+  }
+  &-price {
+    height: 20px;
+    overflow: hidden;
+  }
+  &-banner {
+    &-img {
+      z-index: 100;
+      &-hover {
+        position: absolute;
+        z-index: -10;
+      }
     }
-    &-banner {
-        &-img {
-            z-index: 100;
-            &-hover {
-                position: absolute;
-                z-index: -10;
-            }
-            
-        }
-        &-panel {
-            margin: 0 -55px !important;
-        }
-        &:hover {
-            .warecard-banner-img {
-                opacity: 0;
-            }
-            .warecard-banner-img-hover {
-                animation: scaleUp 5s;
-
-                @keyframes scaleUp {
-                    0%{
-                        transform: scale(1);
-                    }
-                    100%{
-                        transform: scale(1.2);
-                    }
-                }
-            }
-            + .warecard-banner-panel {
-                margin: 0 0 !important;
-            }
-        }
+    &-panel {
+      margin: 0 -40px !important;
+      opacity: 0;
     }
+    &:hover ,.warecard-banner-panel:hover {
+      .warecard-banner-img {
+        opacity: 0;
+      }
+      .warecard-banner-img-hover {
+        animation: scaleUp 6s;
+
+        @keyframes scaleUp {
+          0% {
+            transform: scale(1);
+          }
+          100% {
+            transform: scale(1.2);
+          }
+        }
+      }
+      + .warecard-banner-panel {
+        margin: 0 0 !important;
+        opacity: 1;
+      }
+    }
+  }
+  
+  &:hover + .warecard-price{
+    strong {
+      margin-top: -26px !important;
+    }
+  }
 }
 // -----------------------[categories]---------------------------
 .categories {
-    position: relative;
-    height: 380px;
+  position: relative;
+  height: 380px;
 
-    &-container {
-        position: absolute;
-        width: 90%;
-        height: inherit;
-        overflow: hidden;
-    }
-    &-banner {
-        background-image: url("../img/categories/cat-fashing-dress-4.jpg");
-        background-repeat: no-repeat;
-        background-position: center;
-        width: 100%;
-        height: inherit;
-        position: absolute;
+  &-container {
+    position: absolute;
+    width: 90%;
+    height: inherit;
+    overflow: hidden;
+  }
+  &-banner {
+    background-image: url("../img/categories/cat-fashing-dress-4.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: inherit;
+    position: absolute;
+  }
+  &-title {
+    position: absolute;
+    width: 100%;
+    height: inherit;
+    background-color: transparent;
+
+    * {
+      @include abelith-link($colorLight);
     }
     &-title {
-        position: absolute;
-        width: 100%;
-        height: inherit;
-        background-color: transparent;
+    }
+    &-stock {
+      margin-top: 50px !important;
+      display: none;
+    }
+    &:hover {
+      background-color: $colorDark-hover;
+      .categories-title-stock {
+        display: block !important;
+        margin-top: 10px !important;
+      }
+    }
+  }
 
-        * {
-            @include abelith-link($colorLight);
-        }
-        &-title {
-        }
-        &-stock {
-            margin-top: 50px !important;
-            display: none;
-        }
-        &:hover {
-            background-color: $colorDark-hover;
-            .categories-title-stock {
-                display: block !important;
-                margin-top: 10px !important;
-            }
-        }
+  &:hover .categories-banner {
+    transform: scale(1.1);
+  }
+  &-path {
+    > .active {
+      color: $colorDark !important;
     }
-
-    &:hover .categories-banner {
-        transform: scale(1.1);
-    }
-    &-path{
-        > .active {
-            color: $colorDark !important;
-        }
-    }
+  }
 }
 // -------------------------[reviews]----------------------------
 .reviews {
-    background-image: url(../img/backgrounds/bg-reviews.jpg);
-    background-size: cover;
-    background-position: center;
-    height: 90vh;
-    color: $colorLight;
-    text-align: center;
+  background-image: url(../img/backgrounds/bg-reviews.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 90vh;
+  color: $colorLight;
+  text-align: center;
 
-    h4 {
-        font-weight: 700;
-        font-size: 2.5rem;
+  h4 {
+    font-weight: 700;
+    font-size: 2.5rem;
+  }
+  button {
+    background-color: transparent !important;
+    position: absolute !important;
+    &:hover,
+    &:focus {
+      background-color: transparent !important;
     }
-    button {
-        background-color: transparent !important;
-        position: absolute !important;
-        &:hover,
-        &:focus {
-            background-color: transparent !important;
-        }
-    }
+  }
 }
 // ------------------------[newscard]----------------------------
 .newsCard {
-    height: 340px;
-    flex-direction: row;
+  height: 340px;
+  flex-direction: row;
 
-    &-banner {
+  &-banner {
+    position: relative;
+    overflow: hidden;
+
+    &-img {
+      height: 100%;
+      width: 100%;
+      background-image: url(../img/news/blog-fashing-15.jpg);
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    &-mask {
+      background-color: $colorDark-hover;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      opacity: 0;
+
+      span {
         position: relative;
-        overflow: hidden;
-
-        &-img {
-            height: 100%;
-            width: 100%;
-            background-image: url(../img/news/blog-fashing-15.jpg);
-            background-position: center;
-            background-repeat: no-repeat;
-        }
-
-        &-mask {
-            background-color: $colorDark-hover;
-            width: 100%;
-            height: 100%;
-            position: absolute;
-            opacity: 0;
-
-            span {
-                position: relative;
-                font-size: 5vw;
-                color: $colorLight-hover;
-                left: 40%;
-                top: 20%;
-            }
-        }
-
-        &-date {
-            position: absolute;
-            background-color: $colorLight;
-            text-align: center;
-
-            span {
-                font-weight: 600;
-                font-size: 0.75rem;
-            }
-        }
-
-        &:hover {
-            .newsCard-banner-mask {
-                opacity: 1;
-            }
-            .newsCard-banner-img {
-                transform: scale(1.05);
-            }
-        }
+        font-size: 5vw;
+        color: $colorLight-hover;
+        left: 40%;
+        top: 20%;
+      }
     }
 
-    &-categories {
-        background-color: $colorAlpha;
-        padding: 0 8px 3px !important;
-        color: $colorLight;
-        white-space: nowrap;
+    &-date {
+      position: absolute;
+      background-color: $colorLight;
+      text-align: center;
 
-        a {
-            @include light-link;
-            white-space: nowrap;
-            font-size: 11px !important;
-        }
+      span {
+        font-weight: 600;
+        font-size: 0.75rem;
+      }
     }
 
-    &-readmore {
-        @include alpha-link;
+    &:hover {
+      .newsCard-banner-mask {
+        opacity: 1;
+      }
+      .newsCard-banner-img {
+        transform: scale(1.05);
+      }
+    }
+  }
 
-        &::after {
-            position: absolute;
-            bottom: 0;
-            left: 100%;
-            display: inline-block;
-            margin-left: 5px;
-            height: 5px;
-            font-weight: 400;
-            font-size: 14px;
-            line-height: 5px;
-            opacity: 1;
-            transition: opacity 0.35s ease;
-            content: "\2026";
-            color: red;
-        }
+  &-categories {
+    background-color: $colorAlpha;
+    padding: 0 8px 3px !important;
+    color: $colorLight;
+    white-space: nowrap;
 
-        &:hover {
-            .newsCard-readmore::after {
-                opacity: 1;
-            }
-        }
+    a {
+      @include light-link;
+      white-space: nowrap;
+      font-size: 11px !important;
+    }
+  }
+
+  &-readmore {
+    @include alpha-link;
+
+    &::after {
+      position: absolute;
+      bottom: 0;
+      left: 100%;
+      display: inline-block;
+      margin-left: 5px;
+      height: 5px;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 5px;
+      opacity: 1;
+      transition: opacity 0.35s ease;
+      content: "\2026";
+      color: red;
     }
 
-    &-author {
-        a {
-            color: $colorDark-hover-s !important;
-
-            &:hover {
-                color: $colorDark !important;
-            }
-        }
+    &:hover {
+      .newsCard-readmore::after {
+        opacity: 1;
+      }
     }
+  }
 
-    @media (max-width: 768px) {
-        height: auto;
+  &-author {
+    a {
+      color: $colorDark-hover-s !important;
+
+      &:hover {
+        color: $colorDark !important;
+      }
     }
+  }
+
+  @media (max-width: 768px) {
+    height: auto;
+  }
 }
 // ----------------------[social button]-------------------------
 .social-btn {
-    border-radius: 50%;
-    border: 1px solid $colorDark-hover-x;
-    width: 34px;
-    height: 34px;
-    cursor: pointer;
-    * {
-        color: $colorDark-hover;
+  border-radius: 50%;
+  border: 1px solid $colorDark-hover-x;
+  width: 34px;
+  height: 34px;
+  cursor: pointer;
+  * {
+    color: $colorDark-hover;
+  }
+  @each $name, $color in $social-btn-colors {
+    &-#{$name}:hover {
+      background-color: $color;
+      border-color: $color;
+      * {
+        color: $colorLight;
+      }
     }
-    @each $name, $color in $social-btn-colors {
-        &-#{$name}:hover {
-            background-color: $color;
-            border-color: $color;
-            * {
-                color: $colorLight;
-            }
-        }
-    }
+  }
 }
 // -----------------------[newsletter]---------------------------
 .newsletter-form {
-    height: 44px;
-    &-input {
-        height: 100%;
-    }
+  height: 44px;
+  &-input {
+    height: 100%;
+  }
 }
 // -------------------------[footer]-----------------------------
 .mainFooter {
+  * {
+    color: $colorLight;
+  }
+  p,
+  i,
+  li a,
+  span {
+    @extend .text-size-s;
+    color: $colorLight-hover !important;
+  }
+  li a {
+    &:hover {
+      color: $colorLight !important;
+    }
+  }
+  a {
+    font-weight: 500;
+    @include light-link;
+  }
+  .footer-logo {
     * {
-        color: $colorLight;
+      fill: $colorLight;
     }
-    p,
-    i,
-    li a,
-    span {
-        @extend .text-size-s;
-        color: $colorLight-hover !important;
-    }
-    li a {
-        &:hover {
-            color: $colorLight !important;
-        }
-    }
-    a {
-        font-weight: 500;
-        @include light-link;
-    }
-    .footer-logo {
-        * {
-            fill: $colorLight;
-        }
-    }
+  }
 }
 // ----------------------[stuff album]---------------------------
 .album {
-    &-thumbnail {
-        width: 130px;
-        height: 149px;
-        &-wrapper {
-            width: 100%;
-            height: 100%;
-        }
-        &-item {
-            &.active {
-                opacity: 80% !important;
-            }
-        }
+  &-thumbnail {
+    width: 130px;
+    height: 149px;
+    &-wrapper {
+      width: 100%;
+      height: 100%;
     }
-    &-show {
-        &-wrapper {
-            max-width: 100%;
-            height: 100% !important;
-            overflow: hidden;
-            position: relative;
-            box-sizing: inherit;
-            img {
-                width: 100% !important;
-                height: 100% !important;
-                display: block !important;
-                object-fit: cover;
-                position: absolute;
-            }
-        }
+    &-item {
+      &.active {
+        opacity: 80% !important;
+      }
     }
+  }
+  &-show {
+    &-wrapper {
+      max-width: 100%;
+      height: 100% !important;
+      overflow: hidden;
+      position: relative;
+      box-sizing: inherit;
+      img {
+        width: 100% !important;
+        height: 100% !important;
+        display: block !important;
+        object-fit: cover;
+        position: absolute;
+      }
+    }
+  }
 }
 // ----------------------[size button]---------------------------
 .size {
-    &-list {
-        li {
-            &:last-child {
-                font-size: 11px !important;
-            }
-        }
+  &-list {
+    li {
+      &:last-child {
+        font-size: 11px !important;
+      }
     }
-    &-btn {
-        padding: 3px 10px !important;
-        &:hover {
-            border-bottom: 1px solid $colorDark-hover !important;
-        }
-        &.active {
-            border-bottom: 1px solid $colorDark !important;
-        }
-        &-clear {
-            color: $colorDark-hover !important;
-        }
+  }
+  &-btn {
+    padding: 3px 10px !important;
+    &:hover {
+      border-bottom: 1px solid $colorDark-hover !important;
     }
+    &.active {
+      border-bottom: 1px solid $colorDark !important;
+    }
+    &-clear {
+      color: $colorDark-hover !important;
+    }
+  }
 }
 // ----------------------[stuffnumber]---------------------------
 .stuffNumber {
-    width: 80px;
-    height: 42px;
-    * {
-        color: $colorDark-hover !important;
+  width: 80px;
+  height: 42px;
+  * {
+    color: $colorDark-hover !important;
+  }
+  &-decrease {
+    border: 1px solid $colorDark-hover-xx;
+    @extend .flex-centralizer;
+    button {
+      padding: 0 !important;
+      width: 20px !important;
+      width: 18px;
+      height: 42px !important;
     }
-    &-decrease {
-        border: 1px solid $colorDark-hover-xx;
-        @extend .flex-centralizer;
-        button {
-            padding: 0 !important;
-            width: 20px !important;
-            width: 18px;
-            height: 42px !important;
-        }
 
-        &:hover > button {
-            color: $colorLight !important;
-            background-color: $colorAlpha !important;
-        }
+    &:hover > button {
+      color: $colorLight !important;
+      background-color: $colorAlpha !important;
     }
-    &-number {
-        border: 1px solid $colorDark-hover-xx;
-        border-left: 0;
-        border-right: 0;
-        @extend .flex-centralizer;
+  }
+  &-number {
+    border: 1px solid $colorDark-hover-xx;
+    border-left: 0;
+    border-right: 0;
+    @extend .flex-centralizer;
+  }
+  &-increase {
+    border: 1px solid $colorDark-hover-xx;
+    @extend .flex-centralizer;
+    button {
+      padding: 0 !important;
+      width: 20px !important;
+      width: 18px;
+      height: 42px !important;
     }
-    &-increase {
-        border: 1px solid $colorDark-hover-xx;
-        @extend .flex-centralizer;
-        button {
-            padding: 0 !important;
-            width: 20px !important;
-            width: 18px;
-            height: 42px !important;
-        }
-        &:hover > button {
-            color: $colorLight !important;
-            background-color: $colorAlpha !important;
-        }
+    &:hover > button {
+      color: $colorLight !important;
+      background-color: $colorAlpha !important;
     }
+  }
 }
 // -----------------------[instagram]----------------------------
 .instagramPosts {
-    &:hover {
-        img {
-            opacity: 70%;
-        }
+  &:hover {
+    img {
+      opacity: 70%;
     }
+  }
 }
 // -----------------------[stufftabs]----------------------------
 #recentComments {
-    li {
-        &::before {
-            content: "#";
-        }
+  li {
+    &::before {
+      content: "#";
     }
+  }
 }
 // -----------------------[stufftabs]----------------------------
 #stuffTabs {
-    &-btn {
-        li {
-            button {
-                height: 30px;
-            }
-        }
+  &-btn {
+    li {
+      button {
+        height: 30px;
+      }
     }
-    ul {
-        li {
-            &::before {
-                content: ">";
-                margin-right: 10px;
-            }
-        }
+  }
+  ul {
+    li {
+      &::before {
+        content: ">";
+        margin-right: 10px;
+      }
     }
+  }
 }
 // -----------------------[blogTitle]----------------------------
 #blogTitle {
-    position: relative;
-    div {
-        position: absolute;
-        background-color: rgb(249, 255, 255);
-        text-align: center;
-        top: 0;
-        left: 0;
-        span {
-            font-weight: 600;
-            font-size: 0.75rem;
-        }
+  position: relative;
+  div {
+    position: absolute;
+    background-color: rgb(249, 255, 255);
+    text-align: center;
+    top: 0;
+    left: 0;
+    span {
+      font-weight: 600;
+      font-size: 0.75rem;
     }
+  }
 }
 // ------------------------[blogMain]----------------------------
 #viewAllBrands {
-    &:hover {
-        background-color: $colorDark-hover-x !important;
-    }
+  &:hover {
+    background-color: $colorDark-hover-x !important;
+  }
 }
 .authorCard {
-    background-color: $colorDark-hover-xxx;
-    position: relative;
-    img {
-        position: absolute;
-        top: -30px;
-    }
+  background-color: $colorDark-hover-xxx;
+  position: relative;
+  img {
+    position: absolute;
+    top: -30px;
+  }
 }
 // ------------------------[overview]----------------------------
 .overview {
-    &-title {
-        a {
-            font-size: 35px;
-        }
+  &-title {
+    a {
+      font-size: 35px;
     }
-    &-categories {
-        li a {
-            color: $colorDark-hover;
-            span {
-                border: 1px solid $colorDark-hover-x;
-                color: $colorDark-hover;
-                font-size: 12px;
-            }
-            &:hover {
-                color: $colorDark;
-                > span {
-                    background-color: $colorAlpha;
-                    border-color: $colorAlpha;
-                    color: $colorLight;
-                }
-            }
+  }
+  &-categories {
+    li a {
+      color: $colorDark-hover;
+      span {
+        border: 1px solid $colorDark-hover-x;
+        color: $colorDark-hover;
+        font-size: 12px;
+      }
+      &:hover {
+        color: $colorDark;
+        > span {
+          background-color: $colorAlpha;
+          border-color: $colorAlpha;
+          color: $colorLight;
         }
+      }
     }
-    &-colors {
-        li {
-            a {
-                .rounded-circle {
-                    padding: 3px 12px !important;
-                }
-                &:hover {
-                    > span:first-child {
-                        &:before {
-                            content: "+";
-                            position: absolute;
-                            margin: -0.5px -3.9px;
-                            color: $colorLight;
-                        }
-                    }
-                    > span:last-child {
-                        background-color: $colorAlpha;
-                        border-color: $colorAlpha;
-                        color: $colorLight;
-                    }
-                }
-                span:last-child {
-                    border: 1px solid $colorDark-hover-x;
-                    color: $colorDark-hover;
-                    font-size: 12px;
-                }
-            }
+  }
+  &-colors {
+    li {
+      a {
+        .rounded-circle {
+          padding: 3px 12px !important;
         }
-        height: 250px;
-        overflow-y: scroll;
-        &::-webkit-scrollbar {
-            width: 4px;
-            &-track {
-                background-color: $colorDark-hover-xxx;
-            }
-            &-thumb {
-                border-radius: 0;
-                background-color: $colorDark-hover-x;
-            }
-        }
-    }
-    &-sizes {
-        li {
-            a {
-                font-weight: 800;
-                &:hover {
-                    > span:first-child {
-                        color: $colorDark;
-                        border-color: $colorDark;
-                    }
-                    > span:last-child {
-                        background-color: $colorAlpha;
-                        border-color: $colorAlpha;
-                        color: $colorLight;
-                    }
-                }
-                span:first-child {
-                    border-bottom: 2px solid transparent;
-                }
-                span:last-child {
-                    font-weight: 500 !important;
-                    border: 1px solid $colorDark-hover-x;
-                    color: $colorDark-hover;
-                    font-size: 12px;
-                }
-            }
-        }
-    }
-    &-search {
-        &-input {
-            border: 1px solid $colorDark-hover-xx;
-            padding: 10px 10px !important;
-            input {
-                all: unset !important;
-            }
-            i {
-                color: $colorDark-hover;
-            }
-        }
-    }
-    &-status {
-        opacity: 0;
-        cursor: pointer;
-        &:checked {
-            ~ .overview-status-check {
-                background-color: $colorAlpha;
-                border-color: $colorAlpha;
-            }
-        }
-        &-wrapper {
-            padding-left: 24px !important;
-            color: $colorDark-hover;
-            &:hover > .overview-status-check {
-                border-color: $colorAlpha;
-            }
-        }
-        &-check {
-            position: absolute;
-            top: 5px;
-            left: 0;
-            height: 15px;
-            width: 15px;
-            border: 2px solid $colorDark-hover-xx;
-            background-color: transparent;
-            &:after {
-                content: " ";
-                position: absolute;
-                left: 4px;
-                top: -1px;
-                width: 4px;
-                height: 10px;
-                border: solid $colorLight;
-                border-width: 0 1px 1px 0;
-                transform: rotate(45deg);
-            }
-        }
-    }
-    &-header {
-        overflow: hidden;
         &:hover {
-            .overview-header-img {
-                img {
-                    transform: scale(1.05);
-                }
+          > span:first-child {
+            &:before {
+              content: "+";
+              position: absolute;
+              margin: -0.5px -3.9px;
+              color: $colorLight;
             }
+          }
+          > span:last-child {
+            background-color: $colorAlpha;
+            border-color: $colorAlpha;
+            color: $colorLight;
+          }
         }
+        span:last-child {
+          border: 1px solid $colorDark-hover-x;
+          color: $colorDark-hover;
+          font-size: 12px;
+        }
+      }
     }
-    &-grid {
-        li a{
-            font-size: large;
-            &.active {
-                color: $colorDark !important;
-            }
-        }
+    height: 250px;
+    overflow-y: scroll;
+    &::-webkit-scrollbar {
+      width: 4px;
+      &-track {
+        background-color: $colorDark-hover-xxx;
+      }
+      &-thumb {
+        border-radius: 0;
+        background-color: $colorDark-hover-x;
+      }
     }
-    &-sort{
-        all: unset;
-        width: 100%;
-        &-wrapper{
-            border-bottom: 1px solid $colorDark-hover-xx;
-            i {
-                margin: 5px -15px !important;
-                z-index: -1;
-            }
+  }
+  &-sizes {
+    li {
+      a {
+        font-weight: 800;
+        &:hover {
+          > span:first-child {
+            color: $colorDark;
+            border-color: $colorDark;
+          }
+          > span:last-child {
+            background-color: $colorAlpha;
+            border-color: $colorAlpha;
+            color: $colorLight;
+          }
         }
-        &:focus .overview-sort-wrapper{
-            border-bottom: 3px solid $colorAlpha;
+        span:first-child {
+          border-bottom: 2px solid transparent;
         }
+        span:last-child {
+          font-weight: 500 !important;
+          border: 1px solid $colorDark-hover-x;
+          color: $colorDark-hover;
+          font-size: 12px;
+        }
+      }
     }
+  }
+  &-search {
+    &-input {
+      border: 1px solid $colorDark-hover-xx;
+      padding: 10px 10px !important;
+      input {
+        all: unset !important;
+      }
+      i {
+        color: $colorDark-hover;
+      }
+    }
+  }
+  &-status {
+    opacity: 0;
+    cursor: pointer;
+    &:checked {
+      ~ .overview-status-check {
+        background-color: $colorAlpha;
+        border-color: $colorAlpha;
+      }
+    }
+    &-wrapper {
+      padding-left: 24px !important;
+      color: $colorDark-hover;
+      &:hover > .overview-status-check {
+        border-color: $colorAlpha;
+      }
+    }
+    &-check {
+      position: absolute;
+      top: 5px;
+      left: 0;
+      height: 15px;
+      width: 15px;
+      border: 2px solid $colorDark-hover-xx;
+      background-color: transparent;
+      &:after {
+        content: " ";
+        position: absolute;
+        left: 4px;
+        top: -1px;
+        width: 4px;
+        height: 10px;
+        border: solid $colorLight;
+        border-width: 0 1px 1px 0;
+        transform: rotate(45deg);
+      }
+    }
+  }
+  &-header {
+    overflow: hidden;
+    &:hover {
+      .overview-header-img {
+        img {
+          transform: scale(1.05);
+        }
+      }
+    }
+  }
+  &-grid {
+    li a {
+      font-size: large;
+      &.active {
+        color: $colorDark !important;
+      }
+    }
+  }
+  &-sort {
+    all: unset;
+    width: 100%;
+    &-wrapper {
+      border-bottom: 1px solid $colorDark-hover-xx;
+      i {
+        margin: 5px -15px !important;
+        z-index: -1;
+      }
+    }
+    &:focus .overview-sort-wrapper {
+      border-bottom: 3px solid $colorAlpha;
+    }
+  }
 }
 // ----------------------[mediaqueries]--------------------------
 @media (max-width: 991px) {
-    nav {
-        img {
-            width: 50% !important;
-        }
-        .fa-cart-shopping {
-            font-size: 20px;
-        }
+  nav {
+    img {
+      width: 50% !important;
     }
-    header {
-        .header-slider {
-            height: 80vh;
-            padding: 10px 50px !important;
-            &-item {
-                width: 100%;
-                height: 80vh !important;
-            }
-        }
+    .fa-cart-shopping {
+      font-size: 20px;
     }
+  }
+  header {
+    .header-slider {
+      height: 80vh;
+      padding: 10px 50px !important;
+      &-item {
+        width: 100%;
+        height: 80vh !important;
+      }
+    }
+  }
 }
 // --------------------------[title]-----------------------------

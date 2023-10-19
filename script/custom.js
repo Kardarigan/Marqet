@@ -49,7 +49,7 @@ $.getJSON("../data/waresInfo.json", function (data) {
                         })()
                     ),
 
-                    $("<div>").append(
+                    $("<div>",{ class: "warecard-price" }).append(
                         $("<strong>", { class: "d-block" }).text("$199.00"),
                         $("<a>", { class: "list-hover-underline my-1", href: "#" }).text("SELECT OPTION")
                     )

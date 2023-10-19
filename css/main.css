@@ -127,14 +127,10 @@
 
 /* ......................................classes........................................... */
 .non-st * {
-  -webkit-user-select: none !important;
-     -moz-user-select: none !important;
-          user-select: none !important;
+  user-select: none !important;
 }
 .non-st-single {
-  -webkit-user-select: none !important;
-     -moz-user-select: none !important;
-          user-select: none !important;
+  user-select: none !important;
 }
 
 .text-size-sssz * {
@@ -591,9 +587,7 @@ h6 {
   justify-content: center;
 }
 .header-slider * {
-  -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
+  user-select: none;
 }
 .header-slider-item {
   background-size: cover;
@@ -655,9 +649,7 @@ h6 {
 }
 
 .threebox {
-  -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
+  user-select: none;
 }
 .threebox:hover .threebox-image-content {
   transform: scale(1.1);
@@ -671,13 +663,10 @@ h6 {
   height: 80%;
 }
 .threebox-image-content {
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 .threebox-content * {
-  -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
+  user-select: none;
 }
 .threebox-content-event {
   color: #83b735;
@@ -699,6 +688,10 @@ h6 {
 .warecard-container {
   overflow: hidden;
 }
+.warecard-price {
+  height: 20px;
+  overflow: hidden;
+}
 .warecard-banner-img {
   z-index: 100;
 }
@@ -707,13 +700,14 @@ h6 {
   z-index: -10;
 }
 .warecard-banner-panel {
-  margin: 0 -55px !important;
-}
-.warecard-banner:hover .warecard-banner-img {
+  margin: 0 -40px !important;
   opacity: 0;
 }
-.warecard-banner:hover .warecard-banner-img-hover {
-  animation: scaleUp 5s;
+.warecard-banner:hover .warecard-banner-img, .warecard-banner .warecard-banner-panel:hover .warecard-banner-img {
+  opacity: 0;
+}
+.warecard-banner:hover .warecard-banner-img-hover, .warecard-banner .warecard-banner-panel:hover .warecard-banner-img-hover {
+  animation: scaleUp 6s;
 }
 @keyframes scaleUp {
   0% {
@@ -723,8 +717,12 @@ h6 {
     transform: scale(1.2);
   }
 }
-.warecard-banner:hover + .warecard-banner-panel {
+.warecard-banner:hover + .warecard-banner-panel, .warecard-banner .warecard-banner-panel:hover + .warecard-banner-panel {
   margin: 0 0 !important;
+  opacity: 1;
+}
+.warecard:hover + .warecard-price strong {
+  margin-top: -26px !important;
 }
 
 .categories {
@@ -987,8 +985,7 @@ h6 {
   width: 100% !important;
   height: 100% !important;
   display: block !important;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   position: absolute;
 }
 
