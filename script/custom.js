@@ -35,7 +35,7 @@ $.getJSON("../data/waresInfo.json", function (data) {
                     $("<a>", { class: "card-title pt-5", href: "#" }).text(item.title),
                     $("<a>", { class: "text-muted d-block pt-1", href: "#" }).text(item.categories),
 
-                    $("<ul>", { class: "card-text py-1 size-list" }).append(
+                    $("<ul>", { class: "card-text py-1 warecard-size-list" }).append(
                         (function () {
                             const sizeItems = [];
                             $.each(item.sizes, function (index, size) {
@@ -48,10 +48,9 @@ $.getJSON("../data/waresInfo.json", function (data) {
                             return sizeItems;
                         })()
                     ),
-
                     $("<div>",{ class: "warecard-price" }).append(
                         $("<strong>", { class: "d-block" }).text("$199.00"),
-                        $("<a>", { class: "list-hover-underline my-1", href: "#" }).text("SELECT OPTION")
+                        $("<a>", { class: "lhu-link my-1", href: "#" }).text("SELECT OPTION")
                     )
                 )
             )

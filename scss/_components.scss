@@ -193,6 +193,9 @@
   &-container {
     overflow: hidden;
   }
+  &-size-list {
+    
+  }
   &-price {
     height: 20px;
     overflow: hidden;
@@ -231,11 +234,8 @@
       }
     }
   }
-  
-  &:hover + .warecard-price{
-    strong {
+  &:hover .warecard-price strong {
       margin-top: -26px !important;
-    }
   }
 }
 // -----------------------[categories]---------------------------
