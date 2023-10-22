@@ -1,0 +1,42 @@
+[
+    {
+        "imgPath": "/img/furniture/furniture2.jpg",
+        "hoverPath" : "/img/furniture/furniture2-4.jpg",
+        "imgAlt": "fashion",
+        "href" : "/pages/stuff.html",
+        "title": "Write with Lace Insert",
+        "categorie": "furniture",
+        "colors": ["red","blue","black","yellow"],
+        "price": 750
+    },
+    {
+        "imgPath": "/img/furniture/furniture2.jpg",
+        "hoverPath" : "/img/furniture/furniture2-4.jpg",
+        "imgAlt": "fashion",
+        "href" : "/pages/stuff.html",
+        "title": "Write with Lace Insert",
+        "categorie": "furniture",
+        "colors": ["red","blue","black","yellow"],
+        "price": 750
+    },
+    {
+        "imgPath": "/img/furniture/furniture2.jpg",
+        "hoverPath" : "/img/furniture/furniture2-4.jpg",
+        "imgAlt": "fashion",
+        "href" : "/pages/stuff.html",
+        "title": "Write with Lace Insert",
+        "categorie": "furniture",
+        "colors": ["red","blue","black","yellow"],
+        "price": 750
+    },
+    {
+        "imgPath": "/img/furniture/furniture2.jpg",
+        "hoverPath" : "/img/furniture/furniture2-4.jpg",
+        "imgAlt": "fashion",
+        "href" : "/pages/stuff.html",
+        "title": "Write with Lace Insert",
+        "categorie": "furniture",
+        "colors": ["red","blue","black","yellow"],
+        "price": 750
+    }
+]

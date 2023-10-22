@@ -1,42 +1,240 @@
 [
-    {
-        "imgPath": "/img/fashion-main/fashion-default-product-5-290x330.jpg",
-        "hoverPath" : "/img/fashion-main/fashion-default-product-5-2-290x330.jpg",
-        "imgAlt": "fashion",
-        "href" : "/pages/stuff.html",
-        "title": "Write with Lace Insert",
-        "categories": "fashion",
-        "sizes": ["S","M","XL"],
-        "price": 750
-    },
-    {
-        "imgPath": "/img/fashion-main/fashion-default-product-5-290x330.jpg",
-        "hoverPath" : "/img/fashion-main/fashion-default-product-5-2-290x330.jpg",
-        "imgAlt": "fashion",
-        "href" : "/pages/stuff.html",
-        "title": "Write with Lace Insert",
-        "categories": "fashion",
-        "sizes": ["S","M","XL"],
-        "price": 750
-    },
-    {
-        "imgPath": "/img/fashion-main/fashion-default-product-5-290x330.jpg",
-        "hoverPath" : "/img/fashion-main/fashion-default-product-5-2-290x330.jpg",
-        "imgAlt": "fashion",
-        "href" : "/pages/stuff.html",
-        "title": "Write with Lace Insert",
-        "categories": "fashion",
-        "sizes": ["S","M","XL"],
-        "price": 750
-    },
-    {
-        "imgPath": "/img/fashion-main/fashion-default-product-5-290x330.jpg",
-        "hoverPath" : "/img/fashion-main/fashion-default-product-5-2-290x330.jpg",
-        "imgAlt": "fashion",
-        "href" : "/pages/stuff.html",
-        "title": "Write with Lace Insert",
-        "categories": "fashion",
-        "sizes": ["S","M","XL"],
-        "price": 750
-    }
+  {
+    "imgPath": "/img/fashion-main/fashion-default-product-5-290x330.jpg",
+    "hoverPath": "/img/fashion-main/fashion-default-product-5-2-290x330.jpg",
+    "imgAlt": "fashion",
+    "href": "/pages/stuff.html",
+    "title": "Write with Lace Insert",
+    "categorie": "fashion",
+    "sizes": ["S", "M", "XL"],
+    "price": 750
+  },
+  {
+    "imgPath": "/img/fashion-main/fashion-default-product-5-290x330.jpg",
+    "hoverPath": "/img/fashion-main/fashion-default-product-5-2-290x330.jpg",
+    "imgAlt": "fashion",
+    "href": "/pages/stuff.html",
+    "title": "Write with Lace Insert",
+    "categorie": "fashion",
+    "sizes": ["S", "M", "XL"],
+    "price": 750
+  },
+  {
+    "imgPath": "/img/fashion-main/fashion-default-product-5-290x330.jpg",
+    "hoverPath": "/img/fashion-main/fashion-default-product-5-2-290x330.jpg",
+    "imgAlt": "fashion",
+    "href": "/pages/stuff.html",
+    "title": "Write with Lace Insert",
+    "categorie": "fashion",
+    "sizes": ["S", "M", "XL"],
+    "price": 750
+  },
+  {
+    "imgPath": "/img/fashion-main/fashion-default-product-5-290x330.jpg",
+    "hoverPath": "/img/fashion-main/fashion-default-product-5-2-290x330.jpg",
+    "imgAlt": "fashion",
+    "href": "/pages/stuff.html",
+    "title": "Write with Lace Insert",
+    "categorie": "fashion",
+    "sizes": ["S", "M", "XL"],
+    "price": 750
+  },
+  {
+    "imgPath": "/img/furniture/furniture2.jpg",
+    "hoverPath": "/img/furniture/furniture2_4.jpg",
+    "imgAlt": "fashion",
+    "href": "/pages/stuff.html",
+    "title": "Write with Lace Insert",
+    "categorie": "furniture",
+    "price": 750
+  },
+  {
+    "imgPath": "/img/furniture/furniture2.jpg",
+    "hoverPath": "/img/furniture/furniture2_4.jpg",
+    "imgAlt": "fashion",
+    "href": "/pages/stuff.html",
+    "title": "Write with Lace Insert",
+    "categorie": "furniture",
+    "colors": ["red", "blue", "black", "yellow"],
+    "price": 750
+  },
+  {
+    "imgPath": "/img/furniture/furniture2.jpg",
+    "hoverPath": "/img/furniture/furniture2_4.jpg",
+    "imgAlt": "fashion",
+    "href": "/pages/stuff.html",
+    "title": "Write with Lace Insert",
+    "categorie": "furniture",
+    "colors": ["red", "blue", "black", "yellow"],
+    "price": 750
+  },
+  {
+    "imgPath": "/img/furniture/furniture2.jpg",
+    "hoverPath": "/img/furniture/furniture2_4.jpg",
+    "imgAlt": "fashion",
+    "href": "/pages/stuff.html",
+    "title": "Write with Lace Insert",
+    "categorie": "furniture",
+    "colors": ["red", "blue", "black", "yellow"],
+    "price": 750
+  },
+  {
+    "imgPath": "/img/fashion-main/fashion-default-product-5-290x330.jpg",
+    "hoverPath": "/img/fashion-main/fashion-default-product-5-2-290x330.jpg",
+    "imgAlt": "fashion",
+    "href": "/pages/stuff.html",
+    "title": "Write with Lace Insert",
+    "categorie": "fashion",
+    "sizes": ["S", "M", "XL"],
+    "price": 750
+  },
+  {
+    "imgPath": "/img/fashion-main/fashion-default-product-5-290x330.jpg",
+    "hoverPath": "/img/fashion-main/fashion-default-product-5-2-290x330.jpg",
+    "imgAlt": "fashion",
+    "href": "/pages/stuff.html",
+    "title": "Write with Lace Insert",
+    "categorie": "fashion",
+    "sizes": ["S", "M", "XL"],
+    "price": 750
+  },
+  {
+    "imgPath": "/img/fashion-main/fashion-default-product-5-290x330.jpg",
+    "hoverPath": "/img/fashion-main/fashion-default-product-5-2-290x330.jpg",
+    "imgAlt": "fashion",
+    "href": "/pages/stuff.html",
+    "title": "Write with Lace Insert",
+    "categorie": "fashion",
+    "sizes": ["S", "M", "XL"],
+    "price": 750
+  },
+  {
+    "imgPath": "/img/fashion-main/fashion-default-product-5-290x330.jpg",
+    "hoverPath": "/img/fashion-main/fashion-default-product-5-2-290x330.jpg",
+    "imgAlt": "fashion",
+    "href": "/pages/stuff.html",
+    "title": "Write with Lace Insert",
+    "categorie": "fashion",
+    "sizes": ["S", "M", "XL"],
+    "price": 750
+  },
+  {
+    "imgPath": "/img/furniture/furniture2.jpg",
+    "hoverPath": "/img/furniture/furniture2_4.jpg",
+    "imgAlt": "fashion",
+    "href": "/pages/stuff.html",
+    "title": "Write with Lace Insert",
+    "categorie": "furniture",
+    "price": 750
+  },
+  {
+    "imgPath": "/img/furniture/furniture2.jpg",
+    "hoverPath": "/img/furniture/furniture2_4.jpg",
+    "imgAlt": "fashion",
+    "href": "/pages/stuff.html",
+    "title": "Write with Lace Insert",
+    "categorie": "furniture",
+    "colors": ["red", "blue", "black", "yellow"],
+    "price": 750
+  },
+  {
+    "imgPath": "/img/furniture/furniture2.jpg",
+    "hoverPath": "/img/furniture/furniture2_4.jpg",
+    "imgAlt": "fashion",
+    "href": "/pages/stuff.html",
+    "title": "Write with Lace Insert",
+    "categorie": "furniture",
+    "colors": ["red", "blue", "black", "yellow"],
+    "price": 750
+  },
+  {
+    "imgPath": "/img/furniture/furniture2.jpg",
+    "hoverPath": "/img/furniture/furniture2_4.jpg",
+    "imgAlt": "fashion",
+    "href": "/pages/stuff.html",
+    "title": "Write with Lace Insert",
+    "categorie": "furniture",
+    "colors": ["red", "blue", "black", "yellow"],
+    "price": 750
+  },
+  {
+    "imgPath": "/img/fashion-main/fashion-default-product-5-290x330.jpg",
+    "hoverPath": "/img/fashion-main/fashion-default-product-5-2-290x330.jpg",
+    "imgAlt": "fashion",
+    "href": "/pages/stuff.html",
+    "title": "Write with Lace Insert",
+    "categorie": "fashion",
+    "sizes": ["S", "M", "XL"],
+    "price": 750
+  },
+  {
+    "imgPath": "/img/fashion-main/fashion-default-product-5-290x330.jpg",
+    "hoverPath": "/img/fashion-main/fashion-default-product-5-2-290x330.jpg",
+    "imgAlt": "fashion",
+    "href": "/pages/stuff.html",
+    "title": "Write with Lace Insert",
+    "categorie": "fashion",
+    "sizes": ["S", "M", "XL"],
+    "price": 750
+  },
+  {
+    "imgPath": "/img/fashion-main/fashion-default-product-5-290x330.jpg",
+    "hoverPath": "/img/fashion-main/fashion-default-product-5-2-290x330.jpg",
+    "imgAlt": "fashion",
+    "href": "/pages/stuff.html",
+    "title": "Write with Lace Insert",
+    "categorie": "fashion",
+    "sizes": ["S", "M", "XL"],
+    "price": 750
+  },
+  {
+    "imgPath": "/img/fashion-main/fashion-default-product-5-290x330.jpg",
+    "hoverPath": "/img/fashion-main/fashion-default-product-5-2-290x330.jpg",
+    "imgAlt": "fashion",
+    "href": "/pages/stuff.html",
+    "title": "Write with Lace Insert",
+    "categorie": "fashion",
+    "sizes": ["S", "M", "XL"],
+    "price": 750
+  },
+  {
+    "imgPath": "/img/furniture/furniture2.jpg",
+    "hoverPath": "/img/furniture/furniture2_4.jpg",
+    "imgAlt": "fashion",
+    "href": "/pages/stuff.html",
+    "title": "Write with Lace Insert",
+    "categorie": "furniture",
+    "colors": ["red", "blue", "black", "yellow"],
+    "price": 750
+  },
+  {
+    "imgPath": "/img/furniture/furniture2.jpg",
+    "hoverPath": "/img/furniture/furniture2_4.jpg",
+    "imgAlt": "fashion",
+    "href": "/pages/stuff.html",
+    "title": "Write with Lace Insert",
+    "categorie": "furniture",
+    "colors": ["red", "blue", "black", "yellow"],
+    "price": 750
+  },
+  {
+    "imgPath": "/img/furniture/furniture2.jpg",
+    "hoverPath": "/img/furniture/furniture2_4.jpg",
+    "imgAlt": "fashion",
+    "href": "/pages/stuff.html",
+    "title": "Write with Lace Insert",
+    "categorie": "furniture",
+    "colors": ["red", "blue", "black", "yellow"],
+    "price": 750
+  },
+  {
+    "imgPath": "/img/furniture/furniture2.jpg",
+    "hoverPath": "/img/furniture/furniture2_4.jpg",
+    "imgAlt": "fashion",
+    "href": "/pages/stuff.html",
+    "title": "Write with Lace Insert",
+    "categorie": "furniture",
+    "colors": ["red", "blue", "black", "yellow"],
+    "price": 750
+  }
 ]

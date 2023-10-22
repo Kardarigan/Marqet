@@ -287,6 +287,177 @@
   content: "+";
 }
 
+.werecard-color-white {
+  background-color: #ffffff !important;
+  border-color: #ffffff !important;
+  width: 15px;
+  height: 15px;
+}
+.werecard-color-white:hover {
+  background-color: #ffffff !important;
+  border-color: #ffffff !important;
+}
+.werecard-color-silver {
+  background-color: #c0c0c0 !important;
+  border-color: #c0c0c0 !important;
+  width: 15px;
+  height: 15px;
+}
+.werecard-color-silver:hover {
+  background-color: #c0c0c0 !important;
+  border-color: #c0c0c0 !important;
+}
+.werecard-color-gray {
+  background-color: #808080 !important;
+  border-color: #808080 !important;
+  width: 15px;
+  height: 15px;
+}
+.werecard-color-gray:hover {
+  background-color: #808080 !important;
+  border-color: #808080 !important;
+}
+.werecard-color-black {
+  background-color: #000000 !important;
+  border-color: #000000 !important;
+  width: 15px;
+  height: 15px;
+}
+.werecard-color-black:hover {
+  background-color: #000000 !important;
+  border-color: #000000 !important;
+}
+.werecard-color-red {
+  background-color: #ff0000 !important;
+  border-color: #ff0000 !important;
+  width: 15px;
+  height: 15px;
+}
+.werecard-color-red:hover {
+  background-color: #ff0000 !important;
+  border-color: #ff0000 !important;
+}
+.werecard-color-maroon {
+  background-color: #800000 !important;
+  border-color: #800000 !important;
+  width: 15px;
+  height: 15px;
+}
+.werecard-color-maroon:hover {
+  background-color: #800000 !important;
+  border-color: #800000 !important;
+}
+.werecard-color-yellow {
+  background-color: #ffff00 !important;
+  border-color: #ffff00 !important;
+  width: 15px;
+  height: 15px;
+}
+.werecard-color-yellow:hover {
+  background-color: #ffff00 !important;
+  border-color: #ffff00 !important;
+}
+.werecard-color-mustart {
+  background-color: #eabe12 !important;
+  border-color: #eabe12 !important;
+  width: 15px;
+  height: 15px;
+}
+.werecard-color-mustart:hover {
+  background-color: #eabe12 !important;
+  border-color: #eabe12 !important;
+}
+.werecard-color-olive {
+  background-color: #808000 !important;
+  border-color: #808000 !important;
+  width: 15px;
+  height: 15px;
+}
+.werecard-color-olive:hover {
+  background-color: #808000 !important;
+  border-color: #808000 !important;
+}
+.werecard-color-lime {
+  background-color: #00ff00 !important;
+  border-color: #00ff00 !important;
+  width: 15px;
+  height: 15px;
+}
+.werecard-color-lime:hover {
+  background-color: #00ff00 !important;
+  border-color: #00ff00 !important;
+}
+.werecard-color-green {
+  background-color: #008000 !important;
+  border-color: #008000 !important;
+  width: 15px;
+  height: 15px;
+}
+.werecard-color-green:hover {
+  background-color: #008000 !important;
+  border-color: #008000 !important;
+}
+.werecard-color-aqua {
+  background-color: #00ffff !important;
+  border-color: #00ffff !important;
+  width: 15px;
+  height: 15px;
+}
+.werecard-color-aqua:hover {
+  background-color: #00ffff !important;
+  border-color: #00ffff !important;
+}
+.werecard-color-teal {
+  background-color: #008080 !important;
+  border-color: #008080 !important;
+  width: 15px;
+  height: 15px;
+}
+.werecard-color-teal:hover {
+  background-color: #008080 !important;
+  border-color: #008080 !important;
+}
+.werecard-color-blue {
+  background-color: #0000ff !important;
+  border-color: #0000ff !important;
+  width: 15px;
+  height: 15px;
+}
+.werecard-color-blue:hover {
+  background-color: #0000ff !important;
+  border-color: #0000ff !important;
+}
+.werecard-color-navy {
+  background-color: #000080 !important;
+  border-color: #000080 !important;
+  width: 15px;
+  height: 15px;
+}
+.werecard-color-navy:hover {
+  background-color: #000080 !important;
+  border-color: #000080 !important;
+}
+.werecard-color-fuchsia {
+  background-color: #ff00ff !important;
+  border-color: #ff00ff !important;
+  width: 15px;
+  height: 15px;
+}
+.werecard-color-fuchsia:hover {
+  background-color: #ff00ff !important;
+  border-color: #ff00ff !important;
+}
+.werecard-color-purple {
+  background-color: #800080 !important;
+  border-color: #800080 !important;
+  width: 15px;
+  height: 15px;
+}
+.werecard-color-purple:hover {
+  background-color: #800080 !important;
+  border-color: #800080 !important;
+}
+
 .text-color-white {
   color: #ffffff;
 }
@@ -561,6 +732,9 @@ h6 {
 .navBar-submenu a:hover {
   color: #83b735;
 }
+.navBar-list li::after {
+  content: "†" !important;
+}
 
 .header-categories h5 {
   background-color: #83b735;
@@ -622,7 +796,7 @@ h6 {
   aspect-ratio: 1;
   padding: 2px !important;
   background: rgba(0, 0, 0, 0.5) no-repeat content-box;
-  border-radius: 50%;
+  border-radius: 50% !important;
   outline-offset: 1px;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -631,8 +805,8 @@ h6 {
 }
 .header-slider-radio input[type=radio]:checked, .header-slider-radio input[type=radio]:hover {
   border-color: Black;
-  background-color: rgb(249, 255, 255);
-  border: 1px solid rgb(249, 255, 255);
+  background-color: rgb(249, 255, 255) !important;
+  border: 1px solid rgb(249, 255, 255) !important;
   padding: 5px !important;
   background-size: 5% 5%;
 }
@@ -645,7 +819,7 @@ h6 {
   }
 }
 .header-slider button {
-  border-radius: 100px;
+  border-radius: 100px !important;
 }
 
 .threebox {
@@ -708,11 +882,9 @@ h6 {
 }
 .warecard-banner:hover .warecard-banner-img-hover, .warecard-banner .warecard-banner-panel:hover .warecard-banner-img-hover {
   animation: scaleUp 6s;
+  animation-fill-mode: both;
 }
 @keyframes scaleUp {
-  0% {
-    transform: scale(1);
-  }
   100% {
     transform: scale(1.2);
   }
@@ -758,6 +930,7 @@ h6 {
 .categories-title-stock {
   margin-top: 50px !important;
   display: none;
+  transition: all 1s ease-in-out;
 }
 .categories-title:hover {
   background-color: rgba(0, 0, 0, 0.5);

@@ -18,245 +18,259 @@ $colorDark-hover-xxxx: rgba(0, 0, 0, 0.025);
 $colorDark-light: #454545;
 
 $social-btn-colors: (
-    "facebook": #3b5999,
-    "twitter": #55acee,
-    "pintrest": #e60023,
-    "linkedin": #0077b5,
-    "telegram": #0088cc
+  "facebook": #3b5999,
+  "twitter": #55acee,
+  "pintrest": #e60023,
+  "linkedin": #0077b5,
+  "telegram": #0088cc,
 );
 
 $text-sizes: (
-    "sssz": 0.1rem,
-    "sss": 0.25rem,
-    "ss": 0.5rem,
-    "s": 0.75rem,
-    "m": 1rem,
-    "x": 1.25rem,
-    "xx": 1.5rem,
-    "xxx": 1.75rem,
-    "xxxx": 2rem,
-    "xxxxx": 2.25rem
+  "sssz": 0.1rem,
+  "sss": 0.25rem,
+  "ss": 0.5rem,
+  "s": 0.75rem,
+  "m": 1rem,
+  "x": 1.25rem,
+  "xx": 1.5rem,
+  "xxx": 1.75rem,
+  "xxxx": 2rem,
+  "xxxxx": 2.25rem,
 );
 
 $prod-colors: (
-    "white": #ffffff,
-    "silver": #c0c0c0,
-    "gray": #808080,
-    "black": #000000,
-    "red": #ff0000,
-    "maroon": #800000,
-    "yellow": #ffff00,
-    "mustart": #eabe12,
-    "olive": #808000,
-    "lime": #00ff00,
-    "green": #008000,
-    "aqua": #00ffff,
-    "teal": #008080,
-    "blue": #0000ff,
-    "navy": #000080,
-    "fuchsia": #ff00ff,
-    "purple": #800080
+  "white": #ffffff,
+  "silver": #c0c0c0,
+  "gray": #808080,
+  "black": #000000,
+  "red": #ff0000,
+  "maroon": #800000,
+  "yellow": #ffff00,
+  "mustart": #eabe12,
+  "olive": #808000,
+  "lime": #00ff00,
+  "green": #008000,
+  "aqua": #00ffff,
+  "teal": #008080,
+  "blue": #0000ff,
+  "navy": #000080,
+  "fuchsia": #ff00ff,
+  "purple": #800080,
 );
 // ---------[mixin]---------
 @mixin light-link {
-    color: $colorLight !important;
-    &:hover {
-        color: $colorLight-hover !important;
-    }
+  color: $colorLight !important;
+  &:hover {
+    color: $colorLight-hover !important;
+  }
 }
 @mixin dark-link {
-    color: $colorDark;
-    &:hover {
-        color: $colorDark-hover-s;
-    }
+  color: $colorDark;
+  &:hover {
+    color: $colorDark-hover-s;
+  }
 }
 @mixin alpha-link {
-    color: $colorAlpha;
-    &:hover {
-        color: $colorAlpha-darker;
-    }
+  color: $colorAlpha;
+  &:hover {
+    color: $colorAlpha-darker;
+  }
 }
 @mixin dark-link-reverb {
-    color: $colorDark-hover-s;
-    &:hover {
-        color: $colorDark;
-    }
+  color: $colorDark-hover-s;
+  &:hover {
+    color: $colorDark;
+  }
 }
 @mixin abelith-link($color: $colorDark) {
+  color: $color;
+  &:hover {
     color: $color;
-    &:hover {
-        color: $color;
-    }
+  }
 }
 @mixin button-reseter {
+  background-color: transparent !important;
+  padding: 0 0 !important;
+  color: $colorDark !important;
+  &:hover {
     background-color: transparent !important;
-    padding: 0 0 !important;
-    color: $colorDark !important;
-    &:hover {
-        background-color: transparent !important;
-        color: $colorDark;
-    }
+    color: $colorDark;
+  }
 }
 // -----[usable classes]-----
 .reset-list {
-    list-style: none;
-    margin: 0;
-    padding: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+  li {
     display: inline-block;
-    li {
-        display: inline-block;
-    }
+  }
 }
 .reset-button {
+  background-color: transparent !important;
+  color: $colorDark !important;
+  &:hover {
     background-color: transparent !important;
-    color: $colorDark !important;
-    &:hover {
-        background-color: transparent !important;
-    }
+  }
 }
 .phy-button {
-    box-shadow: 0px 3px 0px 0px $colorAlpha-darker !important;
-    padding: 8px 18px !important;
-    font-size: 12px;
-    &:active {
-        margin-top: 6px !important;
-        box-shadow: 0px 0px 0px 0px $colorAlpha-darker !important;
-    }
+  box-shadow: 0px 3px 0px 0px $colorAlpha-darker !important;
+  padding: 8px 18px !important;
+  font-size: 12px;
+  &:active {
+    margin-top: 6px !important;
+    box-shadow: 0px 0px 0px 0px $colorAlpha-darker !important;
+  }
 }
 .flex-centralizer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .flex-starter {
-    display: flex;
-    justify-content: start;
-    align-items: center;
+  display: flex;
+  justify-content: start;
+  align-items: center;
 }
 .flex-ender {
-    display: flex;
-    justify-content: end;
-    align-items: center;
+  display: flex;
+  justify-content: end;
+  align-items: center;
 }
 .flex-space {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
 .lhu-link /*list hover underline*/ {
-    display: inline-block !important;
+  display: inline-block !important;
 
+  &::after {
+    content: "" !important;
+    display: block;
+    width: 0;
+    height: 2px;
+    background: $colorAlpha;
+  }
+  &:hover {
     &::after {
-        content: "" !important;
-        display: block;
-        width: 0;
-        height: 2px;
-        background: $colorAlpha;
+      width: 100% !important;
+      transition: width 0.3s ease-in-out;
     }
-    &:hover {
-        &::after {
-            width: 100% !important;
-            transition: width 0.3s ease-in-out;
-        }
-    }
+  }
 }
 .lhu-link-reset /*list hover underline*/ {
-    &::after {
-        content: "" !important;
-        display: none !important;
-    }
+  &::after {
+    content: "" !important;
+    display: none !important;
+  }
 }
 .lhu-link-top /*list hover underline*/ {
-    display: inline-block;
+  display: inline-block;
 
+  &::before {
+    content: "" !important;
+    display: block;
+    width: 0;
+    height: 2px;
+    background: $colorAlpha;
+  }
+  &:hover {
     &::before {
-        content: "" !important;
-        display: block;
-        width: 0;
-        height: 2px;
-        background: $colorAlpha;
+      width: 100%;
+      transition: width 0.3s ease-in-out;
     }
-    &:hover {
-        &::before {
-            width: 100%;
-            transition: width 0.3s ease-in-out;
-        }
-    }
+  }
 }
 .sides-lines {
-    text-align: center;
-    border-bottom: 1px solid $colorDark-hover-xx;
-    line-height: 0.1em;
-    span {
-        background: $colorLight;
-        padding: 0 10px !important;
-    }
+  text-align: center;
+  border-bottom: 1px solid $colorDark-hover-xx;
+  line-height: 0.1em;
+  span {
+    background: $colorLight;
+    padding: 0 10px !important;
+  }
 }
 .btn-omega {
-    color: $colorDark !important;
-    background-color: transparent !important;
-    font-size: 12px;
-    &:hover {
-        background-color: $colorDark-hover-xx !important;
-    }
+  color: $colorDark !important;
+  background-color: transparent !important;
+  font-size: 12px;
+  &:hover {
+    background-color: $colorDark-hover-xx !important;
+  }
 }
 // ----------[font]----------
 @import url("https://fonts.cdnfonts.com/css/happy-memories");
 .font-happy {
-    font-family: "Happy Memories", sans-serif !important;
+  font-family: "Happy Memories", sans-serif !important;
 }
 @import url("https://fonts.cdnfonts.com/css/iqos");
 @import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
 /* ......................................browser........................................... */
 ::-webkit-scrollbar {
-    width: 7px;
+  width: 7px;
 }
 ::-webkit-scrollbar-track {
-    background-color: $colorLight-hover-x;
+  background-color: $colorLight-hover-x;
 }
 ::-webkit-scrollbar-thumb {
-    background: $colorDark-hover;
-    border-radius: 10px;
+  background: $colorDark-hover;
+  border-radius: 10px;
 }
 /* ......................................classes........................................... */
 .non-st /*select text*/ {
-    & * {
-        user-select: none !important;
-    }
+  & * {
+    user-select: none !important;
+  }
 
-    &-single /*none select*/ {
-        user-select: none !important;
-    }
+  &-single /*none select*/ {
+    user-select: none !important;
+  }
 }
 .text-size {
-    @each $name, $size in $text-sizes {
-        &-#{$name} * {
-            font-size: $size !important;
-        }
+  @each $name, $size in $text-sizes {
+    &-#{$name} * {
+      font-size: $size !important;
     }
+  }
 }
 .prod-color {
-    @each $name, $color in $prod-colors {
-        &-#{$name} {
-            background-color: $color !important;
-            border-color: $color !important;
-            &:hover {
-                &::before {
-                    content: "+";
-                }
-            }
+  @each $name, $color in $prod-colors {
+    &-#{$name} {
+      background-color: $color !important;
+      border-color: $color !important;
+      &:hover {
+        &::before {
+          content: "+";
         }
+      }
     }
+  }
+}
+.werecard-color {
+  @each $name, $color in $prod-colors {
+    &-#{$name} {
+      background-color: $color !important;
+      border-color: $color !important;
+      width: 15px;
+      height: 15px;
+      &:hover {
+        background-color: $color !important;
+        border-color: $color !important;
+      }
+    }
+  }
 }
 .text-color {
-    @each $name, $color in $prod-colors {
-        &-#{$name} {
-            color: $color;
-            * {
-                color: $color;
-            }
-        }
+  @each $name, $color in $prod-colors {
+    &-#{$name} {
+      color: $color;
+      * {
+        color: $color;
+      }
     }
+  }
 }
 .uppercase {
-    text-transform: uppercase;
+  text-transform: uppercase;
 }
