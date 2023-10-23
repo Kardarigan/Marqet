@@ -1,5 +1,19 @@
+// ------------------[were is user]--------------------
+navigator.geolocation.getCurrentPosition(showPos,showErr);
+function showPos(position) { 
+    const currentPosition = 
+    "x => " + position.coords.latitude +
+    "y => " + position.coords.longitude;
+    console.log(currentPosition);
+ } 
+function showErr(error){
+    console.log("Target Location is Off", error);
+}
+// ------------------[class config]--------------------
+$('.list-hover-underline li a').addClass('lhu-link');
 // ----------------[warecard builder]------------------
 $.getJSON("../data/waresInfo.json", function (data) {
+  let allArticlesCount = 0;
   let fashionCount = 0;
   let furniturecount = 0;
 
@@ -49,7 +63,7 @@ $.getJSON("../data/waresInfo.json", function (data) {
         $("<div>", { class: "card-body py-1 px-3" }).append(
           $("<a>", { class: "card-title pt-5", href: "#" }).text(item.title),
           $("<a>", { class: "text-muted d-block pt-1", href: "#" }).text(
-            item.categorie
+            item.categorie.charAt(0).toUpperCase() + item.categorie.slice(1)
           ),
 
           $("<ul>", { class: "card-text py-1 warecard-size-list" }).append(
@@ -76,8 +90,9 @@ $.getJSON("../data/waresInfo.json", function (data) {
                   colorItem.push(
                     $("<li>", { class: "d-inline text-size-m" }).append(
                       $("<button>", {
-                        class: `me-2 reset-button rounded-circle p-1 werecard-color-${color}`,
-                        title: color
+                        class: `me-2 reset-button rounded-circle p-1 hoverTitle werecard-color-${color}`,
+                        "data-titel":
+                          color.charAt(0).toUpperCase() + color.slice(1),
                       })
                     )
                   );
@@ -106,7 +121,16 @@ $.getJSON("../data/waresInfo.json", function (data) {
     } else {
       $(".warecards").append(article);
     }
+    allArticlesCount++;
   });
+
+
+
+  for (let i = 0; i <= 25; i++) {
+    if (allArticlesCount > i) {
+      $(`.warecards-${i} article:gt(${i-1})`).hide();
+    }
+  }
 });
 // --------------------[magnifier]---------------------
 const showWrp = document.querySelector(".album-show-wrapper");

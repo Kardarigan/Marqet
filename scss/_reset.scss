@@ -1,91 +1,163 @@
 // ---------[resets]---------
 * {
-    margin: 0 !important;
-    padding: 0 !important;
-    transition: all 0.3s;
-    font-family: "Lato", sans-serif;
+  margin: 0 !important;
+  padding: 0 !important;
+  transition: all 0.3s;
+  font-family: "Lato", sans-serif;
+  &[title] {
+    background-color: $colorDark;
+  }
 }
 body {
-    background-color: $colorLight;
+  background-color: $colorLight;
 }
 a {
+  text-decoration: none;
+  @include dark-link;
+  font-weight: 500;
+  &:hover {
     text-decoration: none;
-    @include dark-link;
-    font-weight: 500;
-    &:hover {
-        text-decoration: none;
-    }
+  }
 }
 ul {
-    list-style: none !important;
-    display: block;
+  list-style: none !important;
+  display: block;
 }
 button {
-    background-color: $colorAlpha !important;
-    padding: 10px 25px !important;
-    border: 0 !important;
-    color: $colorLight !important;
-    &:hover {
-        background-color: $colorAlpha-hover !important;
-    }
+  background-color: $colorAlpha !important;
+  padding: 10px 25px !important;
+  border: 0 !important;
+  color: $colorLight !important;
+  &:hover {
+    background-color: $colorAlpha-hover !important;
+  }
 }
 strong {
-    color: $colorAlpha;
+  color: $colorAlpha;
 }
-input, textarea {
-    border: 1px solid $colorDark-hover-x;
-    border-radius: 0;
-    background-color: transparent;
-    &:focus {
-        border: 1px solid $colorDark-hover-x !important;
-        border-radius: 0 !important;
-    }
+input,
+textarea {
+  border: 1px solid $colorDark-hover-x;
+  border-radius: 0;
+  background-color: transparent;
+  &:focus {
+    border: 1px solid $colorDark-hover-x !important;
+    border-radius: 0 !important;
+  }
 }
-p,li {
-    font-size: 15px;
-    color: $colorDark-hover;
+p,
+li {
+  font-size: 15px;
+  color: $colorDark-hover;
 }
 .bg {
-    &-primary {
-        background-color: $colorAlpha !important;
-    }
-    &-dark {
-        background-color: $colorDark !important;
-    }
-    &-muted {
-        background-color: $colorDark-hover-xxxx;
-    }
+  &-primary {
+    background-color: $colorAlpha !important;
+  }
+  &-dark {
+    background-color: $colorDark !important;
+  }
+  &-muted {
+    background-color: $colorDark-hover-xxxx;
+  }
 }
 .text {
-    &-primary {
-        color: $colorAlpha !important;
+  &-primary {
+    color: $colorAlpha !important;
+  }
+  &-muted {
+    color: $colorDark-hover !important;
+    &-all * {
+      color: $colorDark-hover !important;
     }
-    &-muted {
-        color: $colorDark-hover !important;
-        &-all * {
-            color: $colorDark-hover !important;
-        }
-    }
+  }
 }
 .border {
-    &-black {
-        border-color: $colorDark-hover-xx !important;
-    }
-    &-light {
-        border-color: $colorLight-hover-x !important;
-    }
-    &-primary{
-        border-color: $colorAlpha !important;
-
-    }
+  &-black {
+    border-color: $colorDark-hover-xx !important;
+  }
+  &-light {
+    border-color: $colorLight-hover-x !important;
+  }
+  &-primary {
+    border-color: $colorAlpha !important;
+  }
 }
 .card {
-    background-color: transparent !important;
-    border: 0 !important;
-    border-radius: 0 !important;
+  background-color: transparent !important;
+  border: 0 !important;
+  border-radius: 0 !important;
 }
 @for $i from 1 through 6 {
-    h#{$i} {
-        font-weight: 600 !important;
-    }
+  h#{$i} {
+    font-weight: 600 !important;
+  }
+}
+
+
+input[type=range] {
+	width: 100%;
+	margin: 21.75px 0 !important;
+	background-color: transparent;
+	-webkit-appearance: none;
+	&:focus {
+		outline: none;
+		&::-webkit-slider-runnable-track {
+			background: $colorAlpha;
+		}
+		&::-ms-fill-lower {
+			background: $colorAlpha;
+		}
+		&::-ms-fill-upper {
+			background: $colorAlpha;
+		}
+	}
+	&::-webkit-slider-runnable-track {
+		background: $colorAlpha;
+		width: 100%;
+		height: 3px;
+		cursor: pointer;
+	}
+	&::-webkit-slider-thumb {
+		margin-top: -9px !important;
+		width: 5px;
+		height: 20px;
+		background: $colorAlpha;
+		cursor: pointer;
+		-webkit-appearance: none;
+	}
+	&::-moz-range-track {
+		background: $colorAlpha;
+		width: 100%;
+		height: 3px;
+		cursor: pointer;
+	}
+	&::-moz-range-thumb {
+		width: 5px;
+		height: 20px;
+		background: $colorAlpha;
+		cursor: pointer;
+	}
+	&::-ms-track {
+		background: transparent;
+		border-color: transparent;
+		border-width: 21.75px 0;
+		color: transparent;
+		width: 100%;
+		height: 3px;
+		cursor: pointer;
+	}
+	&::-ms-fill-lower {
+		background: $colorAlpha;
+	}
+	&::-ms-fill-upper {
+		background: $colorAlpha;
+	}
+	&::-ms-thumb {
+		width: 5px;
+		height: 20px;
+		background: $colorAlpha;
+		cursor: pointer;
+		margin-top: 0px;
+	}
 }
