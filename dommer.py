@@ -11,6 +11,8 @@ def addAllDOM(destinationPath):
     navSource = 'components/navbar.html'
     footSource = 'components/footer.html'
     scriptSource = 'components/script.html'
+    sideSource = 'components/owSidebar.html'
+
 
     destinationPath = os.path.join(mainDirectory, destinationPath)
     needDeletes = ['link', 'script']
@@ -21,8 +23,8 @@ def addAllDOM(destinationPath):
             for tag in hasDelete:
                 tag.decompose()
 
-    allPathes = [headSource, navSource, scriptSource, footSource]
-    allTargets = ['head', 'nav', 'body', 'footer','div']
+    allPathes = [headSource, navSource, scriptSource, footSource, sideSource]
+    allTargets = ['head', 'nav', 'body', 'footer','aside']
 
     for path, targetStr in zip(allPathes, allTargets):
         path = os.path.join(mainDirectory, path)
@@ -40,15 +42,15 @@ def addAllDOM(destinationPath):
             if navTarget:
                 navTarget.clear()
 
-        if targetStr == 'div':
-            sideTarget = destinationContent.find('nav', {'id': 'owSidebarCountainer'})
-            if sideTarget:
-                sideTarget.clear()
-
         if targetStr == 'footer':
             footTarget = destinationContent.find('footer')
             if footTarget:
                 footTarget.clear()
+
+        if targetStr == 'aside':
+            asideTarget = destinationContent.find('aside')
+            if asideTarget:
+                asideTarget.clear()
 
         targetTag = destinationContent.find(targetStr)
 
@@ -67,3 +69,5 @@ for aFile in allFiles:
     addAllDOM(aFile)
     aFileName = aFile.replace('pages\\overviews', '') 
     print(f'Mission Complete Sire ----> in {aFileName}')
+
+print('\nIts Done My Lord')
