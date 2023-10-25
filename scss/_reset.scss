@@ -45,6 +45,63 @@ textarea {
     border-radius: 0 !important;
   }
 }
+input[type="range"] {
+  width: 100%;
+  border: 0 !important;
+  -webkit-appearance: none;
+  cursor: pointer;
+  &:focus {
+    outline: none;
+    cursor: col-resize;
+    &::-webkit-slider-runnable-track {
+      background: $colorAlpha;
+    }
+    &::-ms-fill-lower {
+      background: $colorAlpha;
+    }
+    &::-ms-fill-upper {
+      background: $colorAlpha;
+    }
+  }
+  &::-webkit-slider-runnable-track {
+    background: $colorAlpha;
+    width: 100%;
+    height: 3px;
+  }
+  &::-webkit-slider-thumb {
+    margin-top: -9px !important;
+    width: 5px;
+    height: 20px;
+    background: $colorAlpha;
+    -webkit-appearance: none;
+  }
+  &::-moz-range-track {
+    background: $colorAlpha;
+    width: 100%;
+    height: 3px;
+  }
+  &::-moz-range-thumb {
+    width: 5px;
+    height: 20px;
+    background: $colorAlpha;
+  }
+  &::-ms-track {
+    width: 100%;
+    height: 3px;
+  }
+  &::-ms-fill-lower {
+    background: $colorAlpha;
+  }
+  &::-ms-fill-upper {
+    background: $colorAlpha;
+  }
+  &::-ms-thumb {
+    width: 5px;
+    height: 20px;
+    background: $colorAlpha;
+    margin-top: 0px;
+  }
+}
 p,
 li {
   font-size: 15px;
@@ -92,72 +149,4 @@ li {
   h#{$i} {
     font-weight: 600 !important;
   }
-}
-
-
-input[type=range] {
-	width: 100%;
-	margin: 21.75px 0 !important;
-	background-color: transparent;
-	-webkit-appearance: none;
-	&:focus {
-		outline: none;
-		&::-webkit-slider-runnable-track {
-			background: $colorAlpha;
-		}
-		&::-ms-fill-lower {
-			background: $colorAlpha;
-		}
-		&::-ms-fill-upper {
-			background: $colorAlpha;
-		}
-	}
-	&::-webkit-slider-runnable-track {
-		background: $colorAlpha;
-		width: 100%;
-		height: 3px;
-		cursor: pointer;
-	}
-	&::-webkit-slider-thumb {
-		margin-top: -9px !important;
-		width: 5px;
-		height: 20px;
-		background: $colorAlpha;
-		cursor: pointer;
-		-webkit-appearance: none;
-	}
-	&::-moz-range-track {
-		background: $colorAlpha;
-		width: 100%;
-		height: 3px;
-		cursor: pointer;
-	}
-	&::-moz-range-thumb {
-		width: 5px;
-		height: 20px;
-		background: $colorAlpha;
-		cursor: pointer;
-	}
-	&::-ms-track {
-		background: transparent;
-		border-color: transparent;
-		border-width: 21.75px 0;
-		color: transparent;
-		width: 100%;
-		height: 3px;
-		cursor: pointer;
-	}
-	&::-ms-fill-lower {
-		background: $colorAlpha;
-	}
-	&::-ms-fill-upper {
-		background: $colorAlpha;
-	}
-	&::-ms-thumb {
-		width: 5px;
-		height: 20px;
-		background: $colorAlpha;
-		cursor: pointer;
-		margin-top: 0px;
-	}
 }

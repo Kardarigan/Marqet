@@ -22,7 +22,7 @@ def addAllDOM(destinationPath):
                 tag.decompose()
 
     allPathes = [headSource, navSource, scriptSource, footSource]
-    allTargets = ['head', 'nav', 'body', 'footer']
+    allTargets = ['head', 'nav', 'body', 'footer','div']
 
     for path, targetStr in zip(allPathes, allTargets):
         path = os.path.join(mainDirectory, path)
@@ -40,6 +40,8 @@ def addAllDOM(destinationPath):
             if navTarget:
                 navTarget.clear()
 
+        
+
         if targetStr == 'footer':
             footTarget = destinationContent.find('footer')
             if footTarget:
@@ -56,9 +58,9 @@ def addAllDOM(destinationPath):
 
 
 
-allFiles = ['index.html','pages\\furniture-ow.html', 'pages\stuff.html','pages\post.html']
+allFiles = ['index.html','pages/overviews/furniture-ow.html','pages/overviews/cooking-ow.html','pages/overviews/accessories-ow.html','pages/overviews/fashion-ow.html','pages/overviews/lighting-ow.html','pages/overviews/toys-ow.html','pages/overviews/handmade-ow.html','pages/overviews/minimalism-ow.html','pages/overviews/electronic-ow.html','pages/overviews/cars-ow.html', 'pages/stuff.html','pages/post.html']
 
 for aFile in allFiles:
     addAllDOM(aFile)
-    aFileName = aFile.replace('pages\\', '') 
+    aFileName = aFile.replace('pages\\overviews', '') 
     print(f'Mission Complete Sire ----> in {aFileName}')

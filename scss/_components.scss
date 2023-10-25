@@ -55,7 +55,7 @@
   }
   &-list {
     li::after {
-      content: '\2020' !important;
+      content: "\2020" !important;
     }
   }
 }
@@ -195,7 +195,6 @@
     overflow: hidden;
   }
   &-size-list {
-
   }
   &-price {
     height: 20px;
@@ -213,7 +212,20 @@
       margin: 0 -40px !important;
       opacity: 0;
     }
-    &:hover ,.warecard-banner-panel:hover {
+    &-event {
+      h5 {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        font-size: 1em !important;
+        font-weight: 200 !important;
+        transition: all 0.5s ease-in-out;
+        @extend .flex-centralizer;
+      }
+    }
+    &:hover,
+    .warecard-banner-event:hover,
+    .warecard-banner-panel:hover {
       .warecard-banner-img {
         opacity: 0;
       }
@@ -227,6 +239,14 @@
           }
         }
       }
+      ~ .warecard-banner-event h5 {
+          transition-delay: 0s;
+          opacity: 0;
+        & {
+          display: none;
+          transition-delay: 5.5s;
+        }
+      }
       + .warecard-banner-panel {
         margin: 0 0 !important;
         opacity: 1;
@@ -234,7 +254,7 @@
     }
   }
   &:hover .warecard-price strong {
-      margin-top: -26px !important;
+    margin-top: -26px !important;
   }
 }
 // -----------------------[categories]---------------------------
@@ -269,7 +289,6 @@
       margin-top: 50px !important;
       display: none;
       transition: all 1s ease-in-out;
-
     }
     &:hover {
       background-color: $colorDark-hover;

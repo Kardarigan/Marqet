@@ -30,7 +30,7 @@
   box-shadow: 0px 0px 0px 0px #438e44 !important;
 }
 
-.flex-centralizer, .stuffNumber-increase, .stuffNumber-number, .stuffNumber-decrease {
+.flex-centralizer, .stuffNumber-increase, .stuffNumber-number, .stuffNumber-decrease, .warecard-banner-event h5 {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -645,6 +645,64 @@ textarea:focus {
   border-radius: 0 !important;
 }
 
+input[type=range] {
+  width: 100%;
+  border: 0 !important;
+  -webkit-appearance: none;
+  cursor: pointer;
+}
+input[type=range]:focus {
+  outline: none;
+  cursor: col-resize;
+}
+input[type=range]:focus::-webkit-slider-runnable-track {
+  background: #83b735;
+}
+input[type=range]:focus::-ms-fill-lower {
+  background: #83b735;
+}
+input[type=range]:focus::-ms-fill-upper {
+  background: #83b735;
+}
+input[type=range]::-webkit-slider-runnable-track {
+  background: #83b735;
+  width: 100%;
+  height: 3px;
+}
+input[type=range]::-webkit-slider-thumb {
+  margin-top: -9px !important;
+  width: 5px;
+  height: 20px;
+  background: #83b735;
+  -webkit-appearance: none;
+}
+input[type=range]::-moz-range-track {
+  background: #83b735;
+  width: 100%;
+  height: 3px;
+}
+input[type=range]::-moz-range-thumb {
+  width: 5px;
+  height: 20px;
+  background: #83b735;
+}
+input[type=range]::-ms-track {
+  width: 100%;
+  height: 3px;
+}
+input[type=range]::-ms-fill-lower {
+  background: #83b735;
+}
+input[type=range]::-ms-fill-upper {
+  background: #83b735;
+}
+input[type=range]::-ms-thumb {
+  width: 5px;
+  height: 20px;
+  background: #83b735;
+  margin-top: 0px;
+}
+
 p,
 li {
   font-size: 15px;
@@ -709,73 +767,6 @@ h5 {
 
 h6 {
   font-weight: 600 !important;
-}
-
-input[type=range] {
-  width: 100%;
-  margin: 21.75px 0 !important;
-  background-color: transparent;
-  -webkit-appearance: none;
-}
-input[type=range]:focus {
-  outline: none;
-}
-input[type=range]:focus::-webkit-slider-runnable-track {
-  background: #83b735;
-}
-input[type=range]:focus::-ms-fill-lower {
-  background: #83b735;
-}
-input[type=range]:focus::-ms-fill-upper {
-  background: #83b735;
-}
-input[type=range]::-webkit-slider-runnable-track {
-  background: #83b735;
-  width: 100%;
-  height: 3px;
-  cursor: pointer;
-}
-input[type=range]::-webkit-slider-thumb {
-  margin-top: -9px !important;
-  width: 5px;
-  height: 20px;
-  background: #83b735;
-  cursor: pointer;
-  -webkit-appearance: none;
-}
-input[type=range]::-moz-range-track {
-  background: #83b735;
-  width: 100%;
-  height: 3px;
-  cursor: pointer;
-}
-input[type=range]::-moz-range-thumb {
-  width: 5px;
-  height: 20px;
-  background: #83b735;
-  cursor: pointer;
-}
-input[type=range]::-ms-track {
-  background: transparent;
-  border-color: transparent;
-  border-width: 21.75px 0;
-  color: transparent;
-  width: 100%;
-  height: 3px;
-  cursor: pointer;
-}
-input[type=range]::-ms-fill-lower {
-  background: #83b735;
-}
-input[type=range]::-ms-fill-upper {
-  background: #83b735;
-}
-input[type=range]::-ms-thumb {
-  width: 5px;
-  height: 20px;
-  background: #83b735;
-  cursor: pointer;
-  margin-top: 0px;
 }
 
 #targetNav nav:first-child * {
@@ -973,10 +964,22 @@ input[type=range]::-ms-thumb {
   margin: 0 -40px !important;
   opacity: 0;
 }
-.warecard-banner:hover .warecard-banner-img, .warecard-banner .warecard-banner-panel:hover .warecard-banner-img {
+.warecard-banner-event h5 {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  font-size: 1em !important;
+  font-weight: 200 !important;
+  transition: all 0.5s ease-in-out;
+}
+.warecard-banner:hover .warecard-banner-img,
+.warecard-banner .warecard-banner-event:hover .warecard-banner-img,
+.warecard-banner .warecard-banner-panel:hover .warecard-banner-img {
   opacity: 0;
 }
-.warecard-banner:hover .warecard-banner-img-hover, .warecard-banner .warecard-banner-panel:hover .warecard-banner-img-hover {
+.warecard-banner:hover .warecard-banner-img-hover,
+.warecard-banner .warecard-banner-event:hover .warecard-banner-img-hover,
+.warecard-banner .warecard-banner-panel:hover .warecard-banner-img-hover {
   animation: scaleUp 6s;
   animation-fill-mode: both;
 }
@@ -985,7 +988,21 @@ input[type=range]::-ms-thumb {
     transform: scale(1.2);
   }
 }
-.warecard-banner:hover + .warecard-banner-panel, .warecard-banner .warecard-banner-panel:hover + .warecard-banner-panel {
+.warecard-banner:hover ~ .warecard-banner-event h5,
+.warecard-banner .warecard-banner-event:hover ~ .warecard-banner-event h5,
+.warecard-banner .warecard-banner-panel:hover ~ .warecard-banner-event h5 {
+  transition-delay: 0s;
+  opacity: 0;
+}
+.warecard-banner:hover ~ .warecard-banner-event h5,
+.warecard-banner .warecard-banner-event:hover ~ .warecard-banner-event h5,
+.warecard-banner .warecard-banner-panel:hover ~ .warecard-banner-event h5 {
+  display: none;
+  transition-delay: 5.5s;
+}
+.warecard-banner:hover + .warecard-banner-panel,
+.warecard-banner .warecard-banner-event:hover + .warecard-banner-panel,
+.warecard-banner .warecard-banner-panel:hover + .warecard-banner-panel {
   margin: 0 0 !important;
   opacity: 1;
 }
@@ -1174,8 +1191,8 @@ input[type=range]::-ms-thumb {
   color: rgb(249, 255, 255);
 }
 .social-btn-twitter:hover {
-  background-color: #55acee;
-  border-color: #55acee;
+  background-color: #000000;
+  border-color: #000000;
 }
 .social-btn-twitter:hover * {
   color: rgb(249, 255, 255);

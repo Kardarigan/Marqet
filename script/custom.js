@@ -1,21 +1,34 @@
 // ------------------[were is user]--------------------
-navigator.geolocation.getCurrentPosition(showPos,showErr);
-function showPos(position) { 
-    const currentPosition = 
-    "x => " + position.coords.latitude +
-    "y => " + position.coords.longitude;
-    console.log(currentPosition);
- } 
-function showErr(error){
-    console.log("Target Location is Off", error);
+navigator.geolocation.getCurrentPosition(showPos, showErr);
+function showPos(position) {
+  const currentPosition =
+    "x => " + position.coords.latitude + "y => " + position.coords.longitude;
+  console.log(currentPosition);
+}
+function showErr(error) {
+  console.error("GeolocationPositionError: ", error.code, "-", error.message);
 }
 // ------------------[class config]--------------------
-$('.list-hover-underline li a').addClass('lhu-link');
+$(".list-hover-underline li a").addClass("lhu-link");
 // ----------------[warecard builder]------------------
-$.getJSON("../data/waresInfo.json", function (data) {
+$.getJSON("/data/waresInfo.json", function (data) {
   let allArticlesCount = 0;
   let fashionCount = 0;
   let furniturecount = 0;
+  let cookingCount = 0;
+
+  let allCategories = [
+    "furniture",
+    "cooking",
+    "accessories",
+    "fashion",
+    "lighting",
+    "toys",
+    "handmade",
+    "minimalism",
+    "electronics",
+    "cars",
+  ];
 
   $.each(data, function (index, item) {
     const article = $("<article>", { class: "col-md-3 p-2 col-6" }).append(
@@ -57,6 +70,19 @@ $.getJSON("../data/waresInfo.json", function (data) {
                 )
               )
             )
+          ),
+          $("<div>", {
+            class:
+              "position-absolute warecard-banner-event m-2 flex-column text-light",
+          }).append(
+            item.discount &&
+              $("<h5>", {
+                class: "p-1 m-1 bg-primary text-light",
+              }).text("%" + item.discount),
+            item.hot &&
+              $("<h5>", {
+                class: "p-1 m-1 bg-primary text-light",
+              }).text("Hot")
           )
         ),
 
@@ -112,23 +138,33 @@ $.getJSON("../data/waresInfo.json", function (data) {
         )
       )
     );
+
+    allCategories.forEach(categoriesCounter);
+
+    function categoriesCounter(index, cates) {
+      cates = Array.from(cates);
+      let cate = cates.filter((item) => item.categorie === cates);
+      $(`#countOf${cates}`).text(cate.length);
+      console.log(cate.length);
+    }
+
     if (item.categorie == "furniture") {
       $(".warecards-furniture").append(article);
       $("#resultsNumber").text(furniturecount);
     } else if (item.categorie == "fashion") {
       $(".warecards-fashion").append(article);
       $("#resultsNumber").text(fashionCount);
+    } else if (item.categorie == "cooking") {
+      $(".warecards-cooking").append(article);
+      $("#resultsNumber").text(cookingCount);
     } else {
       $(".warecards").append(article);
     }
     allArticlesCount++;
   });
-
-
-
   for (let i = 0; i <= 25; i++) {
     if (allArticlesCount > i) {
-      $(`.warecards-${i} article:gt(${i-1})`).hide();
+      $(`.warecards-${i} article:gt(${i - 1})`).hide();
     }
   }
 });
