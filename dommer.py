@@ -40,7 +40,10 @@ def addAllDOM(destinationPath):
             if navTarget:
                 navTarget.clear()
 
-        
+        if targetStr == 'div':
+            sideTarget = destinationContent.find('nav', {'id': 'owSidebarCountainer'})
+            if sideTarget:
+                sideTarget.clear()
 
         if targetStr == 'footer':
             footTarget = destinationContent.find('footer')
