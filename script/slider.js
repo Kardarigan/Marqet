@@ -11,7 +11,7 @@ function showSlide(index) {
         item.classList.remove("active");
     });
 
-    sliderItems[index].classList.add("active");
+    $(sliderItems[index]).addClass("active");
     radioInputs[index].checked = true;
 }
 

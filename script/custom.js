@@ -6,7 +6,7 @@ function showPos(position) {
   console.log(currentPosition);
 }
 function showErr(error) {
-  console.error("GeolocationPositionError: ", error.code, "-", error.message);
+  console.log("GeolocationPositionError: ", error.code, "-", error.message);
 }
 // ------------------[class config]--------------------
 $(".list-hover-underline li a").addClass("lhu-link");
@@ -14,7 +14,7 @@ $(".list-hover-underline li a").addClass("lhu-link");
 $.getJSON("/data/waresInfo.json", function (data) {
   let allArticlesCount = 0;
   let fashionCount = 0;
-  let furniturecount = 0;
+  let furnitureCount = 0;
   let cookingCount = 0;
 
   let allCategories = [
@@ -91,13 +91,10 @@ $.getJSON("/data/waresInfo.json", function (data) {
           $("<a>", { class: "text-muted d-block pt-1", href: "#" }).text(
             item.categorie.charAt(0).toUpperCase() + item.categorie.slice(1)
           ),
-
           $("<ul>", { class: "card-text py-1 warecard-size-list" }).append(
             (function () {
               if (item.sizes) {
                 const sizeItems = [];
-                fashionCount += 1;
-
                 $.each(item.sizes, function (index, size) {
                   sizeItems.push(
                     $("<li>", { class: "d-inline text-size-m" }).append(
@@ -111,7 +108,6 @@ $.getJSON("/data/waresInfo.json", function (data) {
                 return sizeItems;
               } else if (item.colors) {
                 const colorItem = [];
-                furniturecount += 1;
                 $.each(item.colors, function (index, color) {
                   colorItem.push(
                     $("<li>", { class: "d-inline text-size-m" }).append(
@@ -138,30 +134,32 @@ $.getJSON("/data/waresInfo.json", function (data) {
         )
       )
     );
+    allCategories.forEach((aCategorie) => {
+      if (item.categorie == aCategorie) {
+        theCategorie+=1;
+        console.log(theCategorie);
 
-    allCategories.forEach(categoriesCounter);
-
-    function categoriesCounter(index, cates) {
-      cates = Array.from(cates);
-      let cate = cates.filter((item) => item.categorie === cates);
-      $(`#countOf${cates}`).text(cate.length);
-      console.log(cate.length);
-    }
+      }
+    });
 
     if (item.categorie == "furniture") {
       $(".warecards-furniture").append(article);
-      $("#resultsNumber").text(furniturecount);
+      $("#resultsNumber").text(furnitureCount);
+      $("#resultsfurniture").text(furnitureCount);
     } else if (item.categorie == "fashion") {
       $(".warecards-fashion").append(article);
       $("#resultsNumber").text(fashionCount);
+      $("#countOffashion").text(fashionCount);
     } else if (item.categorie == "cooking") {
       $(".warecards-cooking").append(article);
       $("#resultsNumber").text(cookingCount);
+      $("#countOfcooking").text(cookingCount);
     } else {
       $(".warecards").append(article);
     }
     allArticlesCount++;
   });
+
   for (let i = 0; i <= 25; i++) {
     if (allArticlesCount > i) {
       $(`.warecards-${i} article:gt(${i - 1})`).hide();
