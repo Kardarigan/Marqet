@@ -6,31 +6,23 @@ function showPos(position) {
   console.log(currentPosition);
 }
 function showErr(error) {
-  console.log("GeolocationPositionError: ", error.code, "-", error.message);
+  console.error("GeolocationPositionError: ", error.code, "-", error.message);
 }
 // ------------------[class config]--------------------
 $(".list-hover-underline li a").addClass("lhu-link");
 // ----------------[warecard builder]------------------
 $.getJSON("/data/waresInfo.json", function (data) {
   let allArticlesCount = 0;
-  let fashionCount = 0;
-  let furnitureCount = 0;
-  let cookingCount = 0;
-
-  let allCategories = [
-    "furniture",
-    "cooking",
-    "accessories",
-    "fashion",
-    "lighting",
-    "toys",
-    "handmade",
-    "minimalism",
-    "electronics",
-    "cars",
-  ];
+  var counts = {};
 
   $.each(data, function (index, item) {
+    var theCategory = item.category;
+
+    if (counts[theCategory]) {
+      counts[theCategory]++;
+    } else {
+      counts[theCategory] = 1;
+    }
     const article = $("<article>", { class: "col-md-3 p-2 col-6" }).append(
       $("<div>", { class: "card warecard" }).append(
         $("<div>", { class: "card warecard-container" }).append(
@@ -89,8 +81,9 @@ $.getJSON("/data/waresInfo.json", function (data) {
         $("<div>", { class: "card-body py-1 px-3" }).append(
           $("<a>", { class: "card-title pt-5", href: "#" }).text(item.title),
           $("<a>", { class: "text-muted d-block pt-1", href: "#" }).text(
-            item.categorie.charAt(0).toUpperCase() + item.categorie.slice(1)
+            item.category.charAt(0).toUpperCase() + item.category.slice(1)
           ),
+
           $("<ul>", { class: "card-text py-1 warecard-size-list" }).append(
             (function () {
               if (item.sizes) {
@@ -134,30 +127,24 @@ $.getJSON("/data/waresInfo.json", function (data) {
         )
       )
     );
-    allCategories.forEach((aCategorie) => {
-      if (item.categorie == aCategorie) {
-        theCategorie+=1;
-        console.log(theCategorie);
-
-      }
-    });
-
-    if (item.categorie == "furniture") {
+    if (item.category == "furniture") {
       $(".warecards-furniture").append(article);
-      $("#resultsNumber").text(furnitureCount);
-      $("#resultsfurniture").text(furnitureCount);
-    } else if (item.categorie == "fashion") {
+    } else if (item.category == "fashion") {
       $(".warecards-fashion").append(article);
-      $("#resultsNumber").text(fashionCount);
-      $("#countOffashion").text(fashionCount);
-    } else if (item.categorie == "cooking") {
+    } else if (item.category == "cooking") {
       $(".warecards-cooking").append(article);
-      $("#resultsNumber").text(cookingCount);
-      $("#countOfcooking").text(cookingCount);
     } else {
       $(".warecards").append(article);
     }
+    
+
     allArticlesCount++;
+  });
+  console.log(counts);
+
+  var resultContainer = $('#result-container');
+  $.each(counts, function(category, count) {
+    resultContainer.append('<p>' + category + ': ' + count + '</p>');
   });
 
   for (let i = 0; i <= 25; i++) {

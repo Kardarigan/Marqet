@@ -5,7 +5,7 @@
     "imgAlt": "fashion",
     "href": "/pages/stuff.html",
     "title": "Write with Lace Insert",
-    "categorie": "fashion",
+    "category": "fashion",
     "sizes": ["S", "M", "XL"],
     "price": 750
   },
@@ -15,7 +15,7 @@
     "imgAlt": "fashion",
     "href": "/pages/stuff.html",
     "title": "Write with Lace Insert",
-    "categorie": "fashion",
+    "category": "fashion",
     "sizes": ["S", "M", "XL"],
     "price": 750
   },
@@ -25,16 +25,7 @@
     "imgAlt": "fashion",
     "href": "/pages/stuff.html",
     "title": "Write with Lace Insert",
-    "categorie": "fashion",
-    "sizes": ["S", "M", "XL"],
-    "price": 750
-  },{
-    "imgPath": "/img/fashion-main/fashion-default-product-5-290x330.jpg",
-    "hoverPath": "/img/fashion-main/fashion-default-product-5-2-290x330.jpg",
-    "imgAlt": "fashion",
-    "href": "/pages/stuff.html",
-    "title": "Write with Lace Insert",
-    "categorie": "fashion",
+    "category": "fashion",
     "sizes": ["S", "M", "XL"],
     "price": 750
   },
@@ -44,17 +35,7 @@
     "imgAlt": "fashion",
     "href": "/pages/stuff.html",
     "title": "Write with Lace Insert",
-    "categorie": "fashion",
-    "sizes": ["S", "M", "XL"],
-    "price": 750
-  },
-  {
-    "imgPath": "/img/fashion-main/fashion-default-product-5-290x330.jpg",
-    "hoverPath": "/img/fashion-main/fashion-default-product-5-2-290x330.jpg",
-    "imgAlt": "fashion",
-    "href": "/pages/stuff.html",
-    "title": "Write with Lace Insert",
-    "categorie": "fashion",
+    "category": "fashion",
     "sizes": ["S", "M", "XL"],
     "price": 750
   },
@@ -64,7 +45,7 @@
     "imgAlt": "fashion",
     "href": "/pages/stuff.html",
     "title": "Write with Lace Insert",
-    "categorie": "furniture",
+    "category": "furniture",
     "hot": true,
     "discount": 25,
     "price": 750
@@ -75,7 +56,7 @@
     "imgAlt": "fashion",
     "href": "/pages/stuff.html",
     "title": "Write with Lace Insert",
-    "categorie": "furniture",
+    "category": "furniture",
     "colors": ["red", "blue", "black", "yellow"],
     "price": 750
   },
@@ -85,7 +66,7 @@
     "imgAlt": "fashion",
     "href": "/pages/stuff.html",
     "title": "Write with Lace Insert",
-    "categorie": "furniture",
+    "category": "furniture",
     "colors": ["red", "blue", "black", "yellow"],
     "price": 750
   },
@@ -95,7 +76,7 @@
     "imgAlt": "fashion",
     "href": "/pages/stuff.html",
     "title": "Write with Lace Insert",
-    "categorie": "furniture",
+    "category": "furniture",
     "colors": ["red", "blue", "black", "yellow"],
     "price": 750
   },
@@ -105,7 +86,7 @@
     "imgAlt": "fashion",
     "href": "/pages/stuff.html",
     "title": "Write with Lace Insert",
-    "categorie": "fashion",
+    "category": "fashion",
     "sizes": ["S", "M", "XL"],
     "price": 750
   },
@@ -115,7 +96,7 @@
     "imgAlt": "fashion",
     "href": "/pages/stuff.html",
     "title": "Write with Lace Insert",
-    "categorie": "fashion",
+    "category": "fashion",
     "hot": true,
     "discount": 25,
     "sizes": ["S", "M", "XL"],
@@ -127,7 +108,7 @@
     "imgAlt": "fashion",
     "href": "/pages/stuff.html",
     "title": "Write with Lace Insert",
-    "categorie": "fashion",
+    "category": "fashion",
     "sizes": ["S", "M", "XL"],
     "price": 750
   },
@@ -137,7 +118,7 @@
     "imgAlt": "fashion",
     "href": "/pages/stuff.html",
     "title": "Write with Lace Insert",
-    "categorie": "fashion",
+    "category": "fashion",
     "sizes": ["S", "M", "XL"],
     "price": 750
   },
@@ -147,7 +128,7 @@
     "imgAlt": "fashion",
     "href": "/pages/stuff.html",
     "title": "Write with Lace Insert",
-    "categorie": "furniture",
+    "category": "furniture",
     "price": 750
   },
   {
@@ -156,7 +137,7 @@
     "imgAlt": "fashion",
     "href": "/pages/stuff.html",
     "title": "Write with Lace Insert",
-    "categorie": "furniture",
+    "category": "furniture",
     "colors": ["red", "blue", "black", "yellow"],
     "price": 750
   },
@@ -166,7 +147,7 @@
     "imgAlt": "fashion",
     "href": "/pages/stuff.html",
     "title": "Write with Lace Insert",
-    "categorie": "furniture",
+    "category": "furniture",
     "colors": ["red", "blue", "black", "yellow"],
     "price": 750
   },
@@ -176,7 +157,7 @@
     "imgAlt": "fashion",
     "href": "/pages/stuff.html",
     "title": "Write with Lace Insert",
-    "categorie": "furniture",
+    "category": "furniture",
     "colors": ["red", "blue", "black", "yellow"],
     "price": 750
   },
@@ -186,19 +167,7 @@
     "imgAlt": "fashion",
     "href": "/pages/stuff.html",
     "title": "Write with Lace Insert",
-    "categorie": "fashion",
-    "hot": true,
-    "discount": 25,
-    "sizes": ["S", "M", "XL"],
-    "price": 750
-  },
-  {
-    "imgPath": "/img/fashion-main/fashion-default-product-5-290x330.jpg",
-    "hoverPath": "/img/fashion-main/fashion-default-product-5-2-290x330.jpg",
-    "imgAlt": "fashion",
-    "href": "/pages/stuff.html",
-    "title": "Write with Lace Insert",
-    "categorie": "fashion",
+    "category": "fashion",
     "hot": true,
     "discount": 25,
     "sizes": ["S", "M", "XL"],
@@ -210,7 +179,9 @@
     "imgAlt": "fashion",
     "href": "/pages/stuff.html",
     "title": "Write with Lace Insert",
-    "categorie": "fashion",
+    "category": "fashion",
+    "hot": true,
+    "discount": 25,
     "sizes": ["S", "M", "XL"],
     "price": 750
   },
@@ -220,7 +191,17 @@
     "imgAlt": "fashion",
     "href": "/pages/stuff.html",
     "title": "Write with Lace Insert",
-    "categorie": "fashion",
+    "category": "fashion",
+    "sizes": ["S", "M", "XL"],
+    "price": 750
+  },
+  {
+    "imgPath": "/img/fashion-main/fashion-default-product-5-290x330.jpg",
+    "hoverPath": "/img/fashion-main/fashion-default-product-5-2-290x330.jpg",
+    "imgAlt": "fashion",
+    "href": "/pages/stuff.html",
+    "title": "Write with Lace Insert",
+    "category": "fashion",
     "sizes": ["S", "M", "XL"],
     "price": 750
   },
@@ -230,7 +211,7 @@
     "imgAlt": "fashion",
     "href": "/pages/stuff.html",
     "title": "Write with Lace Insert",
-    "categorie": "furniture",
+    "category": "furniture",
     "colors": ["red", "blue", "black", "yellow"],
     "price": 750
   },
@@ -240,7 +221,7 @@
     "imgAlt": "fashion",
     "href": "/pages/stuff.html",
     "title": "Write with Lace Insert",
-    "categorie": "furniture",
+    "category": "furniture",
     "colors": ["red", "blue", "black", "yellow"],
     "price": 750
   },
@@ -250,7 +231,7 @@
     "imgAlt": "fashion",
     "href": "/pages/stuff.html",
     "title": "Write with Lace Insert",
-    "categorie": "furniture",
+    "category": "furniture",
     "colors": ["red", "blue", "black", "yellow"],
     "price": 750
   },
@@ -260,7 +241,7 @@
     "imgAlt": "fashion",
     "href": "/pages/stuff.html",
     "title": "Write with Lace Insert",
-    "categorie": "furniture",
+    "category": "furniture",
     "colors": ["red", "blue", "black", "yellow"],
     "price": 750
   },
@@ -270,7 +251,7 @@
     "imgAlt": "cooking",
     "href": "/pages/stuff.html",
     "title": "Write with Lace Insert",
-    "categorie": "cooking",
+    "category": "cooking",
     "hot": true,
     "discount": 25,
     "colors": ["red", "blue", "black", "gray"],
@@ -282,7 +263,7 @@
     "imgAlt": "cooking",
     "href": "/pages/stuff.html",
     "title": "Write with Lace Insert",
-    "categorie": "cooking",
+    "category": "cooking",
     "colors": ["red", "blue", "black", "gray"],
     "price": 750
   },
@@ -292,7 +273,7 @@
     "imgAlt": "cooking",
     "href": "/pages/stuff.html",
     "title": "Write with Lace Insert",
-    "categorie": "cooking",
+    "category": "cooking",
     "hot": true,
     "discount": 25,
     "colors": ["red", "blue", "black", "gray"],
@@ -304,7 +285,7 @@
     "imgAlt": "cooking",
     "href": "/pages/stuff.html",
     "title": "Write with Lace Insert",
-    "categorie": "cooking",
+    "category": "cooking",
     "colors": ["red", "blue", "black", "gray"],
     "price": 750
   },
@@ -314,7 +295,7 @@
     "imgAlt": "cooking",
     "href": "/pages/stuff.html",
     "title": "Write with Lace Insert",
-    "categorie": "cooking",
+    "category": "cooking",
     "colors": ["red", "blue", "black", "gray"],
     "price": 750
   },
@@ -324,7 +305,7 @@
     "imgAlt": "cooking",
     "href": "/pages/stuff.html",
     "title": "Write with Lace Insert",
-    "categorie": "cooking",
+    "category": "cooking",
     "hot": true,
     "discount": 25,
     "colors": ["red", "blue", "black", "gray"],
@@ -336,7 +317,7 @@
     "imgAlt": "cooking",
     "href": "/pages/stuff.html",
     "title": "Write with Lace Insert",
-    "categorie": "cooking",
+    "category": "cooking",
     "colors": ["red", "blue", "black", "gray"],
     "price": 750
   },
@@ -346,7 +327,7 @@
     "imgAlt": "cooking",
     "href": "/pages/stuff.html",
     "title": "Write with Lace Insert",
-    "categorie": "cooking",
+    "category": "cooking",
     "hot": true,
     "discount": 25,
     "colors": ["red", "blue", "black", "gray"],
@@ -358,7 +339,7 @@
     "imgAlt": "cooking",
     "href": "/pages/stuff.html",
     "title": "Write with Lace Insert",
-    "categorie": "cooking",
+    "category": "cooking",
     "hot": true,
     "discount": 25,
     "colors": ["red", "blue", "black", "gray"],

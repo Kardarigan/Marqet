@@ -1,13 +1,13 @@
-furniture
-cooking
-accessories
-fashion
-lighting
-toys
-handmade
-minimalism
-electronics
-cars
+data-category='furniture'
+data-category='cooking'
+data-category='accessories'
+data-category='fashion'
+data-category='lighting'
+data-category='toys'
+data-category='handmade'
+data-category='minimalism'
+data-category='electronics'
+data-category='cars'
 
 'furniture',
 'cooking',

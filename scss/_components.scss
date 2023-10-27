@@ -61,7 +61,7 @@
 }
 // -------------------------[header]-----------------------------
 .header {
-  &-categories {
+  &-categorys {
     h5 {
       background-color: $colorAlpha;
       width: 100%;
@@ -257,8 +257,8 @@
     margin-top: -26px !important;
   }
 }
-// -----------------------[categories]---------------------------
-.categories {
+// -----------------------[categorys]---------------------------
+.categorys {
   position: relative;
   height: 380px;
 
@@ -269,7 +269,7 @@
     overflow: hidden;
   }
   &-banner {
-    background-image: url("../img/categories/cat-fashing-dress-4.jpg");
+    background-image: url("../img/categorys/cat-fashing-dress-4.jpg");
     background-repeat: no-repeat;
     background-position: center;
     width: 100%;
@@ -292,13 +292,13 @@
     }
     &:hover {
       background-color: $colorDark-hover;
-      .categories-title-stock {
+      .categorys-title-stock {
         display: block !important;
         margin-top: 10px !important;
       }
     }
   }
-  &:hover .categories-banner {
+  &:hover .categorys-banner {
     transform: scale(1.1);
   }
   &-path {
@@ -383,7 +383,7 @@
     }
   }
 
-  &-categories {
+  &-categorys {
     background-color: $colorAlpha;
     padding: 0 8px 3px !important;
     color: $colorLight;
@@ -657,7 +657,7 @@
       font-size: 35px;
     }
   }
-  &-categories {
+  &-categorys {
     li a {
       color: $colorDark-hover;
       span {
