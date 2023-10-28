@@ -823,21 +823,21 @@ h6 {
   content: "†" !important;
 }
 
-.header-categorys h5 {
+.header-categories h5 {
   background-color: #83b735;
   width: 100%;
 }
-.header-categorys ul {
+.header-categories ul {
   width: 100%;
 }
-.header-categorys ul li {
+.header-categories ul li {
   border: 0.1px solid rgba(0, 0, 0, 0.2);
   border-top: 0;
 }
-.header-categorys ul li:hover {
+.header-categories ul li:hover {
   background-color: rgba(240, 255, 255, 0.7);
 }
-.header-categorys ul li a {
+.header-categories ul li a {
   width: 100%;
   display: block;
 }
@@ -1010,52 +1010,52 @@ h6 {
   margin-top: -26px !important;
 }
 
-.categorys {
+.categories {
   position: relative;
   height: 380px;
 }
-.categorys-container {
+.categories-container {
   position: absolute;
   width: 90%;
   height: inherit;
   overflow: hidden;
 }
-.categorys-banner {
-  background-image: url("../img/categorys/cat-fashing-dress-4.jpg");
+.categories-banner {
+  background-image: url(../img/categories/cat-fashing-dress-4.jpg);
   background-repeat: no-repeat;
   background-position: center;
   width: 100%;
   height: inherit;
   position: absolute;
 }
-.categorys-title {
+.categories-title {
   position: absolute;
   width: 100%;
   height: inherit;
   background-color: transparent;
 }
-.categorys-title * {
+.categories-title * {
   color: rgb(249, 255, 255);
 }
-.categorys-title *:hover {
+.categories-title *:hover {
   color: rgb(249, 255, 255);
 }
-.categorys-title-stock {
+.categories-title-stock {
   margin-top: 50px !important;
   display: none;
   transition: all 1s ease-in-out;
 }
-.categorys-title:hover {
+.categories-title:hover {
   background-color: rgba(0, 0, 0, 0.5);
 }
-.categorys-title:hover .categorys-title-stock {
+.categories-title:hover .categories-title-stock {
   display: block !important;
   margin-top: 10px !important;
 }
-.categorys:hover .categorys-banner {
+.categories:hover .categories-banner {
   transform: scale(1.1);
 }
-.categorys-path > .active {
+.categories-path > .active {
   color: Black !important;
 }
 
@@ -1123,18 +1123,18 @@ h6 {
 .newsCard-banner:hover .newsCard-banner-img {
   transform: scale(1.05);
 }
-.newsCard-categorys {
+.newsCard-categories {
   background-color: #83b735;
   padding: 0 8px 3px !important;
   color: rgb(249, 255, 255);
   white-space: nowrap;
 }
-.newsCard-categorys a {
+.newsCard-categories a {
   color: rgb(249, 255, 255) !important;
   white-space: nowrap;
   font-size: 11px !important;
 }
-.newsCard-categorys a:hover {
+.newsCard-categories a:hover {
   color: rgba(240, 255, 255, 0.7) !important;
 }
 .newsCard-readmore {
@@ -1377,18 +1377,18 @@ h6 {
 .overview-title a {
   font-size: 35px;
 }
-.overview-categorys li a {
+.overview-categories li a {
   color: rgba(0, 0, 0, 0.5);
 }
-.overview-categorys li a span {
+.overview-categories li a span {
   border: 1px solid rgba(0, 0, 0, 0.2);
   color: rgba(0, 0, 0, 0.5);
   font-size: 12px;
 }
-.overview-categorys li a:hover {
+.overview-categories li a:hover {
   color: Black;
 }
-.overview-categorys li a:hover > span {
+.overview-categories li a:hover > span {
   background-color: #83b735;
   border-color: #83b735;
   color: rgb(249, 255, 255);
