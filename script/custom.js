@@ -30,17 +30,27 @@ $.getJSON("/data/waresInfo.json", function (data) {
             class: "warecard-banner overflow-hidden",
             href: item.href,
           }).append(
-            $("<img>", {
-              class: "card-img-top warecard-banner-img-hover position-absolute",
-              src: item.hoverPath,
-              alt: item.imgAlt,
-            }),
-            $("<img>", {
-              class: "card-img-top warecard-banner-img",
-              src: item.imgPath,
-              alt: item.imgAlt,
-            })
+            item.hoverPath
+              ? $("<div>").append(
+                  $("<img>", {
+                    class:
+                      "card-img-top warecard-banner-img-hover position-absolute",
+                    src: item.hoverPath,
+                    alt: item.imgAlt,
+                  }),
+                  $("<img>", {
+                    class: "card-img-top warecard-banner-img",
+                    src: item.imgPath,
+                    alt: item.imgAlt,
+                  })
+                )
+              : $("<img>", {
+                class: "card-img-top warecard-banner-img-static",
+                src: item.imgPath,
+                alt: item.imgAlt,
+              })
           ),
+
           $("<div>", {
             class:
               "position-absolute warecard-banner-panel p-2 m-2 bg-white shadow-sm",
@@ -119,7 +129,7 @@ $.getJSON("/data/waresInfo.json", function (data) {
             })()
           ),
           $("<div>", { class: "warecard-price" }).append(
-            $("<strong>", { class: "d-block" }).text("$199.00"),
+            $("<strong>", { class: "d-block" }).text(`$${item.price}`),
             $("<a>", { class: "lhu-link my-1", href: "#" }).text(
               "SELECT OPTION"
             )
@@ -131,20 +141,27 @@ $.getJSON("/data/waresInfo.json", function (data) {
       $(".warecards-furniture").append(article);
     } else if (item.category == "fashion") {
       $(".warecards-fashion").append(article);
+    } else if (item.category == "toys") {
+      $(".warecards-toys").append(article);
+    } else if (item.category == "cars") {
+      $(".warecards-cars").append(article);
     } else if (item.category == "cooking") {
       $(".warecards-cooking").append(article);
+    } else if (item.category == "accessories") {
+      $(".warecards-accessories").append(article);
     } else {
       $(".warecards").append(article);
     }
-    
-
+    console.log("Category: " + item.category);
     allArticlesCount++;
   });
   console.log(counts);
 
-  var resultContainer = $('#result-container');
-  $.each(counts, function(category, count) {
-    resultContainer.append('<p>' + category + ': ' + count + '</p>');
+  $.each(counts, function (category, count) {
+    var categoryCountElement = $(`[data-categoryCount="${category}"]`);
+    if (categoryCountElement.length > 0) {
+      categoryCountElement.text(count);
+    }
   });
 
   for (let i = 0; i <= 25; i++) {
