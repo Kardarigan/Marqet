@@ -149,6 +149,12 @@ $.getJSON("/data/waresInfo.json", function (data) {
       $(".warecards-cooking").append(article);
     } else if (item.category == "accessories") {
       $(".warecards-accessories").append(article);
+    } else if (item.category == "clocks") {
+      $(".warecards-clocks").append(article);
+    } else if (item.category == "lighting") {
+      $(".warecards-lighting").append(article);
+    } else if (item.category == "minimalism") {
+      $(".warecards-minimalism").append(article);
     } else {
       $(".warecards").append(article);
     }

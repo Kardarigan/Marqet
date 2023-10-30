@@ -745,13 +745,323 @@
     "price": 7.99
   },
   {
-    "imgPath": "/img/toys/toys8.jpg",
-    "hoverPath": "/img/toys/toys8_2.jpg",
-    "imgAlt": "toys",
+    "imgPath": "/img/clocks/clocks7.jpg",
+    "hoverPath": "/img/clocks/product-accessories-8-1.jpg",
+    "imgAlt": "clocks",
     "href": "/pages/stuff.html",
     "title": "Write with Lace Insert",
-    "category": "toys",
-    "colors": ["olive","mustart"],
-    "price": 7.99
+    "category": "clocks",
+    "colors": ["red","black"],
+    "price": 37.99
+  },
+  {
+    "imgPath": "/img/clocks/clocks7.jpg",
+    "hoverPath": "/img/clocks/product-accessories-8-1.jpg",
+    "imgAlt": "clocks",
+    "href": "/pages/stuff.html",
+    "title": "Write with Lace Insert",
+    "category": "clocks",
+    "colors": ["red","black"],
+    "price": 37.99
+  },
+  {
+    "imgPath": "/img/clocks/clocks7.jpg",
+    "hoverPath": "/img/clocks/product-accessories-8-1.jpg",
+    "imgAlt": "clocks",
+    "href": "/pages/stuff.html",
+    "title": "Write with Lace Insert",
+    "category": "clocks",
+    "colors": ["red","black"],
+    "price": 37.99
+  },
+  {
+    "imgPath": "/img/clocks/clocks7.jpg",
+    "hoverPath": "/img/clocks/product-accessories-8-1.jpg",
+    "imgAlt": "clocks",
+    "href": "/pages/stuff.html",
+    "title": "Write with Lace Insert",
+    "category": "clocks",
+    "colors": ["red","black"],
+    "price": 37.99
+  },
+  {
+    "imgPath": "/img/clocks/clocks7.jpg",
+    "hoverPath": "/img/clocks/product-accessories-8-1.jpg",
+    "imgAlt": "clocks",
+    "href": "/pages/stuff.html",
+    "title": "Write with Lace Insert",
+    "category": "clocks",
+    "colors": ["red","black"],
+    "price": 37.99
+  },
+  {
+    "imgPath": "/img/clocks/clocks7.jpg",
+    "hoverPath": "/img/clocks/product-accessories-8-1.jpg",
+    "imgAlt": "clocks",
+    "href": "/pages/stuff.html",
+    "title": "Write with Lace Insert",
+    "category": "clocks",
+    "colors": ["red","black"],
+    "price": 37.99
+  },
+  {
+    "imgPath": "/img/clocks/clocks7.jpg",
+    "hoverPath": "/img/clocks/product-accessories-8-1.jpg",
+    "imgAlt": "clocks",
+    "href": "/pages/stuff.html",
+    "title": "Write with Lace Insert",
+    "category": "clocks",
+    "colors": ["red","black"],
+    "price": 37.99
+  },
+  {
+    "imgPath": "/img/clocks/clocks7.jpg",
+    "hoverPath": "/img/clocks/product-accessories-8-1.jpg",
+    "imgAlt": "clocks",
+    "href": "/pages/stuff.html",
+    "title": "Write with Lace Insert",
+    "category": "clocks",
+    "colors": ["red","black"],
+    "price": 37.99
+  },
+  {
+    "imgPath": "/img/clocks/clocks7.jpg",
+    "hoverPath": "/img/clocks/product-accessories-8-1.jpg",
+    "imgAlt": "clocks",
+    "href": "/pages/stuff.html",
+    "title": "Write with Lace Insert",
+    "category": "clocks",
+    "colors": ["red","black"],
+    "price": 37.99
+  },
+  {
+    "imgPath": "/img/clocks/clocks7.jpg",
+    "hoverPath": "/img/clocks/product-accessories-8-1.jpg",
+    "imgAlt": "clocks",
+    "href": "/pages/stuff.html",
+    "title": "Write with Lace Insert",
+    "category": "clocks",
+    "colors": ["red","black"],
+    "price": 37.99
+  },
+  {
+    "imgPath": "/img/clocks/clocks7.jpg",
+    "hoverPath": "/img/clocks/product-accessories-8-1.jpg",
+    "imgAlt": "clocks",
+    "href": "/pages/stuff.html",
+    "title": "Write with Lace Insert",
+    "category": "clocks",
+    "colors": ["red","black"],
+    "price": 37.99
+  },
+  {
+    "imgPath": "/img/clocks/clocks7.jpg",
+    "hoverPath": "/img/clocks/product-accessories-8-1.jpg",
+    "imgAlt": "clocks",
+    "href": "/pages/stuff.html",
+    "title": "Write with Lace Insert",
+    "category": "clocks",
+    "colors": ["red","black"],
+    "price": 37.99
+  },
+  {
+    "imgPath": "/img/clocks/clocks7.jpg",
+    "hoverPath": "/img/clocks/product-accessories-8-1.jpg",
+    "imgAlt": "clocks",
+    "href": "/pages/stuff.html",
+    "title": "Write with Lace Insert",
+    "category": "clocks",
+    "colors": ["red","black"],
+    "price": 37.99
+  },
+  {
+    "imgPath": "/img/lighting/lamp-3-2.jpg",
+    "hoverPath": "/img/lighting/lamp-3-3.jpg",
+    "imgAlt": "lighting",
+    "href": "/pages/stuff.html",
+    "title": "Write with Lace Insert",
+    "category": "lighting",
+    "colors": ["yellow","red"],
+    "price": 11.99
+  },
+  {
+    "imgPath": "/img/lighting/lamp-3-2.jpg",
+    "hoverPath": "/img/lighting/lamp-3-3.jpg",
+    "imgAlt": "lighting",
+    "href": "/pages/stuff.html",
+    "title": "Write with Lace Insert",
+    "category": "lighting",
+    "colors": ["yellow","red"],
+    "price": 11.99
+  },
+  {
+    "imgPath": "/img/lighting/lamp-3-2.jpg",
+    "hoverPath": "/img/lighting/lamp-3-3.jpg",
+    "imgAlt": "lighting",
+    "href": "/pages/stuff.html",
+    "title": "Write with Lace Insert",
+    "category": "lighting",
+    "colors": ["yellow","red"],
+    "price": 11.99
+  },
+  {
+    "imgPath": "/img/lighting/lamp-3-2.jpg",
+    "hoverPath": "/img/lighting/lamp-3-3.jpg",
+    "imgAlt": "lighting",
+    "href": "/pages/stuff.html",
+    "title": "Write with Lace Insert",
+    "category": "lighting",
+    "colors": ["yellow","red"],
+    "price": 11.99
+  },
+  {
+    "imgPath": "/img/lighting/lamp-3-2.jpg",
+    "hoverPath": "/img/lighting/lamp-3-3.jpg",
+    "imgAlt": "lighting",
+    "href": "/pages/stuff.html",
+    "title": "Write with Lace Insert",
+    "category": "lighting",
+    "colors": ["yellow","red"],
+    "price": 11.99
+  },
+  {
+    "imgPath": "/img/lighting/lamp-3-2.jpg",
+    "hoverPath": "/img/lighting/lamp-3-3.jpg",
+    "imgAlt": "lighting",
+    "href": "/pages/stuff.html",
+    "title": "Write with Lace Insert",
+    "category": "lighting",
+    "colors": ["yellow","red"],
+    "price": 11.99
+  },
+  {
+    "imgPath": "/img/lighting/lamp-3-2.jpg",
+    "hoverPath": "/img/lighting/lamp-3-3.jpg",
+    "imgAlt": "lighting",
+    "href": "/pages/stuff.html",
+    "title": "Write with Lace Insert",
+    "category": "lighting",
+    "colors": ["yellow","red"],
+    "price": 11.99
+  },
+  {
+    "imgPath": "/img/lighting/lamp-3-2.jpg",
+    "hoverPath": "/img/lighting/lamp-3-3.jpg",
+    "imgAlt": "lighting",
+    "href": "/pages/stuff.html",
+    "title": "Write with Lace Insert",
+    "category": "lighting",
+    "colors": ["yellow","red"],
+    "price": 11.99
+  },
+  {
+    "imgPath": "/img/lighting/lamp-3-2.jpg",
+    "hoverPath": "/img/lighting/lamp-3-3.jpg",
+    "imgAlt": "lighting",
+    "href": "/pages/stuff.html",
+    "title": "Write with Lace Insert",
+    "category": "lighting",
+    "colors": ["yellow","red"],
+    "price": 11.99
+  },
+  {
+    "imgPath": "/img/lighting/lamp-3-2.jpg",
+    "hoverPath": "/img/lighting/lamp-3-3.jpg",
+    "imgAlt": "lighting",
+    "href": "/pages/stuff.html",
+    "title": "Write with Lace Insert",
+    "category": "lighting",
+    "colors": ["yellow","red"],
+    "price": 11.99
+  },
+  {
+    "imgPath": "/img/lighting/lamp-3-2.jpg",
+    "hoverPath": "/img/lighting/lamp-3-3.jpg",
+    "imgAlt": "lighting",
+    "href": "/pages/stuff.html",
+    "title": "Write with Lace Insert",
+    "category": "lighting",
+    "colors": ["yellow","red"],
+    "price": 11.99
+  },
+  {
+    "imgPath": "/img/minimalism/minimalism-product1.jpg",
+    "hoverPath": "/img/minimalism/minimalism-product1_1.jpg",
+    "imgAlt": "minimalism",
+    "href": "/pages/stuff.html",
+    "title": "Write with Lace Insert",
+    "category": "minimalism",
+    "colors": ["gray","black"],
+    "price": 19.99
+  },
+  {
+    "imgPath": "/img/minimalism/minimalism-product1.jpg",
+    "hoverPath": "/img/minimalism/minimalism-product1_1.jpg",
+    "imgAlt": "minimalism",
+    "href": "/pages/stuff.html",
+    "title": "Write with Lace Insert",
+    "category": "minimalism",
+    "colors": ["gray","black"],
+    "price": 19.99
+  },
+  {
+    "imgPath": "/img/minimalism/minimalism-product1.jpg",
+    "hoverPath": "/img/minimalism/minimalism-product1_1.jpg",
+    "imgAlt": "minimalism",
+    "href": "/pages/stuff.html",
+    "title": "Write with Lace Insert",
+    "category": "minimalism",
+    "colors": ["gray","black"],
+    "price": 19.99
+  },
+  {
+    "imgPath": "/img/minimalism/minimalism-product1.jpg",
+    "hoverPath": "/img/minimalism/minimalism-product1_1.jpg",
+    "imgAlt": "minimalism",
+    "href": "/pages/stuff.html",
+    "title": "Write with Lace Insert",
+    "category": "minimalism",
+    "colors": ["gray","black"],
+    "price": 19.99
+  },
+  {
+    "imgPath": "/img/minimalism/minimalism-product1.jpg",
+    "hoverPath": "/img/minimalism/minimalism-product1_1.jpg",
+    "imgAlt": "minimalism",
+    "href": "/pages/stuff.html",
+    "title": "Write with Lace Insert",
+    "category": "minimalism",
+    "colors": ["gray","black"],
+    "price": 19.99
+  },
+  {
+    "imgPath": "/img/minimalism/minimalism-product1.jpg",
+    "hoverPath": "/img/minimalism/minimalism-product1_1.jpg",
+    "imgAlt": "minimalism",
+    "href": "/pages/stuff.html",
+    "title": "Write with Lace Insert",
+    "category": "minimalism",
+    "colors": ["gray","black"],
+    "price": 19.99
+  },
+  {
+    "imgPath": "/img/minimalism/minimalism-product1.jpg",
+    "hoverPath": "/img/minimalism/minimalism-product1_1.jpg",
+    "imgAlt": "minimalism",
+    "href": "/pages/stuff.html",
+    "title": "Write with Lace Insert",
+    "category": "minimalism",
+    "colors": ["gray","black"],
+    "price": 19.99
+  },
+  {
+    "imgPath": "/img/minimalism/minimalism-product1.jpg",
+    "hoverPath": "/img/minimalism/minimalism-product1_1.jpg",
+    "imgAlt": "minimalism",
+    "href": "/pages/stuff.html",
+    "title": "Write with Lace Insert",
+    "category": "minimalism",
+    "colors": ["gray","black"],
+    "price": 19.99
   }
 ]
