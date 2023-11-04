@@ -2,6 +2,10 @@
 @import url("https://fonts.cdnfonts.com/css/happy-memories");
 @import url("https://fonts.cdnfonts.com/css/iqos");
 @import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+.reest {
+  all: unset !important;
+}
+
 .reset-list {
   list-style: none;
   margin: 0;
@@ -164,6 +168,37 @@
   font-size: 2rem !important;
 }
 .text-size-xxxxx * {
+  font-size: 2.25rem !important;
+}
+
+.text-size-before-sssz *::before {
+  font-size: 0.1rem !important;
+}
+.text-size-before-sss *::before {
+  font-size: 0.25rem !important;
+}
+.text-size-before-ss *::before {
+  font-size: 0.5rem !important;
+}
+.text-size-before-s *::before {
+  font-size: 0.75rem !important;
+}
+.text-size-before-m *::before {
+  font-size: 1rem !important;
+}
+.text-size-before-x *::before {
+  font-size: 1.25rem !important;
+}
+.text-size-before-xx *::before {
+  font-size: 1.5rem !important;
+}
+.text-size-before-xxx *::before {
+  font-size: 1.75rem !important;
+}
+.text-size-before-xxxx *::before {
+  font-size: 2rem !important;
+}
+.text-size-before-xxxxx *::before {
   font-size: 2.25rem !important;
 }
 
@@ -599,7 +634,7 @@
 }
 
 body {
-  background-color: rgb(249, 255, 255);
+  background-color: red;
 }
 
 a {
@@ -769,8 +804,9 @@ h6 {
   font-weight: 600 !important;
 }
 
-#targetNav nav:first-child * {
-  font-size: 12px;
+#targetNav nav * {
+  display: flex !important;
+  align-items: center !important;
 }
 #targetNav nav img {
   width: 90%;
@@ -785,42 +821,66 @@ h6 {
   color: Black;
 }
 
-.navBar-window {
+.navbar-main-first * {
+  color: rgb(249, 255, 255) !important;
+  font-size: 12px !important;
+}
+.navbar-main-first *:hover {
+  color: rgba(240, 255, 255, 0.7) !important;
+}
+.navbar-main-first * i:not(.fa-envelope) {
+  font-size: 18px !important;
+}
+.navbar-main-first * i:not(.fa-envelope):hover {
+  color: rgba(240, 255, 255, 0.7) !important;
+}
+.navbar-main-first * i:not(.fa-envelope).fa-chevron-down {
+  font-size: 8px !important;
+}
+.navbar-window {
   z-index: 999;
   background-color: rgb(249, 255, 255);
   box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.05);
   display: none;
 }
-.navBar-window h6,
-.navBar-window h5,
-.navBar-window h4 {
+.navbar-window h6,
+.navbar-window h5,
+.navbar-window h4 {
   color: Black;
 }
-.navBar-window p {
+.navbar-window p {
   font-size: 12px;
 }
-.navBar-shop li:hover {
+.navbar-shop li:hover {
   background-color: rgb(249, 255, 255);
 }
-.navBar-shop li:hover a {
+.navbar-shop li:hover a {
   color: Black !important;
 }
-.navBar-submenu {
+.navbar-submenu {
   width: 750px;
   margin-left: -100px !important;
 }
-.navBar-submenu a {
+.navbar-submenu a {
   color: rgba(0, 0, 0, 0.5);
   font-weight: 300;
 }
-.navBar-submenu a::after {
+.navbar-submenu a::after {
   display: none;
 }
-.navBar-submenu a:hover {
+.navbar-submenu a:hover {
   color: #83b735;
 }
-.navBar-list li::after {
+.navbar-list li::after {
   content: "†" !important;
+}
+
+#hamburMenu:hover {
+  background-color: transparent !important;
+  cursor: pointer;
+}
+#hamburMenu:hover * {
+  color: rgba(0, 0, 0, 0.5);
 }
 
 .header-categories h5 {
@@ -943,9 +1003,6 @@ h6 {
   font-size: 0.8rem;
 }
 
-.warecard {
-  overflow: hidden;
-}
 .warecard-container {
   overflow: hidden;
 }
@@ -953,15 +1010,20 @@ h6 {
   height: 20px;
   overflow: hidden;
 }
+.warecard-banner {
+  position: relative;
+}
 .warecard-banner-img {
   z-index: 100;
 }
 .warecard-banner-img-hover {
   position: absolute;
   z-index: -10;
+  border-radius: 0 !important;
 }
 .warecard-banner-panel {
-  margin: 0 -40px !important;
+  margin: 5px -30px !important;
+  right: 0;
   opacity: 0;
 }
 .warecard-banner-event h5 {
@@ -988,22 +1050,10 @@ h6 {
     transform: scale(1.2);
   }
 }
-.warecard-banner:hover ~ .warecard-banner-event h5,
-.warecard-banner .warecard-banner-event:hover ~ .warecard-banner-event h5,
-.warecard-banner .warecard-banner-panel:hover ~ .warecard-banner-event h5 {
-  transition-delay: 0s;
-  opacity: 0;
-}
-.warecard-banner:hover ~ .warecard-banner-event h5,
-.warecard-banner .warecard-banner-event:hover ~ .warecard-banner-event h5,
-.warecard-banner .warecard-banner-panel:hover ~ .warecard-banner-event h5 {
-  display: none;
-  transition-delay: 5.5s;
-}
 .warecard-banner:hover + .warecard-banner-panel,
 .warecard-banner .warecard-banner-event:hover + .warecard-banner-panel,
 .warecard-banner .warecard-banner-panel:hover + .warecard-banner-panel {
-  margin: 0 0 !important;
+  margin: 5px 5px !important;
   opacity: 1;
 }
 .warecard:hover .warecard-price strong {
@@ -1380,17 +1430,22 @@ h6 {
 .overview-categories li a {
   color: rgba(0, 0, 0, 0.5);
 }
-.overview-categories li a span {
+.overview-categories li a:hover {
+  color: Black;
+}
+.overview-categories li a:hover > .overview-categories-item-count {
+  background-color: #83b735;
+  border-color: #83b735;
+  color: rgb(249, 255, 255);
+}
+.overview-categories-item-count {
   border: 1px solid rgba(0, 0, 0, 0.2);
   color: rgba(0, 0, 0, 0.5);
   font-size: 12px;
 }
-.overview-categories li a:hover {
-  color: Black;
-}
-.overview-categories li a:hover > span {
-  background-color: #83b735;
-  border-color: #83b735;
+.overview-categories-item-count.active {
+  background-color: #83b735 !important;
+  border-color: #83b735 !important;
   color: rgb(249, 255, 255);
 }
 .overview-colors {
@@ -1448,7 +1503,7 @@ h6 {
   font-size: 12px;
 }
 .overview-search-input {
-  border: 1px solid rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.05);
   padding: 10px 10px !important;
 }
 .overview-search-input input {
@@ -1518,6 +1573,12 @@ h6 {
 .overview-sort:focus .overview-sort-wrapper {
   border-bottom: 3px solid #83b735;
 }
+.overview-notFoundMessage {
+  background-color: #e0b252;
+}
+.overview-notFoundMessage * {
+  color: rgb(249, 255, 255) !important;
+}
 
 @media (max-width: 991px) {
   nav img {
@@ -1528,7 +1589,6 @@ h6 {
   }
   header .header-slider {
     height: 80vh;
-    padding: 10px 50px !important;
   }
   header .header-slider-item {
     width: 100%;

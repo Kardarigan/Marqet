@@ -14,6 +14,19 @@ $(".list-hover-underline li a").addClass("lhu-link");
 $.getJSON("/data/waresInfo.json", function (data) {
   let allArticlesCount = 0;
   var counts = {};
+  var categoryMessages = {
+    furniture: "No products were found matching your selection.",
+    fashion: "No products were found matching your selection.",
+    toys: "No products were found matching your selection.",
+    cars: "No products were found matching your selection.",
+    cooking: "No products were found matching your selection.",
+    accessories: "No products were found matching your selection.",
+    handmades: "No products were found matching your selection.",
+    clocks: "No products were found matching your selection.",
+    lighting: "No products were found matching your selection.",
+    minimalism: "No products were found matching your selection.",
+    electronics: "No products were found matching your selection.",
+  };
 
   $.each(data, function (index, item) {
     var theCategory = item.category;
@@ -45,10 +58,10 @@ $.getJSON("/data/waresInfo.json", function (data) {
                   })
                 )
               : $("<img>", {
-                class: "card-img-top warecard-banner-img-static",
-                src: item.imgPath,
-                alt: item.imgAlt,
-              })
+                  class: "card-img-top warecard-banner-img-static",
+                  src: item.imgPath,
+                  alt: item.imgAlt,
+                })
           ),
 
           $("<div>", {
@@ -137,31 +150,40 @@ $.getJSON("/data/waresInfo.json", function (data) {
         )
       )
     );
-    if (item.category == "furniture") {
-      $(".warecards-furniture").append(article);
-    } else if (item.category == "fashion") {
-      $(".warecards-fashion").append(article);
-    } else if (item.category == "toys") {
-      $(".warecards-toys").append(article);
-    } else if (item.category == "cars") {
-      $(".warecards-cars").append(article);
-    } else if (item.category == "cooking") {
-      $(".warecards-cooking").append(article);
-    } else if (item.category == "accessories") {
-      $(".warecards-accessories").append(article);
-    } else if (item.category == "clocks") {
-      $(".warecards-clocks").append(article);
-    } else if (item.category == "lighting") {
-      $(".warecards-lighting").append(article);
-    } else if (item.category == "minimalism") {
-      $(".warecards-minimalism").append(article);
+    if (item.category in categoryMessages) {
+      $(`.warecards-${item.category}`).append(article);
+      $(`.warecards-${item.category} .no-products-message`).remove();
     } else {
       $(".warecards").append(article);
     }
-    console.log("Category: " + item.category);
     allArticlesCount++;
   });
-  console.log(counts);
+
+  for (var category in categoryMessages) {
+    if (!counts[category]) {
+      $(`.warecards-${category}`).append(
+        $("<div>", {
+          class: "overview-notFoundMessage col-12 d-flex align-items-center",
+        }).append(
+          $("<i>", { class: "fa-sharp fa-light fa-circle-exclamation p-4" }),
+          $("<p>").text(categoryMessages[category])
+        ),
+        $("<label>", {
+          class:
+            "overview-search-input position-relative col-12 d-flex align-items-center mt-3 mb-2",
+          for: "searchForProducdts",
+        }).append(
+          $("<input>", {
+            class: "w-100 p-5",
+            id: "searchForProducdts",
+            placeholder: "Search For Producdts",
+            type: "text",
+          }),
+          $("<i>", { class: "fal fa-search position-absolute end-0 pe-2" })
+        )
+      );
+    }
+  }
 
   $.each(counts, function (category, count) {
     var categoryCountElement = $(`[data-categoryCount="${category}"]`);
@@ -174,6 +196,16 @@ $.getJSON("/data/waresInfo.json", function (data) {
     if (allArticlesCount > i) {
       $(`.warecards-${i} article:gt(${i - 1})`).hide();
     }
+  }
+});
+// -----------------[category active]------------------
+const pageTitle = $('.overview-header-title').text();
+
+$('.overview-categories-item-title').each(function() {
+  var categoryItemText = $(this).text();
+
+  if (categoryItemText === pageTitle) {
+    $(this).next('.overview-categories-item-count').addClass('active');
   }
 });
 // --------------------[magnifier]---------------------

@@ -45,17 +45,25 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
   <body>
     <!------------------------------[navbar]------------------------------>
     <nav id="targetNav">
-      <section class="navbar navbar-expand-md navbar-light bg-primary">
+      <section
+        class="navbar navbar-expand-lg py-1 bg-primary text-color-white navbar-main-first"
+      >
         <div class="container-lg mx-auto justify-content-between d-flex">
           <ul class="d-lg-flex d-none">
-            <li class="d-inline p-2 border-start border-light">
-              <a href="#">ENGLISH</a>
+            <li class="p-2 border-start border-light">
+              <a class="d-flex align-items-center" href="#"
+                >ENGLISH <i class="fa-thin fa-chevron-down ms-1"></i
+              ></a>
+            </li>
+            <li class="p-2 border-start border-light">
+              <a class="d-flex align-items-center" href="#"
+                >COUNTRY <i class="fa-thin fa-chevron-down ms-1"></i
+              ></a>
             </li>
             <li class="d-inline p-2 border-start border-light">
-              <a href="#">COUNTRY</a>
-            </li>
-            <li class="d-inline p-2 border-start border-light">
-              <p class="d-inline">FREE SHIPPING FOR ALL ORDERS OF $150</p>
+              <b class="d-inline weight"
+                >FREE SHIPPING FOR ALL ORDERS OF $150</b
+              >
             </li>
           </ul>
           <ul class="mx-auto d-lg-none d-flex py-2">
@@ -96,7 +104,9 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
               </ul>
             </li>
             <li class="d-inline p-2 border-end border-light">
-              <a href="#"><i class="fa-regular fa-envelope"></i> NEWLETTER</a>
+              <a href="#"
+                ><i class="fa-regular fa-envelope me-1"></i> NEWLETTER</a
+              >
             </li>
             <li class="d-inline p-2 border-end border-light">
               <a href="#">CONTACT US</a>
@@ -107,15 +117,18 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
           </ul>
         </div>
       </section>
-      <section class="navbar navbar-expand-md navbar-light px-3">
+      <section
+        class="navbar navbar-expand-lg navbar-light px-3 py-3 navbar-main-second"
+      >
         <div class="container-lg mx-auto row d-flex justify-content-between">
           <div class="col-1 d-lg-none d-flex">
-            <button class="w-100">
-              <span class="me-1"><i class="fa fa-bars"></i></span>
-              <p class="d-md-inline d-none">MENU</p>
+            <button class="w-100 reest text-color-black" id="hamburMenu">
+              <span class="me-1"
+                ><i class="fa fa-bars d-inline me-1"></i>MENU<span> </span
+              ></span>
             </button>
           </div>
-          <div class="py-4 col-lg-3 col-10 flex-centralizer">
+          <div class="py-3 col-lg-3 col-10 flex-centralizer">
             <a
               class="d-flex justify-content-lg-start justify-content-center"
               href="/index.html"
@@ -574,8 +587,8 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
     </nav>
     <!------------------------------[navbar]------------------------------>
     <!------------------------------[header]------------------------------>
-    <header>
-      <div class="container-lg mx-auto row px-lg-0 px-2">
+    <header class="container-lg mx-auto">
+      <div class="row px-lg-0 px-2">
         <div class="header-categories col-3 d-lg-block d-none">
           <h5 class="py-3 ps-3 text-light">categories</h5>
           <ul>
@@ -776,7 +789,7 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
     <!-----------------------------[threebox]----------------------------->
     <!-----------------------------[featured]----------------------------->
     <section>
-      <div class="p-lg-5 row mx-auto">
+      <div class="container-lg row mx-auto">
         <div class="text-center">
           <strong>WELCOME TO WOODMART</strong>
           <h2 class="py-3">FEATURED PRODUCTS</h2>
@@ -859,7 +872,7 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
     <!----------------------------[categories]---------------------------->
     <!----------------------------[bestseller]---------------------------->
     <section>
-      <div class="p-5 row mx-auto">
+      <div class="container-lg row mx-auto">
         <div class="text-center">
           <strong>WELCOME TO WOODMART</strong>
           <h2 class="py-3">OUR BESTSELLERS</h2>

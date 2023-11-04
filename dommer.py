@@ -63,7 +63,7 @@ def addAllDOM(destinationPath):
 
 
 
-allFiles = ['index.html','pages/overviews/furniture-ow.html','pages/overviews/cooking-ow.html','pages/overviews/accessories-ow.html','pages/overviews/fashion-ow.html','pages/overviews/lighting-ow.html','pages/overviews/toys-ow.html','pages/overviews/handmade-ow.html','pages/overviews/minimalism-ow.html','pages/overviews/electronic-ow.html','pages/overviews/cars-ow.html', 'pages/stuff.html','pages/post.html']
+allFiles = ['index.html','pages/overviews/furniture-ow.html','pages/overviews/cooking-ow.html','pages/overviews/accessories-ow.html','pages/overviews/fashion-ow.html','pages/overviews/lighting-ow.html','pages/overviews/toys-ow.html','pages/overviews/handmade-ow.html','pages/overviews/minimalism-ow.html','pages/overviews/electronic-ow.html','pages/overviews/cars-ow.html','pages/overviews/clocks-ow.html', 'pages/stuff.html','pages/post.html']
 
 for aFile in allFiles:
     addAllDOM(aFile)

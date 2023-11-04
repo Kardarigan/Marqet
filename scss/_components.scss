@@ -1,9 +1,8 @@
 // -------------------------[navbar]-----------------------------
 #targetNav nav {
-  &:first-child {
-    * {
-      font-size: 12px;
-    }
+  * {
+    display: flex !important;
+    align-items: center !important;
   }
   img {
     width: 90%;
@@ -14,7 +13,26 @@
     }
   }
 }
-.navBar {
+.navbar {
+  &-main {
+    &-first {
+      * {
+        @include light-link;
+        font-size: 12px !important;
+        i:not(.fa-envelope) {
+          font-size: 18px !important;
+          &:hover {
+            color: $colorLight-hover !important;
+          }
+          &.fa-chevron-down {
+            font-size: 8px !important;
+          }
+        }
+      }
+    }
+    &-second {
+    }
+  }
   &-window {
     z-index: 999;
     background-color: $colorLight;
@@ -56,6 +74,16 @@
   &-list {
     li::after {
       content: "\2020" !important;
+    }
+  }
+}
+// -------------------------[hambur]-----------------------------
+#hamburMenu {
+  &:hover {
+    background-color: transparent !important;
+    cursor: pointer;
+    * {
+      color: $colorDark-hover;
     }
   }
 }
@@ -190,7 +218,6 @@
 }
 // ------------------------[warecard]----------------------------
 .warecard {
-  overflow: hidden;
   &-container {
     overflow: hidden;
   }
@@ -201,18 +228,20 @@
     overflow: hidden;
   }
   &-banner {
+    position: relative;
     &-img {
       z-index: 100;
       &-hover {
         position: absolute;
         z-index: -10;
+        border-radius: 0 !important;
       }
-      &-static{
-        
+      &-static {
       }
     }
     &-panel {
-      margin: 0 -40px !important;
+      margin: 5px -30px !important;
+      right: 0;
       opacity: 0;
     }
     &-event {
@@ -242,16 +271,8 @@
           }
         }
       }
-      ~ .warecard-banner-event h5 {
-          transition-delay: 0s;
-          opacity: 0;
-        & {
-          display: none;
-          transition-delay: 5.5s;
-        }
-      }
       + .warecard-banner-panel {
-        margin: 0 0 !important;
+        margin: 5px 5px !important;
         opacity: 1;
       }
     }
@@ -663,26 +684,23 @@
   &-categories {
     li a {
       color: $colorDark-hover;
-      span {
-        border: 1px solid $colorDark-hover-x;
-        color: $colorDark-hover;
-        font-size: 12px;
-      }
       &:hover {
         color: $colorDark;
-        > span {
+        > .overview-categories-item-count {
           background-color: $colorAlpha;
           border-color: $colorAlpha;
           color: $colorLight;
         }
       }
-      .active {
-        color: $colorDark;
-        > span {
-          background-color: $colorAlpha;
-          border-color: $colorAlpha;
-          color: $colorLight;
-        }
+    }
+    &-item-count {
+      border: 1px solid $colorDark-hover-x;
+      color: $colorDark-hover;
+      font-size: 12px;
+      &.active {
+        background-color: $colorAlpha !important;
+        border-color: $colorAlpha !important;
+        color: $colorLight;
       }
     }
   }
@@ -756,7 +774,7 @@
   }
   &-search {
     &-input {
-      border: 1px solid $colorDark-hover-xx;
+      border: 1px solid $colorDark-hover-xxx;
       padding: 10px 10px !important;
       input {
         all: unset !important;
@@ -835,6 +853,12 @@
       border-bottom: 3px solid $colorAlpha;
     }
   }
+  &-notFoundMessage {
+    background-color: #e0b252;
+    * {
+      color: $colorLight !important;
+    }
+  }
 }
 // ----------------------[mediaqueries]--------------------------
 @media (max-width: 991px) {
@@ -849,7 +873,6 @@
   header {
     .header-slider {
       height: 80vh;
-      padding: 10px 50px !important;
       &-item {
         width: 100%;
         height: 80vh !important;

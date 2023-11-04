@@ -1055,13 +1055,223 @@
     "price": 19.99
   },
   {
-    "imgPath": "/img/minimalism/minimalism-product1.jpg",
-    "hoverPath": "/img/minimalism/minimalism-product1_1.jpg",
-    "imgAlt": "minimalism",
+    "imgPath": "/img/electronics/Product-2-1.jpg",
+    "hoverPath": "/img/electronics/Product-2-2.jpg",
+    "imgAlt": "electronics",
     "href": "/pages/stuff.html",
-    "title": "Write with Lace Insert",
-    "category": "minimalism",
-    "colors": ["gray","black"],
-    "price": 19.99
+    "title": "Microsoft Surface Go 3",
+    "category": "electronics",
+    "colors": ["gray","black","white"],
+    "price": 499.99
+  },
+  {
+    "imgPath": "/img/electronics/Product-2-1.jpg",
+    "hoverPath": "/img/electronics/Product-2-2.jpg",
+    "imgAlt": "electronics",
+    "href": "/pages/stuff.html",
+    "title": "Microsoft Surface Go 3",
+    "category": "electronics",
+    "colors": ["gray","black","white"],
+    "price": 499.99
+  },
+  {
+    "imgPath": "/img/electronics/Product-2-1.jpg",
+    "hoverPath": "/img/electronics/Product-2-2.jpg",
+    "imgAlt": "electronics",
+    "href": "/pages/stuff.html",
+    "title": "Microsoft Surface Go 3",
+    "category": "electronics",
+    "colors": ["gray","black","white"],
+    "price": 499.99
+  },
+  {
+    "imgPath": "/img/electronics/Product-2-1.jpg",
+    "hoverPath": "/img/electronics/Product-2-2.jpg",
+    "imgAlt": "electronics",
+    "href": "/pages/stuff.html",
+    "title": "Microsoft Surface Go 3",
+    "category": "electronics",
+    "colors": ["gray","black","white"],
+    "price": 499.99
+  },
+  {
+    "imgPath": "/img/electronics/Product-2-1.jpg",
+    "hoverPath": "/img/electronics/Product-2-2.jpg",
+    "imgAlt": "electronics",
+    "href": "/pages/stuff.html",
+    "title": "Microsoft Surface Go 3",
+    "category": "electronics",
+    "colors": ["gray","black","white"],
+    "price": 499.99
+  },
+  {
+    "imgPath": "/img/electronics/Product-2-1.jpg",
+    "hoverPath": "/img/electronics/Product-2-2.jpg",
+    "imgAlt": "electronics",
+    "href": "/pages/stuff.html",
+    "title": "Microsoft Surface Go 3",
+    "category": "electronics",
+    "colors": ["gray","black","white"],
+    "price": 499.99
+  },
+  {
+    "imgPath": "/img/electronics/Product-2-1.jpg",
+    "hoverPath": "/img/electronics/Product-2-2.jpg",
+    "imgAlt": "electronics",
+    "href": "/pages/stuff.html",
+    "title": "Microsoft Surface Go 3",
+    "category": "electronics",
+    "colors": ["gray","black","white"],
+    "price": 499.99
+  },
+  {
+    "imgPath": "/img/electronics/Product-2-1.jpg",
+    "hoverPath": "/img/electronics/Product-2-2.jpg",
+    "imgAlt": "electronics",
+    "href": "/pages/stuff.html",
+    "title": "Microsoft Surface Go 3",
+    "category": "electronics",
+    "colors": ["gray","black","white"],
+    "price": 499.99
+  },
+  {
+    "imgPath": "/img/electronics/Product-2-1.jpg",
+    "hoverPath": "/img/electronics/Product-2-2.jpg",
+    "imgAlt": "electronics",
+    "href": "/pages/stuff.html",
+    "title": "Microsoft Surface Go 3",
+    "category": "electronics",
+    "colors": ["gray","black","white"],
+    "price": 499.99
+  },
+  {
+    "imgPath": "/img/electronics/Product-2-1.jpg",
+    "hoverPath": "/img/electronics/Product-2-2.jpg",
+    "imgAlt": "electronics",
+    "href": "/pages/stuff.html",
+    "title": "Microsoft Surface Go 3",
+    "category": "electronics",
+    "colors": ["gray","black","white"],
+    "price": 499.99
+  },
+  {
+    "imgPath": "/img/electronics/Product-2-1.jpg",
+    "hoverPath": "/img/electronics/Product-2-2.jpg",
+    "imgAlt": "electronics",
+    "href": "/pages/stuff.html",
+    "title": "Microsoft Surface Go 3",
+    "category": "electronics",
+    "colors": ["gray","black","white"],
+    "price": 499.99
+  },
+  {
+    "imgPath": "/img/electronics/Product-2-1.jpg",
+    "hoverPath": "/img/electronics/Product-2-2.jpg",
+    "imgAlt": "electronics",
+    "href": "/pages/stuff.html",
+    "title": "Microsoft Surface Go 3",
+    "category": "electronics",
+    "colors": ["gray","black","white"],
+    "price": 499.99
+  },
+  {
+    "imgPath": "/img/electronics/Product-2-1.jpg",
+    "hoverPath": "/img/electronics/Product-2-2.jpg",
+    "imgAlt": "electronics",
+    "href": "/pages/stuff.html",
+    "title": "Microsoft Surface Go 3",
+    "category": "electronics",
+    "colors": ["gray","black","white"],
+    "price": 499.99
+  },
+  {
+    "imgPath": "/img/electronics/Product-2-1.jpg",
+    "hoverPath": "/img/electronics/Product-2-2.jpg",
+    "imgAlt": "electronics",
+    "href": "/pages/stuff.html",
+    "title": "Microsoft Surface Go 3",
+    "category": "electronics",
+    "colors": ["gray","black","white"],
+    "price": 499.99
+  },
+  {
+    "imgPath": "/img/electronics/Product-2-1.jpg",
+    "hoverPath": "/img/electronics/Product-2-2.jpg",
+    "imgAlt": "electronics",
+    "href": "/pages/stuff.html",
+    "title": "Microsoft Surface Go 3",
+    "category": "electronics",
+    "colors": ["gray","black","white"],
+    "price": 499.99
+  },
+  {
+    "imgPath": "/img/electronics/Product-2-1.jpg",
+    "hoverPath": "/img/electronics/Product-2-2.jpg",
+    "imgAlt": "electronics",
+    "href": "/pages/stuff.html",
+    "title": "Microsoft Surface Go 3",
+    "category": "electronics",
+    "colors": ["gray","black","white"],
+    "price": 499.99
+  },
+  {
+    "imgPath": "/img/electronics/Product-2-1.jpg",
+    "hoverPath": "/img/electronics/Product-2-2.jpg",
+    "imgAlt": "electronics",
+    "href": "/pages/stuff.html",
+    "title": "Microsoft Surface Go 3",
+    "category": "electronics",
+    "colors": ["gray","black","white"],
+    "price": 499.99
+  },
+  {
+    "imgPath": "/img/electronics/Product-2-1.jpg",
+    "hoverPath": "/img/electronics/Product-2-2.jpg",
+    "imgAlt": "electronics",
+    "href": "/pages/stuff.html",
+    "title": "Microsoft Surface Go 3",
+    "category": "electronics",
+    "colors": ["gray","black","white"],
+    "price": 499.99
+  },
+  {
+    "imgPath": "/img/electronics/Product-2-1.jpg",
+    "hoverPath": "/img/electronics/Product-2-2.jpg",
+    "imgAlt": "electronics",
+    "href": "/pages/stuff.html",
+    "title": "Microsoft Surface Go 3",
+    "category": "electronics",
+    "colors": ["gray","black","white"],
+    "price": 499.99
+  },
+  {
+    "imgPath": "/img/electronics/Product-2-1.jpg",
+    "hoverPath": "/img/electronics/Product-2-2.jpg",
+    "imgAlt": "electronics",
+    "href": "/pages/stuff.html",
+    "title": "Microsoft Surface Go 3",
+    "category": "electronics",
+    "colors": ["gray","black","white"],
+    "price": 499.99
+  },
+  {
+    "imgPath": "/img/electronics/Product-2-1.jpg",
+    "hoverPath": "/img/electronics/Product-2-2.jpg",
+    "imgAlt": "electronics",
+    "href": "/pages/stuff.html",
+    "title": "Microsoft Surface Go 3",
+    "category": "electronics",
+    "colors": ["gray","black","white"],
+    "price": 499.99
+  },
+  {
+    "imgPath": "/img/electronics/Product-2-1.jpg",
+    "hoverPath": "/img/electronics/Product-2-2.jpg",
+    "imgAlt": "electronics",
+    "href": "/pages/stuff.html",
+    "title": "Microsoft Surface Go 3",
+    "category": "electronics",
+    "colors": ["gray","black","white"],
+    "price": 499.99
   }
 ]

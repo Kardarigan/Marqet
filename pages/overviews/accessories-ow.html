@@ -47,17 +47,25 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
   <body>
     <!------------------------ navbar ------------------------>
     <nav id="targetNav">
-      <section class="navbar navbar-expand-md navbar-light bg-primary">
+      <section
+        class="navbar navbar-expand-lg py-1 bg-primary text-color-white navbar-main-first"
+      >
         <div class="container-lg mx-auto justify-content-between d-flex">
           <ul class="d-lg-flex d-none">
-            <li class="d-inline p-2 border-start border-light">
-              <a href="#">ENGLISH</a>
+            <li class="p-2 border-start border-light">
+              <a class="d-flex align-items-center" href="#"
+                >ENGLISH <i class="fa-thin fa-chevron-down ms-1"></i
+              ></a>
+            </li>
+            <li class="p-2 border-start border-light">
+              <a class="d-flex align-items-center" href="#"
+                >COUNTRY <i class="fa-thin fa-chevron-down ms-1"></i
+              ></a>
             </li>
             <li class="d-inline p-2 border-start border-light">
-              <a href="#">COUNTRY</a>
-            </li>
-            <li class="d-inline p-2 border-start border-light">
-              <p class="d-inline">FREE SHIPPING FOR ALL ORDERS OF $150</p>
+              <b class="d-inline weight"
+                >FREE SHIPPING FOR ALL ORDERS OF $150</b
+              >
             </li>
           </ul>
           <ul class="mx-auto d-lg-none d-flex py-2">
@@ -98,7 +106,9 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
               </ul>
             </li>
             <li class="d-inline p-2 border-end border-light">
-              <a href="#"><i class="fa-regular fa-envelope"></i> NEWLETTER</a>
+              <a href="#"
+                ><i class="fa-regular fa-envelope me-1"></i> NEWLETTER</a
+              >
             </li>
             <li class="d-inline p-2 border-end border-light">
               <a href="#">CONTACT US</a>
@@ -109,15 +119,18 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
           </ul>
         </div>
       </section>
-      <section class="navbar navbar-expand-md navbar-light px-3">
+      <section
+        class="navbar navbar-expand-lg navbar-light px-3 navbar-main-second p-0"
+      >
         <div class="container-lg mx-auto row d-flex justify-content-between">
           <div class="col-1 d-lg-none d-flex">
-            <button class="w-100">
-              <span class="me-1"><i class="fa fa-bars"></i></span>
-              <p class="d-md-inline d-none">MENU</p>
+            <button class="w-100 reest text-color-black" id="hamburMenu">
+              <span class="me-1"
+                ><i class="fa fa-bars d-inline me-1"></i>MENU<span> </span
+              ></span>
             </button>
           </div>
-          <div class="py-4 col-lg-3 col-10 flex-centralizer">
+          <div class="py-3 col-lg-3 col-10 flex-centralizer">
             <a
               class="d-flex justify-content-lg-start justify-content-center"
               href="/index.html"
@@ -578,11 +591,13 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
     <!------------------------ header ------------------------>
     <header class="w-100 text-center bg-white py-5 overview-title">
       <a class="me-2 d-lg-inline d-none" href="/index.html">←</a>
-      <h1 class="d-inline">Accessories</h1>
+      <h1 class="d-inline">
+        <span class="overview-header-title">Accessories</span>
+      </h1>
     </header>
     <!------------------------ header ------------------------>
     <!------------------------- main ------------------------->
-    <section class="px-5 row">
+    <section class="px-md-5 px-2 row">
       <!----------------------- sidemenu ----------------------->
       <aside class="col-lg-3 d-xl-block d-none">
         <div class="p-5 ps-0">
@@ -591,10 +606,10 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
             <li class="mt-3">
               <a
                 class="d-block w-100 position-relative"
-                href="/pages/overviews/furniture"
-                >Accessories
+                href="/pages/overviews/accessories-ow.html"
+                ><span class="overview-categories-item-title">Accessories</span>
                 <span
-                  class="px-1 rounded-pill position-absolute end-0"
+                  class="px-1 rounded-pill position-absolute end-0 overview-categories-item-count"
                   data-categorycount="accessories"
                   >0</span
                 ></a
@@ -603,10 +618,10 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
             <li class="mt-3">
               <a
                 class="d-block w-100 position-relative"
-                href="/pages/overviews/cooking"
-                >Clocks
+                href="/pages/overviews/clocks-ow.html"
+                ><span class="overview-categories-item-title">Clocks</span>
                 <span
-                  class="px-1 rounded-pill position-absolute end-0"
+                  class="px-1 rounded-pill position-absolute end-0 overview-categories-item-count"
                   data-categorycount="clocks"
                   >0</span
                 ></a
@@ -615,10 +630,10 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
             <li class="mt-3">
               <a
                 class="d-block w-100 position-relative"
-                href="/pages/overviews/accessories"
-                >Cooking
+                href="/pages/overviews/cooking-ow.html"
+                ><span class="overview-categories-item-title">Cooking</span>
                 <span
-                  class="px-1 rounded-pill position-absolute end-0"
+                  class="px-1 rounded-pill position-absolute end-0 overview-categories-item-count"
                   data-categorycount="cooking"
                   >0</span
                 ></a
@@ -627,10 +642,10 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
             <li class="mt-3">
               <a
                 class="d-block w-100 position-relative"
-                href="/pages/overviews/fashion"
-                >Furnitures
+                href="/pages/overviews/furniture-ow.html"
+                ><span class="overview-categories-item-title">Furnitures</span>
                 <span
-                  class="px-1 rounded-pill position-absolute end-0"
+                  class="px-1 rounded-pill position-absolute end-0 overview-categories-item-count"
                   data-categorycount="furniture"
                   >0</span
                 ></a
@@ -639,10 +654,10 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
             <li class="mt-3">
               <a
                 class="d-block w-100 position-relative"
-                href="/pages/overviews/lighting"
-                >Lighting
+                href="/pages/overviews/lighting-ow.html"
+                ><span class="overview-categories-item-title">Lighting</span>
                 <span
-                  class="px-1 rounded-pill position-absolute end-0"
+                  class="px-1 rounded-pill position-absolute end-0 overview-categories-item-count"
                   data-categorycount="lighting"
                   >0</span
                 ></a
@@ -651,10 +666,10 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
             <li class="mt-3">
               <a
                 class="d-block w-100 position-relative"
-                href="/pages/overviews/toys"
-                >Toys
+                href="/pages/overviews/toys-ow.html"
+                ><span class="overview-categories-item-title">Toys</span>
                 <span
-                  class="px-1 rounded-pill position-absolute end-0"
+                  class="px-1 rounded-pill position-absolute end-0 overview-categories-item-count"
                   data-categorycount="toys"
                   >0</span
                 ></a
@@ -663,10 +678,10 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
             <li class="mt-3">
               <a
                 class="d-block w-100 position-relative"
-                href="/pages/overviews/handmade"
-                >Hand Made
+                href="/pages/overviews/handmade-ow.html"
+                ><span class="overview-categories-item-title">Hand Made</span>
                 <span
-                  class="px-1 rounded-pill position-absolute end-0"
+                  class="px-1 rounded-pill position-absolute end-0 overview-categories-item-count"
                   data-categorycount="made"
                   >0</span
                 ></a
@@ -675,10 +690,10 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
             <li class="mt-3">
               <a
                 class="d-block w-100 position-relative"
-                href="/pages/overviews/minimalism"
-                >Minimalism
+                href="/pages/overviews/minimalism-ow.html"
+                ><span class="overview-categories-item-title">Minimalism</span>
                 <span
-                  class="px-1 rounded-pill position-absolute end-0"
+                  class="px-1 rounded-pill position-absolute end-0 overview-categories-item-count"
                   data-categorycount="minimalism"
                   >0</span
                 ></a
@@ -687,10 +702,10 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
             <li class="mt-3">
               <a
                 class="d-block w-100 position-relative"
-                href="/pages/overviews/electronics"
-                >Electronics
+                href="/pages/overviews/electronic-ow.html"
+                ><span class="overview-categories-item-title">Electronics</span>
                 <span
-                  class="px-1 rounded-pill position-absolute end-0"
+                  class="px-1 rounded-pill position-absolute end-0 overview-categories-item-count"
                   data-categorycount="electronics"
                   >0</span
                 ></a
@@ -699,10 +714,10 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
             <li class="mt-3">
               <a
                 class="d-block w-100 position-relative"
-                href="/pages/overviews/cars"
-                >Cars
+                href="/pages/overviews/cars-ow.html"
+                ><span class="overview-categories-item-title">Cars</span>
                 <span
-                  class="px-1 rounded-pill position-absolute end-0"
+                  class="px-1 rounded-pill position-absolute end-0 overview-categories-item-count"
                   data-categorycount="cars"
                   >0</span
                 ></a
@@ -1037,12 +1052,13 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
         </div>
         <div class="overview-tools pb-5 row">
           <div class="col-lg-3 row justify-content-between">
-            <p class="col-lg-12 col-3 text-muted-all categories-path">
+            <p class="col-lg-12 col-6 text-muted-all categories-path">
               <a href="#">Home</a> / <a href="#">Shop</a> /
               <a class="active" href="#">Accessories</a>
             </p>
-            <p class="col-3 d-lg-none">
-              Showing all <span data-categoryCount="accessories">0</span> results
+            <p class="col-6 d-lg-none d-flex justify-content-end">
+              Showing all&nbsp;
+              <span data-categorycount="accessories">0</span>&nbsp;results
             </p>
           </div>
           <div class="col-3 d-lg-flex justify-content-center d-none">
@@ -1109,7 +1125,20 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
               </a>
             </div>
             <div
-              class="col-lg-12 col-3 overview-sort-wrapper d-inline-block end-0"
+              class="col-lg-12 col-3 overview-sort-wrapper d-lg-inline-block d-none end-0"
+            >
+              <select class="overview-sort" name="sortBy">
+                <option value="default">Default sorting</option>
+                <option value="pop">Sort by popularity</option>
+                <option value="rate">Sort by average rating</option>
+                <option value="last">Sort by latest</option>
+                <option value="lth">Sort by price: low to hight</option>
+                <option value="htl">Sort by price: hight to low</option>
+              </select>
+              <i class="fa-regular fa-chevron-down position-absolute"></i>
+            </div>
+            <div
+              class="col-lg-12 col-3 overview-sort-wrapper d-lg-none d-inline-block end-0"
             >
               <select class="overview-sort" name="sortBy">
                 <option value="default">Default sorting</option>

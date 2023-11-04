@@ -98,6 +98,9 @@ $prod-colors: (
   }
 }
 // -----[usable classes]-----
+.reest {
+  all: unset !important;
+}
 .reset-list {
   list-style: none;
   margin: 0;
@@ -230,6 +233,13 @@ $prod-colors: (
 .text-size {
   @each $name, $size in $text-sizes {
     &-#{$name} * {
+      font-size: $size !important;
+    }
+  }
+}
+.text-size-before {
+  @each $name, $size in $text-sizes {
+    &-#{$name} *::before {
       font-size: $size !important;
     }
   }
