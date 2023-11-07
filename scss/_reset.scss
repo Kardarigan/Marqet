@@ -8,8 +8,9 @@
     background-color: $colorDark;
   }
 }
-body {
-  background-color: red;
+body{
+  position: relative !important;
+  z-index: 20 !important; 
 }
 a {
   text-decoration: none;
@@ -144,6 +145,12 @@ li {
   background-color: transparent !important;
   border: 0 !important;
   border-radius: 0 !important;
+}
+.swiper{
+  &-wrapper{
+    width: auto;
+    height: auto;
+  }
 }
 @for $i from 1 through 6 {
   h#{$i} {

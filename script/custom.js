@@ -8,6 +8,43 @@ function showPos(position) {
 function showErr(error) {
   console.error("GeolocationPositionError: ", error.code, "-", error.message);
 }
+// ---------------------[slider]-----------------------
+var swiper = new Swiper(".mySwiper", {
+  slidesPerView: 3,
+  spaceBetween: 30,
+  breakpoints: {
+    640: {
+      slidesPerView: 1,
+      spaceBetween: 40
+    },
+    768: {
+      slidesPerView: 2,
+      spaceBetween: 40
+    }
+  }
+});
+
+// <<<>>>-three box-<<<>>>
+function updateClasses() {
+  const windowWidth = $(window).width();
+  $('#showWidthq').text(windowWidth);
+  const threeboxMain = $('#threebox');
+  const threeboxWrapper = $('.threeboxSliderWrapper');
+  const threeboxSlide = $('.threeboxSlides');
+
+  if (windowWidth < 768) {
+      threeboxMain.addClass('swiper mySwiper');
+      threeboxWrapper.addClass('swiper-wrapper');
+      threeboxSlide.addClass('swiper-slide');
+  } else {
+      threeboxMain.removeClass('swiper mySwiper');
+      threeboxWrapper.removeClass('swiper-wrapper');
+      threeboxSlide.removeClass('swiper-slide');
+  }
+}
+updateClasses();
+$(window).resize(updateClasses);
+
 // ------------------[class config]--------------------
 $(".list-hover-underline li a").addClass("lhu-link");
 // ----------------[warecard builder]------------------
